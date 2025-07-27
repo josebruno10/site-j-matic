@@ -1,181 +1,173 @@
-lado = 0 // inicio do codigo do carrossel, a imagem inicial começa com 0
-let imagem1 = document.querySelector('.imagem1')
-let imagem2 = document.querySelector('.imagem2')
-let imagem3 = document.querySelector('.imagem3')
-const img1 = document.querySelector('.img1')
-const img2 = document.querySelector('.img2')
-const img3 = document.querySelector('.img3')
+lado = 0; // Índice atual do carrossel: 0 = imagem do meio (posição inicial)
 
-imagem1L = -100
-imagem2L = 0
-imagem3L = 100
+// Seleciona os elementos das imagens no HTML
+let imagem1 = document.querySelector(".imagem1");
+let imagem2 = document.querySelector(".imagem2");
+let imagem3 = document.querySelector(".imagem3");
 
+// Essas constantes parecem não estar sendo usadas nesse código
+const img1 = document.querySelector(".img1");
+const img2 = document.querySelector(".img2");
+const img3 = document.querySelector(".img3");
+
+// Posições iniciais das imagens (em vw)
+imagem1L = -100; // imagem1 começa fora da tela à esquerda
+imagem2L = 0; // imagem2 começa no centro (visível)
+imagem3L = 100; // imagem3 começa fora da tela à direita
+
+// Função para ir para a esquerda no carrossel
 function irPE() {
-    clearInterval(intervaloPassar)
-    if (lado === 0) {
-        // animacao do quadrado central
-        if (imagem2L === 0 && imagem3L === 100) {
-            animacao1E()
-            
-        }
-        
-        return
-    }
-    
-    if (lado === 1) {
-        // animacao do quadrado central
-        if (imagem1L === 0 && imagem2L === 100) {
+  clearInterval(intervaloPassar); // Para a rotação automática quando o usuário clica
 
-            animacao2E()
-            
-        }
-        
-        return
+  // Se imagem central for imagem2 e imagem3 estiver à direita
+  if (lado === 0) {
+    if (imagem2L === 0 && imagem3L === 100) {
+      animacao1E(); // executa animação da imagem2 para imagem1
     }
-    if (lado === 2) {
-        // animacao do quadrado central
-        if (imagem3L === 0 && imagem1L === 100) {
-            
-            animacao3E()
-        }
-        
-        return
+    return;
+  }
+
+  // Se imagem central for imagem1 e imagem2 estiver à direita
+  if (lado === 1) {
+    if (imagem1L === 0 && imagem2L === 100) {
+      animacao2E(); // executa animação da imagem1 para imagem3
     }
-    
+    return;
+  }
+
+  // Se imagem central for imagem3 e imagem1 estiver à direita
+  if (lado === 2) {
+    if (imagem3L === 0 && imagem1L === 100) {
+      animacao3E(); // executa animação da imagem3 para imagem2
+    }
+    return;
+  }
 }
 
+// Animação da imagem2 para imagem1 (indo para esquerda)
 function animacao1E() {
-    imagem3L = -100
-    if (imagem2L < 100)  {
-        imagem2L += 5
-        imagem1L += 5
-        imagem1.style.left = imagem1L + 'vw'
-        imagem2.style.left = imagem2L + 'vw'
-        requestAnimationFrame(animacao1E)
-    }else{
-        lado = 1// o img1 está no centro, o img2 está no canto direito, o img3 está no começo
-        passarCarrossel()
-    }
-    
-    
-    
+  imagem3L = -100; // joga a imagem3 para fora da esquerda
+  if (imagem2L < 100) {
+    // move imagem2 e imagem1 5vw para a direita
+    imagem2L += 5;
+    imagem1L += 5;
+    imagem1.style.left = imagem1L + "vw";
+    imagem2.style.left = imagem2L + "vw";
+    requestAnimationFrame(animacao1E); // continua a animação
+  } else {
+    lado = 1; // agora imagem1 está no centro
+    passarCarrossel(); // reinicia o temporizador automático
+  }
 }
+
+// Animação da imagem1 para imagem3 (indo para esquerda)
 function animacao2E() {
-    imagem2L = -100
-    if (imagem1L < 100)  {
-        imagem1L += 5
-        imagem3L += 5
-        imagem3.style.left = imagem3L + 'vw'
-        imagem1.style.left = imagem1L + 'vw'
-        requestAnimationFrame(animacao2E)
-    }else{
-        lado = 2 // o img1 está no final, o img2 está no começo, o img3 está no centro
-        passarCarrossel()
-    }
-    
-    
-    
+  imagem2L = -100; // move imagem2 para fora à esquerda
+  if (imagem1L < 100) {
+    imagem1L += 5;
+    imagem3L += 5;
+    imagem3.style.left = imagem3L + "vw";
+    imagem1.style.left = imagem1L + "vw";
+    requestAnimationFrame(animacao2E);
+  } else {
+    lado = 2; // agora imagem3 está no centro
+    passarCarrossel();
+  }
 }
-function animacao3E() {  
-    imagem1L = -100
-    if (imagem3L < 100)  {
-        imagem3L += 5
-        imagem2L += 5
-        imagem2.style.left = imagem2L + 'vw'
-        imagem3.style.left = imagem3L + 'vw'
-        requestAnimationFrame(animacao3E) 
-    }else{
-        lado = 0 // o img1 está no inicio, o img2 está no centro, o img3 está no canto direito
-        passarCarrossel()
-    }
-    
-    
 
+// Animação da imagem3 para imagem2 (indo para esquerda)
+function animacao3E() {
+  imagem1L = -100; // joga imagem1 para a esquerda
+  if (imagem3L < 100) {
+    imagem3L += 5;
+    imagem2L += 5;
+    imagem2.style.left = imagem2L + "vw";
+    imagem3.style.left = imagem3L + "vw";
+    requestAnimationFrame(animacao3E);
+  } else {
+    lado = 0; // agora imagem2 está no centro
+    passarCarrossel();
+  }
 }
+
+// Função para ir para a direita no carrossel
 function irPD() {
-    clearInterval(intervaloPassar)
-    if (lado === 0) {
-        // animacao do quadrado central
-        if (imagem2L === 0 && imagem3L === 100) {
-            animacao1D()
-            
-        }
-        
-        return
+  clearInterval(intervaloPassar); // para rotação automática ao clicar
+
+  if (lado === 0) {
+    if (imagem2L === 0 && imagem3L === 100) {
+      animacao1D(); // anima imagem2 indo para imagem3
     }
-    
-    if (lado === 1) {
-        // animacao do quadrado central
-        if (imagem1L === 0 && imagem2L === 100) {
-            
-            animacao2D()
-            
-        }
-        
-        return
+    return;
+  }
+
+  if (lado === 1) {
+    if (imagem1L === 0 && imagem2L === 100) {
+      animacao2D(); // anima imagem1 indo para imagem2
     }
-    if (lado === 2) {
-        // animacao do quadrado central
-        if (imagem3L === 0 && imagem1L === 100) {
-            
-            animacao3D()
-        }
-        
-        return
+    return;
+  }
+
+  if (lado === 2) {
+    if (imagem3L === 0 && imagem1L === 100) {
+      animacao3D(); // anima imagem3 indo para imagem1
     }
-    
+    return;
+  }
 }
 
+// Animação da imagem2 para imagem3 (indo para direita)
 function animacao1D() {
-    imagem1L = 100
-    if (imagem2L > -100)  {
-        imagem2L += -5
-        imagem3L += -5
-        imagem3.style.left = imagem3L + 'vw'
-        imagem2.style.left = imagem2L + 'vw'
-        requestAnimationFrame(animacao1D)
-    }else{
-        lado = 2// o img1 está no canto direito, o img2 está no começo, o img3 está no centro
-        passarCarrossel()
-    }
-    
-    
+  imagem1L = 100; // imagem1 vai pro final da direita
+  if (imagem2L > -100) {
+    imagem2L += -5;
+    imagem3L += -5;
+    imagem3.style.left = imagem3L + "vw";
+    imagem2.style.left = imagem2L + "vw";
+    requestAnimationFrame(animacao1D);
+  } else {
+    lado = 2; // agora imagem3 está no centro
+    passarCarrossel();
+  }
 }
+
+// Animação da imagem1 para imagem2 (indo para direita)
 function animacao2D() {
-    imagem3L = 100
-    if (imagem1L > -100)  {
-        imagem1L += -5
-        imagem2L += -5
-        imagem2.style.left = imagem2L + 'vw'
-        imagem1.style.left = imagem1L + 'vw'
-        requestAnimationFrame(animacao2D)
-    }else{
-        passarCarrossel()
-        lado = 0 // o img1 está no inicio, o img2 está no centro, o img3 está no canto direito
-    }
-    
-    
+  imagem3L = 100;
+  if (imagem1L > -100) {
+    imagem1L += -5;
+    imagem2L += -5;
+    imagem2.style.left = imagem2L + "vw";
+    imagem1.style.left = imagem1L + "vw";
+    requestAnimationFrame(animacao2D);
+  } else {
+    passarCarrossel();
+    lado = 0; // agora imagem2 está no centro
+  }
 }
+
+// Animação da imagem3 para imagem1 (indo para direita)
 function animacao3D() {
-    imagem2L = 100
-    if (imagem3L > -100)  {
-        imagem3L += -5
-        imagem1L += -5
-        imagem1.style.left = imagem1L + 'vw'
-        imagem3.style.left = imagem3L + 'vw'
-        requestAnimationFrame(animacao3D) 
-    }else{
-        lado = 1 // o img1 está no centro, o img2 está no canto direito, o img3 está no começo
-        passarCarrossel()
-    }
-    
-    
+  imagem2L = 100;
+  if (imagem3L > -100) {
+    imagem3L += -5;
+    imagem1L += -5;
+    imagem1.style.left = imagem1L + "vw";
+    imagem3.style.left = imagem3L + "vw";
+    requestAnimationFrame(animacao3D);
+  } else {
+    lado = 1; // agora imagem1 está no centro
+    passarCarrossel();
+  }
 }
+
+// Função que cria o temporizador para mudar automaticamente as imagens
 function passarCarrossel() {
-    intervaloPassar = setInterval(() => {
-        irPD()
-        passarCarrossel
-    }, 5000);
-    
+  intervaloPassar = setInterval(() => {
+    irPD(); // chama a função de ir para direita a cada 5 segundos
+    passarCarrossel; // (essa linha está sobrando, mas não afeta)
+  }, 5000);
 }
-passarCarrossel()
+
+// Inicia o carrossel automático ao carregar a página
+passarCarrossel();
