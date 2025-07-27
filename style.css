@@ -62,22 +62,6 @@ body {
   transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
-#pesquisa::placeholder {
-  color: #a3a3a3;
-  font-style: italic;
-}
-
-#pesquisa:focus {
-  outline: none;
-  border-color: #ea580c;
-  background-color: #fff9f4;
-  box-shadow: 0 0 8px #ea580c88;
-}
-
-#pesquisa:hover {
-  background-color: #fff;
-  border-color: #f97316;
-}
 
 .btn-icone {
   background: none;
@@ -110,10 +94,6 @@ body {
   transition: 0.2s;
   cursor: pointer;
 }
-.barraS button:hover {
-  background-color: #f97316;
-  color: #111;
-}
 
 /* Carrossel */
 .carrossel {
@@ -121,21 +101,32 @@ body {
   height: 28vw;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+  background: linear-gradient(90deg, #fffefe 0%, #ffffff 100%);
   box-shadow: 0 4px 16px #0002;
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 .imagem {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: left 0.5s ease;
+}
+.imagem1{
+    left: -100%;
+    z-index: 1; 
+}
+.imagem2{
+    left: 0%;
+    z-index: 1;
+  }
+  .imagem3{
+    left: 100%;
+    z-index: 1;
 }
 .imagem img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 150%;
 }
 .btn-carrossel {
   background-color: #fff9f4;
@@ -154,10 +145,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-.btn-carrossel:hover {
-  background-color: #ea580c;
-  color: #fff9f4;
+  z-index: 10;
 }
 .btn-carrossel.esq {
   left: 1vw;
@@ -165,6 +153,7 @@ body {
 .btn-carrossel.dir {
   right: 1vw;
 }
+/* fimCarrossel */
 
 /* Gradiente decorativo */
 .gradient {
@@ -201,6 +190,35 @@ body {
   justify-content: center;
   transition: 0.2s;
 }
+
+/* Hovers */
+
+#pesquisa::placeholder {
+  color: #a3a3a3;
+  font-style: italic;
+}
+
+#pesquisa:focus {
+  outline: none;
+  border-color: #ea580c;
+  background-color: #fff9f4;
+  box-shadow: 0 0 8px #ea580c88;
+}
+
+#pesquisa:hover {
+  background-color: #fff;
+  border-color: #f97316;
+}
+
+.barraS button:hover {
+  background-color: #f97316;
+  color: #111;
+}
+.btn-carrossel:hover {
+  background-color: #ea580c;
+  color: #fff9f4;
+}
+
 .produto:hover {
   box-shadow: 0.2vw 0.2vw 1.2vw #ea580c55;
   border: 0.15vw solid #ea580c;
