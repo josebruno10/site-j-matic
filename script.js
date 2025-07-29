@@ -30,8 +30,8 @@ function abrirCategorias() {
 
 //funções de animação para as categorias
 function abrindoCategorias() {
-  if (categoriasT < 11) {
-    categoriasT += 1
+  if (categoriasT < 11.1) {
+    categoriasT += 1.01
     categorias.style.top = categoriasT + "vw"
     requestAnimationFrame(abrindoCategorias)
   } else{
