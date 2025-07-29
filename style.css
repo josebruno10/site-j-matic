@@ -82,6 +82,8 @@ body {
   margin-top: 5vw; /* Distância da barra superior */
   background-color: #111; /* Fundo preto */
   border-bottom: 1px solid #4e4e4e; /* Linha de separação cinza escura */
+  z-index: 11;
+  position: relative;
 }
 .barraS button {
   background: transparent; /* Sem fundo */
@@ -93,7 +95,24 @@ body {
   transition: 0.2s;
   cursor: pointer; /* Mãozinha ao passar o mouse */
 }
-
+#categorias{
+  width: 20vw;
+  height: 20vw;
+  background-color: #2e2e2e;
+  position: absolute;
+  top: -9vw;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+#categorias div{
+  width: 100%;
+  height: 5vw;
+  color: #d1d5db;
+  font-size: 1.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Carrossel */
 .carrossel {
   width: 100%;
@@ -158,11 +177,11 @@ body {
 /* Gradiente decorativo */
 .gradient {
   background: #F3F4F6;
-  background: linear-gradient(0deg,#F3F4F6 55%, rgba(253, 187, 45, 0) 100%); /* Efeito de transição do carrossel pro conteúdo */
+  background: linear-gradient(0deg,#F3F4F6 45%, rgba(253, 187, 45, 0) 100%); /* Efeito de transição do carrossel pro conteúdo */
   width: 100%;
-  height: 13vw;
+  height: 10vw;
   position: absolute;
-  bottom: 0;
+  bottom:5vw;
   z-index: 1;
 }
 
