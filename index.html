@@ -1,90 +1,80 @@
-:<!DOCTYPE html>
+:
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J.MATIC AUTOMÁTICOS</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.MATIC AUTOMÁTICOS</title>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <body>
-    <header
-      class="barraP d-flex align-items-center justify-content-between px-4"
-    >
-      <div class="d-flex align-items-center">
-        <img src="imagens/logo.png" alt="Logo da J.Matic" class="logo me-3" />
-        <span class="nome">J.MATIC AUTOMÁTICOS</span>
-      </div>
-      <div class="input-container">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Buscar" id="pesquisa" />
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <button class="btn-icone" title="Minha conta">
-          <i class="fa fa-user-o" aria-hidden="true"></i>
-        </button>
-        <button class="btn-icone" title="Carrinho">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </button>
-      </div>
-    </header>
-    <!-- barra secundaria -->
-    <nav class="barraS">
-      <button onclick="abrirCategorias()" style="margin-left:4vw">
-        <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
-      </button>
-    </nav>
-    <div id="categorias"> <!--div que contém todos os botões das categorias-->
-      <div>Corpo de Válvulas</div>
-      <div>Conversores de Torque</div>
-      <div>Transmissões Completas</div>
-      <div>Módulo de Controle de Transmissão</div>
-      <div>Carcaças</div>
-      <div>Outras Peças de Transmissão</div>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="barraP d-flex align-items-center justify-content-between px-4">
+    <div class="d-flex align-items-center">
+      <img src="imagens/logo.png" alt="Logo da J.Matic" class="logo me-3" />
+      <span class="nome">J.MATIC AUTOMÁTICOS</span>
     </div>
-    <main style="background-color: #F3F4F6;" >
-      <div id="fundo1">
-        <!-- carrossel -->
-        <section class="carrossel">
-          <button class="btn-carrossel esq" onclick="irPE()">
-            <
-          </button>
-          <button class="btn-carrossel dir" onclick="irPD()">
-            >
-          </button>
-          
-          <div class="imagem imagem1" style="background-color: black;">
-            <img src="" alt="Peça 1" />
-        </div>
-        <div class="imagem imagem2" style="background-color: rgb(255, 0, 0);">
-          <img src="" alt="Peça 2" />
-        </div>
-        <div class="imagem imagem3" style="background-color: rgb(0, 8, 255);">
-          <img src="" alt="Peça 3" />
-        </div>
+    <div class="input-container">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Buscar" id="pesquisa" />
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn-icone" title="Minha conta">
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+      </button>
+      <button class="btn-icone" title="Carrinho">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+  <!-- barra secundaria -->
+  <nav class="barraS">
+    <button onclick="abrirCategorias()" style="margin-left:4vw">
+      <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
+    </button>
+  </nav>
+  <div id="categorias"> <!--div que contém todos os botões das categorias-->
+    <div onclick="pecaEscolhida(1)">Corpo de Válvulas</div>
+    <div onclick="pecaEscolhida(2)">Conversores de Torque</div>
+    <div onclick="pecaEscolhida(3)">Transmissões Completas</div>
+    <div onclick="pecaEscolhida(4)">Módulo de Controle de Transmissão</div>
+    <div onclick="pecaEscolhida(5)">Carcaças</div>
+    <div onclick="pecaEscolhida(6)">Outras Peças de Transmissão</div>
+  </div>
+  <main style="background-color: #F3F4F6;">
+    <div id="fundo1">
+      <!-- carrossel -->
+      <section class="carrossel">
+        <button class="btn-carrossel esq" onclick="irPE()">
+          < </button>
+            <button class="btn-carrossel dir" onclick="irPD()">
+              >
+            </button>
+
+            <div class="imagem imagem1" style="background-color: black;">
+              <img src="" alt="Peça 1" />
+            </div>
+            <div class="imagem imagem2" style="background-color: rgb(255, 0, 0);">
+              <img src="" alt="Peça 2" />
+            </div>
+            <div class="imagem imagem3" style="background-color: rgb(0, 8, 255);">
+              <img src="" alt="Peça 3" />
+            </div>
       </section>
 
       <div class="gradient"></div>
@@ -93,129 +83,171 @@
         <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
         <div class="produto">
           <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
           </div>
           <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ 299,99</s></span><!--em caso de promoções-->
+          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+              299,99</s></span><!--em caso de promoções-->
           <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
+          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+            juros</span><!--preço parcelado-->
         </div>
         <div class="produto">
           <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
           </div>
           <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ 299,99</s></span><!--em caso de promoções-->
+          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+              299,99</s></span><!--em caso de promoções-->
           <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
+          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+            juros</span><!--preço parcelado-->
         </div>
         <div class="produto">
           <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
           </div>
           <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ 299,99</s></span><!--em caso de promoções-->
+          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+              299,99</s></span><!--em caso de promoções-->
           <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
+          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+            juros</span><!--preço parcelado-->
         </div>
         <div class="produto">
           <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
           </div>
           <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ 299,99</s></span><!--em caso de promoções-->
+          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+              299,99</s></span><!--em caso de promoções-->
           <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
+          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+            juros</span><!--preço parcelado-->
         </div>
         <div class="produto">
           <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
           </div>
           <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ 299,99</s></span><!--em caso de promoções-->
+          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+              299,99</s></span><!--em caso de promoções-->
           <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
+          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+            juros</span><!--preço parcelado-->
         </div>
       </section>
+    </div>
+    <div id="fundo2">
+      <div class="linha">
+        <span id="nomeFundo2">
+          nome
+        </span>
       </div>
-      <div id="fundo2">
-        <div class="linha">
-          <span id="nomeFundo2">
-            nome
-          </span>
-        </div>
-        <div class="linha">
+      <div class="linha">
 
-          <div id="filtro2"> <!--filtro para marca, preço, etc-->
-            <span style="font-size: 2vw; margin-left: 2vw;margin-top:1vw">Marca</span>
-            <hr>
-            <div class="marcas">
-              <span><div class="checkbox" data-value="Chevrolet"></div>Chevrolet</span>
-              <span><div class="checkbox" data-value="Fiat"></div>Fiat</span>
-              <span><div class="checkbox" data-value="Nissan"></div>Nissan</span>
-              <span><div class="checkbox" data-value="Renault"></div>Renaut</span>
-              <span><div class="checkbox" data-value="Ford"></div>Ford</span>
-              <span><div class="checkbox" data-value="Volkswagen"></div>Volkswagen</span>
-              <span><div class="checkbox" data-value="Audi"></div>Audi</span>
-              <span><div class="checkbox" data-value="Honda"></div>Honda</span>
-              <span><div class="checkbox" data-value="Jeep"></div>Jeep</span>
-              <span><div class="checkbox" data-value="Mitsubishi"></div>Mitsubishi</span>
-              <span><div class="checkbox" data-value="Citroën"></div>Citroën</span>
-              
-            </div>
+        <div id="filtro2"> <!--filtro para marca, preço, etc-->
+          <!-- parte de marcas do filtro -->
+          <span style="font-size: 2vw; margin-left: 2vw;margin-top:1vw">Marca</span>
+          <div class="marcas">
+            <span><input type="checkbox" name="marca" id="checkboxChevrolet">Chevrolet</span>
+            <span><input type="checkbox" name="marca" id="checkboxFiat">Fiat</span>
+            <span><input type="checkbox" name="marca" id="checkboxNissan">Nissan</span>
+            <span><input type="checkbox" name="marca" id="checkboxRenaut">Renaut</span>
+            <span><input type="checkbox" name="marca" id="checkboxFord">Ford</span>
+            <span><input type="checkbox" name="marca" id="checkboxVolkswagen">Volkswagen</span>
+            <span><input type="checkbox" name="marca" id="checkboxAudi">Audi</span>
+            <span><input type="checkbox" name="marca" id="checkboxHonda">Honda</span>
+            <span><input type="checkbox" name="marca" id="checkboxJeep">Jeep</span>
+            <span><input type="checkbox" name="marca" id="checkboxMitsubishi">Mitsubishi</span>
+            <span><input type="checkbox" name="marca" id="checkboxCitroen">Citroën</span>
           </div>
-          <section class="organizaProd">
-            <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
-            <div class="produto">
-              <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-                <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
-              </div>
-              <span class="nomeProdut">psh psh psh</span><!--nome do produto-->                <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ XXX,XX</s></span><!--em caso de promoções-->
-              <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
-              <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
-            </div>
-             <div class="produto">
-              <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-                <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
-              </div>
-              <span class="nomeProdut">psh psh psh</span><!--nome do produto-->                <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ XXX,XX</s></span><!--em caso de promoções-->
-              <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
-              <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
-            </div>
-            <div class="produto">
-              <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-                <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
-              </div>
-              <span class="nomeProdut">psh psh psh</span><!--nome do produto-->                <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ XXX,XX</s></span><!--em caso de promoções-->
-              <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
-              <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
-            </div>
-            <div class="produto">
-              <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-                <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
-              </div>
-              <span class="nomeProdut">psh psh psh</span><!--nome do produto-->                <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ XXX,XX</s></span><!--em caso de promoções-->
-              <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
-              <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
-            </div>
-            <div class="produto">
-              <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
-                <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="" >
-              </div>
-              <span class="nomeProdut">psh psh psh</span><!--nome do produto-->                <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$ XXX,XX</s></span><!--em caso de promoções-->
-              <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
-              <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem juros</span><!--preço parcelado-->
-            </div>
-          </section>
+          <hr>
+          <span style="font-size: 2vw; margin-left: 2vw;margin-top:1vw">Preço</span>
+          <!-- parte de preços do filtro -->
+          <div class="marcas">
+            <span><input type="checkbox" name="marca" id="checkboxPreco1">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco2">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco3">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco4">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco5">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco6">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco7">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco8">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco9">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco10">XXX</span>
+            <span><input type="checkbox" name="marca" id="checkboxPreco11">XXX</span>
+          </div>
+          <hr>
         </div>
+        <section class="organizaProd" style="margin-top: 2vw;">
+          <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
+          <div class="produto">
+            <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto--> <span
+              style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                XXX,XX</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
+            <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
+          </div>
+          <div class="produto">
+            <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto--> <span
+              style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                XXX,XX</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
+            <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
+          </div>
+          <div class="produto">
+            <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto--> <span
+              style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                XXX,XX</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
+            <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
+          </div>
+          <div class="produto">
+            <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto--> <span
+              style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                XXX,XX</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
+            <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
+          </div>
+          <div class="produto">
+            <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto--> <span
+              style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                XXX,XX</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ XXX,XX</b></span><!--preço deito-->
+            <span class="precoProdutParcela">XX% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
+          </div>
+        </section>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
-  </html>
-  
-  <!--1. TCM (Módulo de Controle de Transmissão)
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--1. TCM (Módulo de Controle de Transmissão)
 Módulos eletrônicos que controlam a transmissão automática.
 
 TCM AW5040 – Vectra, Astra, Zafira

@@ -120,8 +120,9 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-#fundo1 {
-  display: none;
+#fundo1 { /*tela inicial*/
+  display: flex;
+  flex-direction: column;
 }
 
 /* Carrossel */
@@ -264,24 +265,31 @@ body {
 }
 /* fundo ao selecionar uma categoria */
 #fundo2 {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
-#filtro2 {
-  width: 25vw;
-  height: 30vw;
-  border: 0.1vw solid rgb(159, 159, 159);
-  border-top-right-radius: 0.7vw;
-  border-bottom-right-radius: 0.7vw;
-  box-shadow: 0vw 0vw 0.3vw #9b9b9b;
-  margin-top: 5vw;
-  display: flex;
-  flex-direction: column;
-  font-family: "Oswald", sans-serif;
+#nomeFundo2{
+  font-size: 4vw;
+  margin-top: 1vw;
+  margin-left: 1vw;
 }
 .linha {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+#filtro2 {
+  width: 25vw;
+  height: auto;
+  border: 0.1vw solid rgb(159, 159, 159);
+  border-top-right-radius: 0.7vw;
+  border-bottom-right-radius: 0.7vw;
+  box-shadow: 0vw 0vw 0.3vw #9b9b9b;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
 }
 
 .marcas {
@@ -290,7 +298,11 @@ body {
   margin-left: 2vw;
 }
 
-
+.checkbox{
+  width: 1vw;
+  height: 1vw;
+  border: 0.1vw solid #292929;
+}
 
 /* efeitos ao passar o mouse */
 
