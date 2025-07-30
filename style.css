@@ -95,7 +95,7 @@ body {
   transition: 0.2s;
   cursor: pointer; /* Mãozinha ao passar o mouse */
 }
-#categorias{
+#categorias {
   width: 20vw;
   height: 20vw;
   background-color: #2e2e2e;
@@ -110,7 +110,7 @@ body {
   border-bottom-right-radius: 0.4vw;
   overflow: hidden;
 }
-#categorias div{
+#categorias div {
   width: 98.2%;
   height: 4vw;
   color: #e3e6ea;
@@ -120,6 +120,10 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+#fundo1 {
+  display: none;
+}
+
 /* Carrossel */
 .carrossel {
   width: 100%;
@@ -137,19 +141,18 @@ body {
   position: absolute; /* Sobrepõe as imagens */
   width: 100%;
   height: 100%;
-
 }
-.imagem1{
-    left: -100%; /* Fora da tela à esquerda */
-    z-index: 1; 
+.imagem1 {
+  left: -100%; /* Fora da tela à esquerda */
+  z-index: 1;
 }
-.imagem2{
-    left: 0%; /* Imagem visível no centro */
-    z-index: 1;
+.imagem2 {
+  left: 0%; /* Imagem visível no centro */
+  z-index: 1;
 }
-.imagem3{
-    left: 100%; /* Fora da tela à direita */
-    z-index: 1;
+.imagem3 {
+  left: 100%; /* Fora da tela à direita */
+  z-index: 1;
 }
 .imagem img {
   width: 100%; /* Imagem ocupa largura total */
@@ -184,12 +187,16 @@ body {
 
 /* Gradiente decorativo */
 .gradient {
-  background: #F3F4F6;
-  background: linear-gradient(0deg,#F3F4F6 45%, rgba(253, 187, 45, 0) 100%); /* Efeito de transição do carrossel pro conteúdo */
+  background: #f3f4f6;
+  background: linear-gradient(
+    0deg,
+    #f3f4f6 45%,
+    rgba(253, 187, 45, 0) 100%
+  ); /* Efeito de transição do carrossel pro conteúdo */
   width: 100%;
   height: 10vw;
   position: absolute;
-  bottom:5vw;
+  bottom: 5vw;
   z-index: 1;
 }
 
@@ -220,7 +227,7 @@ body {
   transition: 0.9s;
   cursor: pointer;
 }
-.guardImg{
+.guardImg {
   width: 100%;
   height: 14vw;
   display: flex;
@@ -229,31 +236,61 @@ body {
   position: relative;
   top: 0.6vw;
 }
-.guardImg > img{ /* imagem do produto */
+.guardImg > img {
+  /* imagem do produto */
   width: 100%;
   height: 160%;
   position: relative;
   top: -3.5vw;
 }
-.nomeProdut{
+.nomeProdut {
   font-size: 1.3vw;
   margin-top: 1vw;
   margin-left: 1vw;
 }
-.guardPrecoProdut{
+.guardPrecoProdut {
   width: 100%;
   height: auto;
   display: flex;
 }
-.precoProdut{
+.precoProdut {
   font-size: 1.7vw;
   margin-left: 1vw;
   color: #ea580c;
 }
-.precoProdutParcela{
+.precoProdutParcela {
   margin-left: 1vw;
   font-size: 0.7vw;
 }
+/* fundo ao selecionar uma categoria */
+#fundo2 {
+  display: flex;
+  flex-direction: column;
+}
+#filtro2 {
+  width: 25vw;
+  height: 30vw;
+  border: 0.1vw solid rgb(159, 159, 159);
+  border-top-right-radius: 0.7vw;
+  border-bottom-right-radius: 0.7vw;
+  box-shadow: 0vw 0vw 0.3vw #9b9b9b;
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+}
+.linha {
+  display: flex;
+  flex-direction: row;
+}
+
+.marcas {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+}
+
+
 
 /* efeitos ao passar o mouse */
 
@@ -280,7 +317,7 @@ body {
   color: #111; /* Texto escuro */
   transition: 0.5s;
 }
-#categorias div:hover{
+#categorias div:hover {
   box-shadow: 0vw 0vw 0.4vw #171717;
   background-color: #292929;
 }
@@ -294,5 +331,7 @@ body {
 .produto:hover {
   box-shadow: 0.2vw 0.2vw 0.2vw #ea580c55; /* Realça o produto */
   border: 0.1vw solid #ea580c; /* Muda a cor da borda */
-
 }
+
+
+
