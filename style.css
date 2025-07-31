@@ -38,6 +38,7 @@ body {
 .logo {
   width: 4vw;
   height: 4vw;
+  cursor: pointer;
   /* Tamanho responsivo da logo */
 }
 
@@ -103,17 +104,12 @@ body {
   /* Fundo transparente */
   border: none;
   /* Sem borda */
-  color: white;
-  /* Cor branca do ícone */
-  font-size: 2vw;
+  color: rgb(185, 185, 185);
+  /* Cor cinza do ícone */
+  font-size: 2.3vw;
   /* Tamanho responsivo do ícone */
   transition: 0.2s;
   /* Transição suave */
-}
-
-.btn-icone:hover {
-  color: #f97316;
-  /* Muda cor para laranja ao passar o mouse */
 }
 
 /* Barra de categorias */
@@ -320,7 +316,7 @@ body {
   align-items: start;
   justify-content: start;
   flex-direction: column;
-  transition: 0.9s;
+  transition: 0.6s;
   cursor: pointer;
 }
 
@@ -386,7 +382,7 @@ body {
 
 #filtro2 {
   width: 25vw;
-  height: auto;
+  height: 56vw;
   border: 0.1vw solid rgb(159, 159, 159);
   border-top-right-radius: 0.7vw;
   border-bottom-right-radius: 0.7vw;
@@ -402,6 +398,20 @@ body {
   flex-direction: column;
   margin-left: 2vw;
 }
+.botãoFiltrar{
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #585858; 
+  background-color: #f6f6f6;
+  border: 0.1vw solid #e6e6e6;
+  border-radius: 1.3vw; 
+  cursor: pointer;
+  box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
+  transition: all 0.5s ease;
+  margin-top: 2vw;
+}
+
 .spanCheck{
   display: flex;
   flex-direction: row;
@@ -440,55 +450,3 @@ input[type="checkbox"]:checked + svg polyline {
 }
 
 
-/* efeitos ao passar o mouse */
-
-#pesquisa::placeholder {
-  color: #a3a3a3;
-  /* Cor do texto de dica */
-  font-style: italic;
-}
-
-#pesquisa:focus {
-  outline: none;
-  /* Remove a borda padrão azul */
-  border-color: #ea580c;
-  /* Destaca a borda ao focar */
-  background-color: #ffffff;
-  /* Fundo branco suave */
-  box-shadow: 0 0 0.5vw #ea580c88;
-  /* Brilho ao redor do campo */
-  transition: 0.5s;
-}
-
-#pesquisa:hover {
-  background-color: #ffffff;
-  transition: 0.5s;
-}
-
-.barraS button:hover {
-  background-color: #f97316;
-  /* Fundo laranja */
-  color: #111;
-  /* Texto escuro */
-  transition: 0.5s;
-}
-
-#categorias div:hover {
-  box-shadow: 0vw 0vw 0.4vw #171717;
-  background-color: #292929;
-}
-
-.btn-carrossel:hover {
-  background-color: #ea580c;
-  /* Fundo laranja ao passar o mouse */
-  color: #fff9f4;
-  /* Texto claro */
-  transition: 0.2s;
-}
-
-.produto:hover {
-  box-shadow: 0.2vw 0.2vw 0.2vw #ea580c55;
-  /* Realça o produto */
-  border: 0.1vw solid #ea580c;
-  /* Muda a cor da borda */
-}
