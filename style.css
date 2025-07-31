@@ -1,100 +1,157 @@
 /* Reset e fontes */
 * {
-  margin: 0; /* Remove margem padrão de todos os elementos */
-  padding: 0; /* Remove preenchimento interno padrão */
-  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total */
+  margin: 0;
+  /* Remove margem padrão de todos os elementos */
+  padding: 0;
+  /* Remove preenchimento interno padrão */
+  box-sizing: border-box;
+  /* Inclui padding e borda no cálculo do tamanho total */
 }
+
 body {
-  font-family: "Oswald", sans-serif; /* Define a fonte da página */
-  background-color: #f3f4f6; /* Cor de fundo cinza-clara */
-  color: #2e2e2e; /* Cor do texto principal (cinza escuro) */
+  font-family: "Oswald", sans-serif;
+  /* Define a fonte da página */
+  background-color: #f3f4f6;
+  /* Cor de fundo cinza-clara */
+  color: #2e2e2e;
+  /* Cor do texto principal (cinza escuro) */
 }
 
 /* Barra superior */
 .barraP {
-  width: 100%; /* Ocupa toda a largura da tela */
-  height: 7vw; /* Altura responsiva baseada na largura da tela */
-  background-color: #2e2e2e; /* Cor de fundo escura */
-  position: fixed; /* Fixa a barra no topo mesmo com rolagem */
-  top: 0; /* Gruda no topo da página */
-  z-index: 100; /* Garante que fique acima dos outros elementos */
-  box-shadow: 0 2px 8px #0002; /* Sombra sutil abaixo da barra */
+  width: 100%;
+  /* Ocupa toda a largura da tela */
+  height: 7vw;
+  /* Altura responsiva baseada na largura da tela */
+  background-color: #2e2e2e;
+  /* Cor de fundo escura */
+  position: fixed;
+  /* Fixa a barra no topo mesmo com rolagem */
+  top: 0;
+  /* Gruda no topo da página */
+  z-index: 100;
+  /* Garante que fique acima dos outros elementos */
+  box-shadow: 0 2px 8px #0002;
+  /* Sombra sutil abaixo da barra */
 }
+
 .logo {
   width: 4vw;
-  height: 4vw; /* Tamanho responsivo da logo */
+  height: 4vw;
+  /* Tamanho responsivo da logo */
 }
+
 .nome {
-  font-size: 2.5vw; /* Tamanho responsivo da fonte do nome */
-  color: #f97316; /* Cor laranja vibrante */
-  font-weight: bold; /* Deixa em negrito */
-  letter-spacing: 1px; /* Espaçamento entre letras */
+  font-size: 2.5vw;
+  /* Tamanho responsivo da fonte do nome */
+  color: #f97316;
+  /* Cor laranja vibrante */
+  font-weight: bold;
+  /* Deixa em negrito */
+  letter-spacing: 1px;
+  /* Espaçamento entre letras */
 }
+
 .input-container {
-  position: relative; /* Permite posicionar o ícone da lupa dentro */
-  width: 28vw; /* Largura do campo de busca */
-  margin-right: 13rem; /* Espaço à direita do campo */
-  max-width: 400px; /* Limita tamanho máximo em telas grandes */
+  position: relative;
+  /* Permite posicionar o ícone da lupa dentro */
+  width: 28vw;
+  /* Largura do campo de busca */
+  margin-right: 13rem;
+  /* Espaço à direita do campo */
+  max-width: 400px;
+  /* Limita tamanho máximo em telas grandes */
 }
 
 .input-container i {
-  position: absolute; /* Posiciona a lupa dentro do input */
+  position: absolute;
+  /* Posiciona a lupa dentro do input */
   left: 1vw;
   top: 50%;
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  color: #ea580c; /* Cor da lupa (laranja) */
+  transform: translateY(-50%);
+  /* Centraliza verticalmente */
+  color: #ea580c;
+  /* Cor da lupa (laranja) */
   font-size: 1.3vw;
-  transition: color 0.3s; /* Suaviza mudança de cor */
-  pointer-events: none; /* Clique ignora o ícone e vai pro input */
+  transition: color 0.3s;
+  /* Suaviza mudança de cor */
+  pointer-events: none;
+  /* Clique ignora o ícone e vai pro input */
 }
 
 #pesquisa {
   width: 100%;
   height: 2.5vw;
-  padding-left: 3vw; /* Espaço para a lupa à esquerda */
-  border: 0.15vw solid #d1d5db; /* Borda cinza clara */
-  border-radius: 10px; /* Bordas arredondadas */
+  padding-left: 3vw;
+  /* Espaço para a lupa à esquerda */
+  border: 0.15vw solid #d1d5db;
+  /* Borda cinza clara */
+  border-radius: 10px;
+  /* Bordas arredondadas */
   background-color: #e9ebee;
   font-family: "Oswald", sans-serif;
   font-size: 1.1vw;
-  color: #111111; /* Cor do texto */
-  box-shadow: inset 0 0 5px rgba(234, 88, 12, 0.1); /* Sombra interna laranja suave */
+  color: #111111;
+  /* Cor do texto */
+  box-shadow: inset 0 0 5px rgba(234, 88, 12, 0.1);
+  /* Sombra interna laranja suave */
   transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .btn-icone {
-  background: none; /* Fundo transparente */
-  border: none; /* Sem borda */
-  color: white; /* Cor branca do ícone */
-  font-size: 2vw; /* Tamanho responsivo do ícone */
-  transition: 0.2s; /* Transição suave */
+  background: none;
+  /* Fundo transparente */
+  border: none;
+  /* Sem borda */
+  color: white;
+  /* Cor branca do ícone */
+  font-size: 2vw;
+  /* Tamanho responsivo do ícone */
+  transition: 0.2s;
+  /* Transição suave */
 }
+
 .btn-icone:hover {
-  color: #f97316; /* Muda cor para laranja ao passar o mouse */
+  color: #f97316;
+  /* Muda cor para laranja ao passar o mouse */
 }
 
 /* Barra de categorias */
 .barraS {
-  display: flex; /* Organiza botões lado a lado */
-  flex-wrap: wrap; /* Permite quebrar linha se precisar */
-  gap: 1vw; /* Espaço entre os botões */
-  padding: 1vw 2vw; /* Espaçamento interno */
-  margin-top: 5vw; /* Distância da barra superior */
-  background-color: #111; /* Fundo preto */
-  border-bottom: 1px solid #4e4e4e; /* Linha de separação cinza escura */
+  display: flex;
+  /* Organiza botões lado a lado */
+  flex-wrap: wrap;
+  /* Permite quebrar linha se precisar */
+  gap: 1vw;
+  /* Espaço entre os botões */
+  padding: 1vw 2vw;
+  /* Espaçamento interno */
+  margin-top: 5vw;
+  /* Distância da barra superior */
+  background-color: #111;
+  /* Fundo preto */
+  border-bottom: 1px solid #4e4e4e;
+  /* Linha de separação cinza escura */
   z-index: 11;
   position: relative;
 }
+
 .barraS button {
-  background: transparent; /* Sem fundo */
-  border: none; /* Sem borda */
-  color: #f3f4f6; /* Texto branco acinzentado */
+  background: transparent;
+  /* Sem fundo */
+  border: none;
+  /* Sem borda */
+  color: #f3f4f6;
+  /* Texto branco acinzentado */
   font-size: 1.4vw;
   padding: 0.5vw 1vw;
-  border-radius: 0.5vw; /* Bordas arredondadas */
+  border-radius: 0.5vw;
+  /* Bordas arredondadas */
   transition: 0.2s;
-  cursor: pointer; /* Mãozinha ao passar o mouse */
+  cursor: pointer;
+  /* Mãozinha ao passar o mouse */
 }
+
 #categorias {
   width: 20vw;
   height: 20vw;
@@ -110,6 +167,7 @@ body {
   border-bottom-right-radius: 0.4vw;
   overflow: hidden;
 }
+
 #categorias div {
   width: 98.2%;
   height: 4vw;
@@ -120,7 +178,9 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-#fundo1 { /*tela inicial*/
+
+#fundo1 {
+  /*tela inicial*/
   display: flex;
   flex-direction: column;
 }
@@ -128,72 +188,98 @@ body {
 /* Carrossel */
 .carrossel {
   width: 100%;
-  height: 28vw; /* Altura do carrossel */
-  overflow: hidden; /* Esconde as imagens fora do espaço visível */
+  height: 28vw;
+  /* Altura do carrossel */
+  overflow: hidden;
+  /* Esconde as imagens fora do espaço visível */
   position: relative;
-  background: white; /* Fundo branco */
-  box-shadow: 0 4px 16px #0002; /* Sombra externa */
+  background: white;
+  /* Fundo branco */
+  box-shadow: 0 4px 16px #0002;
+  /* Sombra externa */
   display: flex;
   align-items: center;
   flex-direction: row;
   top: -0.1vw;
 }
+
 .imagem {
-  position: absolute; /* Sobrepõe as imagens */
+  position: absolute;
+  /* Sobrepõe as imagens */
   width: 100%;
   height: 100%;
 }
+
 .imagem1 {
-  left: -100%; /* Fora da tela à esquerda */
+  left: -100%;
+  /* Fora da tela à esquerda */
   z-index: 1;
 }
+
 .imagem2 {
-  left: 0%; /* Imagem visível no centro */
+  left: 0%;
+  /* Imagem visível no centro */
   z-index: 1;
 }
+
 .imagem3 {
-  left: 100%; /* Fora da tela à direita */
+  left: 100%;
+  /* Fora da tela à direita */
   z-index: 1;
 }
+
 .imagem img {
-  width: 100%; /* Imagem ocupa largura total */
-  height: 150%; /* Altura maior que o container (provavelmente proposital) */
+  width: 100%;
+  /* Imagem ocupa largura total */
+  height: 150%;
+  /* Altura maior que o container (provavelmente proposital) */
 }
+
 .btn-carrossel {
-  background-color: #fff9f4; /* Fundo branco amarelado */
-  color: #ea580c; /* Cor da seta laranja */
+  background-color: #fff9f4;
+  /* Fundo branco amarelado */
+  color: #ea580c;
+  /* Cor da seta laranja */
   font-size: 2.5vw;
-  border-radius: 50%; /* Botão redondo */
+  border-radius: 50%;
+  /* Botão redondo */
   border: 0.2vw solid #ea580c;
   width: 3vw;
   height: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px #0002; /* Sombra leve */
+  box-shadow: 0 2px 8px #0002;
+  /* Sombra leve */
   transition: background 0.2s, color 0.2s;
   z-index: 2;
   position: absolute;
-  top: 50%; /* Centraliza verticalmente */
+  top: 50%;
+  /* Centraliza verticalmente */
   transform: translateY(-50%);
-  z-index: 9; /* Garante que os botões fiquem acima das imagens */
+  z-index: 9;
+  /* Garante que os botões fiquem acima das imagens */
 }
+
 .btn-carrossel.esq {
-  left: 1vw; /* Botão esquerdo */
+  left: 1vw;
+  /* Botão esquerdo */
 }
+
 .btn-carrossel.dir {
-  right: 1vw; /* Botão direito */
+  right: 1vw;
+  /* Botão direito */
 }
+
 /* fimCarrossel */
 
 /* Gradiente decorativo */
 .gradient {
   background: #f3f4f6;
-  background: linear-gradient(
-    0deg,
-    #f3f4f6 45%,
-    rgba(253, 187, 45, 0) 100%
-  ); /* Efeito de transição do carrossel pro conteúdo */
+  background: linear-gradient(0deg,
+      #f3f4f6 45%,
+      rgba(253, 187, 45, 0) 100%);
+  /* Efeito de transição do carrossel pro conteúdo */
   width: 100%;
   height: 10vw;
   position: absolute;
@@ -203,24 +289,33 @@ body {
 
 /* Produtos */
 .organizaProd {
-  width: 90vw; /* Largura da área de produtos */
-  min-height: 40vw; /* Altura mínima da seção */
-  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 90vw;
+  /* Largura da área de produtos */
+  min-height: 40vw;
+  /* Altura mínima da seção */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
   margin-top: 5vw;
   display: flex;
-  flex-wrap: wrap; /* Quebra linha quando necessário */
-  gap: 1vw; /* Espaço entre os produtos */
-  justify-content: center; /* Centraliza os produtos */
+  flex-wrap: wrap;
+  /* Quebra linha quando necessário */
+  gap: 1vw;
+  /* Espaço entre os produtos */
+  justify-content: center;
+  /* Centraliza os produtos */
   position: relative;
   z-index: 10;
 }
+
 .produto {
   width: 17vw;
   height: 30vw;
-  border: 0.1vw solid #bdbdbd; /* Borda cinza clara */
+  border: 0.1vw solid #bdbdbd;
+  /* Borda cinza clara */
   background: white;
   border-radius: 1vw;
-  box-shadow: 0.1vw 0.1vw 0.8vw #4e4e4e22; /* Sombra suave */
+  box-shadow: 0.1vw 0.1vw 0.8vw #4e4e4e22;
+  /* Sombra suave */
   display: flex;
   align-items: start;
   justify-content: start;
@@ -228,6 +323,7 @@ body {
   transition: 0.9s;
   cursor: pointer;
 }
+
 .guardImg {
   width: 100%;
   height: 14vw;
@@ -237,48 +333,57 @@ body {
   position: relative;
   top: 0.6vw;
 }
-.guardImg > img {
+
+.guardImg>img {
   /* imagem do produto */
   width: 100%;
   height: 160%;
   position: relative;
   top: -3.5vw;
 }
+
 .nomeProdut {
   font-size: 1.3vw;
   margin-top: 1vw;
   margin-left: 1vw;
 }
+
 .guardPrecoProdut {
   width: 100%;
   height: auto;
   display: flex;
 }
+
 .precoProdut {
   font-size: 1.7vw;
   margin-left: 1vw;
   color: #ea580c;
 }
+
 .precoProdutParcela {
   margin-left: 1vw;
   font-size: 0.7vw;
 }
+
 /* fundo ao selecionar uma categoria */
 #fundo2 {
   display: none;
   flex-direction: column;
 }
-#nomeFundo2{
+
+#nomeFundo2 {
   font-size: 4vw;
   margin-top: 1vw;
   margin-left: 1vw;
 }
+
 .linha {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
 }
+
 #filtro2 {
   width: 25vw;
   height: auto;
@@ -297,25 +402,61 @@ body {
   flex-direction: column;
   margin-left: 2vw;
 }
-
-.checkbox{
-  width: 1vw;
-  height: 1vw;
-  border: 0.1vw solid #292929;
+.spanCheck{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+.checkbox-wrapper {
+  display: flex;
+  cursor: pointer;
+  border: 0.1vw solid #a1a1a1;
+  border-radius: 0.3vw;
+  width: 1.3vw;
+  height: 1.3vw;
+  align-items: center;
+  justify-content: center;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+  width: 100%;
+}
+
+svg polyline {
+  fill: none;
+  stroke: #4A90E2; /* cor da linha*/
+  stroke-width: 7; /* largura da linha */
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+
+input[type="checkbox"]:checked + svg polyline {
+  stroke-dashoffset: 0;
+}
+
 
 /* efeitos ao passar o mouse */
 
 #pesquisa::placeholder {
-  color: #a3a3a3; /* Cor do texto de dica */
+  color: #a3a3a3;
+  /* Cor do texto de dica */
   font-style: italic;
 }
 
 #pesquisa:focus {
-  outline: none; /* Remove a borda padrão azul */
-  border-color: #ea580c; /* Destaca a borda ao focar */
-  background-color: #ffffff; /* Fundo branco suave */
-  box-shadow: 0 0 0.5vw #ea580c88; /* Brilho ao redor do campo */
+  outline: none;
+  /* Remove a borda padrão azul */
+  border-color: #ea580c;
+  /* Destaca a borda ao focar */
+  background-color: #ffffff;
+  /* Fundo branco suave */
+  box-shadow: 0 0 0.5vw #ea580c88;
+  /* Brilho ao redor do campo */
   transition: 0.5s;
 }
 
@@ -325,25 +466,29 @@ body {
 }
 
 .barraS button:hover {
-  background-color: #f97316; /* Fundo laranja */
-  color: #111; /* Texto escuro */
+  background-color: #f97316;
+  /* Fundo laranja */
+  color: #111;
+  /* Texto escuro */
   transition: 0.5s;
 }
+
 #categorias div:hover {
   box-shadow: 0vw 0vw 0.4vw #171717;
   background-color: #292929;
 }
 
 .btn-carrossel:hover {
-  background-color: #ea580c; /* Fundo laranja ao passar o mouse */
-  color: #fff9f4; /* Texto claro */
+  background-color: #ea580c;
+  /* Fundo laranja ao passar o mouse */
+  color: #fff9f4;
+  /* Texto claro */
   transition: 0.2s;
 }
 
 .produto:hover {
-  box-shadow: 0.2vw 0.2vw 0.2vw #ea580c55; /* Realça o produto */
-  border: 0.1vw solid #ea580c; /* Muda a cor da borda */
+  box-shadow: 0.2vw 0.2vw 0.2vw #ea580c55;
+  /* Realça o produto */
+  border: 0.1vw solid #ea580c;
+  /* Muda a cor da borda */
 }
-
-
-
