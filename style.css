@@ -394,15 +394,30 @@ body {
   box-shadow: none;
 }
 
+#filtro2 {
+  width: 28%;
+  flex-shrink: 0;
+  height: auto;
+  margin-top: 2vw;
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0.7vw;
+  box-shadow: none;
+}
+
 #filtro2 > span {
   font-family: 'Oswald', sans-serif;
   font-size: 1.8vw;
   margin-left: 0;
   margin-bottom: 1.5vw;
-  border-bottom: 0.3vw solid #ea580c;
+  border-bottom: 2px solid #ea580c;
   padding-bottom: 0.8vw;
+  /* --- ALTERAÇÃO AQUI --- */
+  align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
 }
-
 .marcas {
   display: flex;
   flex-direction: column;
@@ -414,13 +429,14 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   color: #585858; 
-  background-color: #f6f6f6;
+  background-color: #ea580c;
   border: 0.1vw solid #e6e6e6;
   border-radius: 1.3vw; 
   cursor: pointer;
   box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
   margin-top: 2vw;
+  color: white;
 }
 
 .spanCheck{
@@ -613,4 +629,14 @@ input[type="checkbox"]:checked + svg polyline {
       text-align: center;
       font-size: 7vw;
   }
+}
+#logo-container {
+  cursor: pointer;
+}
+.spanCheck {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer; /* Faz o mouse virar uma "mãozinha" */
+  gap: 0.5vw;
 }

@@ -27,8 +27,8 @@
 
 <body>
   <header class="barraP d-flex align-items-center justify-content-between px-4">
-    <div class="d-flex align-items-center ">
-      <img src="imagens/logo.png" alt="Logo da J.Matic" class="logo me-3" onclick="voltarInicial()"/>
+    <div class="d-flex align-items-center" id="logo-container" onclick="voltarInicial()">
+      <img src="imagens/logo.png" alt="Logo da J.Matic" class="logo me-3" />
       <span class="nome">J.MATIC AUTOMÁTICOS</span>
     </div>
     <div class="input-container">
@@ -47,7 +47,7 @@
   </header>
   <!-- barra secundaria -->
   <nav class="barraS">
-    <button onclick="abrirCategorias()" style="margin-left:4vw">
+    <button onclick="abrirCategorias()" style="margin-left:0.5vw">
       <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
     </button>
   </nav>
@@ -155,105 +155,105 @@
 
           </span>
           <div class="marcas">
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxChevrolet" onclick="chev=chev*(-1) " />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxChevrolet" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
-                Chevrolet
-            </span>
-            <span class="spanCheck"class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxFiat" onclick="fiat=fiat*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+              </div>
+              Chevrolet
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxFiat" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
-                Fiat
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxNissan" onclick="niss=niss*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+              </div>
+              Fiat
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxNissan" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Nissan
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxRenaut" onclick="renau=renau*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxRenaut" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Renaut
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxFord" onclick="ford=ford*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxFord" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Ford
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxVolkswagen" onclick="volk=volk*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxVolkswagen" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Volkswagen
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxAudi" onclick="audi=audi*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxAudi" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Audi
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxHonda" onclick="honda=honda*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxHonda" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Honda
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxJeep" onclick="jeep=jeep*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxJeep" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Jeep
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxMitsubishi" onclick="mitsu=mitsu*(-1)" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxMitsubishi" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Mitsubishi
-            </span>
-            <span class="spanCheck">
-              <label class="checkbox-wrapper">
-                <input type="checkbox" name="marca" id="checkboxCitroen" onclick="citro = citro*(-1)" />
-                <svg viewBox= "0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+            </label>
+            <label class="spanCheck">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" name="marca" id="checkboxCitroen" />
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
-              </label>
+              </div>
               Citroën
-            </span>
+            </label>
           </div>
           <hr>
           <span class="spanCheck" style="font-size: 2vw; margin-left: 2vw;margin-top:1vw">Preço</span>
@@ -262,8 +262,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -271,8 +271,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -280,8 +280,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -289,8 +289,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -298,8 +298,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -307,8 +307,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -316,8 +316,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -325,8 +325,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -334,8 +334,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -343,8 +343,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -352,8 +352,8 @@
             <span class="spanCheck">
               <label class="checkbox-wrapper">
                 <input type="checkbox" name="preco" id="checkboxPreco" />
-                <svg viewBox="0 0 24 24"  width="50" height="30">
-                  <polyline points="4 12 9 17 20 6 " /> 
+                <svg viewBox="0 0 24 24" width="50" height="30">
+                  <polyline points="4 12 9 17 20 6 " />
                 </svg>
               </label>
               XXX
@@ -366,7 +366,7 @@
 
         <section class="organizaProd" style="margin-top: 2vw;">
           <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
-          
+
           <div class="produto fChevrolet">
             <div class="guardImg"> <!-- guarda as imagens para organizalas na div produto -->
               <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
