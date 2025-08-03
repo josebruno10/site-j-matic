@@ -1,4 +1,6 @@
-
+const fundo1 = document.querySelector("#fundo1");
+const fundo2 = document.querySelector("#fundo2");
+const fundoProduto = document.querySelector("#fundoProduto");
 let categorias = document.querySelector("#categorias") //div em que ficam as categorias
 let setaCate = document.querySelector(".setaCate")
 let fChevrolet = document.querySelector(".fChevrolet")
@@ -34,7 +36,15 @@ categoriasT = -9 // Top da categoria, -9 indica fora da visão do usuario
 function voltarInicial() {
   fundo1.style.display = "flex"
   fundo2.style.display = "none"
+  fundoProduto.style.display = "none";
 }
+function mostrarProduto() {
+  fundo1.style.display = "none";
+  fundo2.style.display = "none";
+  fundoProduto.style.display = "flex";
+  window.scrollTo(0, 0); // Leva o usuário para o topo da página
+}
+
 // categorias
 function abrirCategorias() {
   if (abreCate === 0) {
@@ -71,6 +81,7 @@ function pecaEscolhida(peca) {
   const fundo1 = document.querySelector("#fundo1")
   const fundo2 = document.querySelector("#fundo2")
   let nomeFundo2 = document.querySelector("#nomeFundo2")
+  fundoProduto.style.display = "none";
   switch (peca) {
     case 1:
       fundo1.style.display = "none"
@@ -198,6 +209,21 @@ function filtrar() {
     }
   }
 
+}
+// Pega todos os elementos que têm a classe 'produto'
+const todosOsProdutos = document.querySelectorAll('.produto');
+
+// Adiciona a função de clique a cada um deles
+todosOsProdutos.forEach(produto => {
+  produto.addEventListener('click', () => {
+    mostrarProduto();
+    // No futuro, você pode passar um ID de produto aqui, por exemplo:
+    // mostrarProduto(produto.dataset.id); 
+  });
+});
+function mudarImagem(novaImagemSrc) {
+  const imagemPrincipal = document.querySelector("#imagemPrincipalProduto");
+  imagemPrincipal.src = novaImagemSrc;
 }
 
 // chev = -1

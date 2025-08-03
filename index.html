@@ -502,6 +502,62 @@
 
       </div> <!--fecha linha-->
     </div>
+    <div id="fundoProduto" style="display: none;">
+      <div class="produto-container-novo">
+
+        <div class="coluna-imagens">
+          <span class="fotos-label">Fotos</span>
+          <div class="galeria-container">
+            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.00.33.jpeg" alt="Imagem Principal"
+              id="imagemPrincipalProduto">
+            <div class="produto-thumbnails">
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.00.33.jpeg" alt="Thumbnail 1"
+                class="thumbnail-img" onclick="mudarImagem(this.src)">
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.42.jpeg" alt="Thumbnail 2"
+                class="thumbnail-img" onclick="mudarImagem(this.src)">
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.57.jpeg" alt="Thumbnail 3"
+                class="thumbnail-img" onclick="mudarImagem(this.src)">
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="Thumbnail 4"
+                class="thumbnail-img" onclick="mudarImagem(this.src)">
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.11.jpeg" alt="Thumbnail 5"
+                class="thumbnail-img" onclick="mudarImagem(this.src)">
+            </div>
+          </div>
+        </div>
+
+        <div class="coluna-detalhes">
+          <h1 class="produto-titulo-novo">Caixa Satélite Montada - Volkswagen Kombi moderna</h1>
+          <span class="tag-destaque">Destaque</span>
+
+          <div class="preco-container">
+            <span class="preco-principal">R$ 649,00</span>
+            <span class="preco-parcelado-novo">ou 5x de R$ 129,80 Sem juros MasterCard - Vindi</span>
+            <span class="preco-parcelado-novo">ou 10x de R$ 77,62 com juros MasterCard - Vindi</span>
+          </div>
+
+          <div class="quantidade-container">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" value="1" min="1">
+          </div>
+
+          <button class="btn-comprar-novo">
+            <i class="fa fa-plus"></i> Comprar
+          </button>
+
+          <a href="#" class="btn-whatsapp">
+            <i class="fa fa-whatsapp"></i> Envie agora sua dúvida no WhatsApp
+          </a>
+
+          <div class="frete-container">
+            <label for="cep">Simulador de Frete</label>
+            <div class="frete-input">
+              <input type="text" id="cep" placeholder="CEP:">
+              <button>Calcular frete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <script src="funcoesP1.js"></script>

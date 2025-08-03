@@ -640,3 +640,194 @@ input[type="checkbox"]:checked + svg polyline {
   cursor: pointer; /* Faz o mouse virar uma "mãozinha" */
   gap: 0.5vw;
 }
+/* EM style.css, SUBSTITUA O CSS DA PÁGINA DE PRODUTO POR ESTE CÓDIGO ATUALIZADO */
+
+#fundoProduto {
+  padding: 2vw;
+  background-color: #f3f4f6; /* Cor de fundo principal do seu site */
+  width: 100%;
+}
+
+.produto-container-novo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  background-color: #ffffff; /* Fundo branco para o container */
+  padding: 1.5vw;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- COLUNA DA ESQUERDA --- */
+.coluna-imagens {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+
+.fotos-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
+  max-width: 60px;
+}
+
+.galeria-container {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#imagemPrincipalProduto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.produto-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnail-img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  object-fit: contain;
+  transition: border-color 0.2s;
+}
+
+.thumbnail-img:hover {
+  border-color: #ea580c; /* COR LARANJA PRINCIPAL */
+}
+
+
+/* --- COLUNA DA DIREITA --- */
+.coluna-detalhes {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-titulo-novo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
+  margin-bottom: 10px;
+}
+
+.tag-destaque {
+  background-color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.preco-container {
+  margin-bottom: 20px;
+}
+
+.preco-principal {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  display: block;
+}
+
+.preco-parcelado-novo {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+}
+
+.quantidade-container {
+  margin-bottom: 20px;
+}
+.quantidade-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.quantidade-container input {
+  width: 70px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-comprar-novo {
+  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+.btn-comprar-novo:hover {
+  background-color: #c2410c; /* COR LARANJA ESCURO (HOVER) */
+}
+
+.btn-whatsapp {
+  background-color: transparent;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  border: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+  margin-bottom: 25px;
+}
+.btn-whatsapp:hover {
+  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
+  color: white;
+}
+
+.frete-container {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.frete-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
+}
+.frete-input {
+  display: flex;
+  gap: 10px;
+}
+.frete-input input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+.frete-input button {
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 0 20px;
+  cursor: pointer;
+}
