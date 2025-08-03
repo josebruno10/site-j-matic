@@ -52,15 +52,15 @@
 }
 
 .produto:hover {
-  box-shadow: 0.2vw 0.2vw 0.2vw #ea580c55;
+  box-shadow: 0.2vw 0.2vw 0.3vw #dddddd;
   /* Realça o produto */
-  border: 0.1vw solid #ea580c;
+  border: 0.1vw solid #dddddd;
   /* Muda a cor da borda */
 }
 .botãoFiltrar:hover{
   transform: translateY(-0.2vw);
-  background-color: #c2410c; /* Um laranja mais escuro no hover */
-  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+  background-color: #ffffff; /* Um laranja mais escuro no hover */
+  box-shadow: 0 0.2vw 0.3vw #cbdcf0;
 }
 .botãoFiltrar:active{
   transform: translateY(-0.1vw);
