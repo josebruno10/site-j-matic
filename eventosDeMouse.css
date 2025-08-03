@@ -30,7 +30,8 @@
 }
 
 .barraS button:hover {
-  background-color: #f97316;
+  background-color: #ea580c;
+  color: #ffffff;
   /* Fundo laranja */
   color: #111;
   /* Texto escuro */
@@ -58,8 +59,8 @@
 }
 .botãoFiltrar:hover{
   transform: translateY(-0.2vw);
-  box-shadow: 0 0.2vw 0.3vw rgba(29, 49, 76, 0.12);
-  color: #4A90E2;
+  background-color: #c2410c; /* Um laranja mais escuro no hover */
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
 }
 .botãoFiltrar:active{
   transform: translateY(-0.1vw);

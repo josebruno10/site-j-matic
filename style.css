@@ -381,35 +381,62 @@ body {
 }
 
 #filtro2 {
-  width: 25vw;
-  height: 56vw;
-  border: 0.1vw solid rgb(159, 159, 159);
-  border-top-right-radius: 0.7vw;
-  border-bottom-right-radius: 0.7vw;
-  box-shadow: 0vw 0vw 0.3vw #9b9b9b;
+  width: 28%;
+  flex-shrink: 0;
+  height: auto;
   margin-top: 2vw;
+  padding: 1.5vw;
   display: flex;
   flex-direction: column;
-  font-family: "Oswald", sans-serif;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0.7vw;
+  box-shadow: none;
 }
 
+#filtro2 {
+  width: 28%;
+  flex-shrink: 0;
+  height: auto;
+  margin-top: 2vw;
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0.7vw;
+  box-shadow: none;
+}
+
+#filtro2 > span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8vw;
+  margin-left: 0;
+  margin-bottom: 1.5vw;
+  border-bottom: 2px solid #ea580c;
+  padding-bottom: 0.8vw;
+  /* --- ALTERAÇÃO AQUI --- */
+  align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
+}
 .marcas {
   display: flex;
   flex-direction: column;
-  margin-left: 2vw;
+  margin-left: 0;
+  gap: 1.2vw;
 }
 .botãoFiltrar{
   padding: 0.8rem 2.5rem;
   font-size: 1.1rem;
   font-weight: bold;
   color: #585858; 
-  background-color: #f6f6f6;
+  background-color: #ea580c;
   border: 0.1vw solid #e6e6e6;
   border-radius: 1.3vw; 
   cursor: pointer;
   box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
   margin-top: 2vw;
+  color: white;
 }
 
 .spanCheck{
@@ -450,3 +477,357 @@ input[type="checkbox"]:checked + svg polyline {
 }
 
 
+/* ########## CÓDIGO DE RESPONSIVIDADE ########## */
+/* Adicione este bloco ao final do seu arquivo style.css */
+
+/* ----- Estilos para Tablets (telas até 768px) ----- */
+@media (max-width: 768px) {
+  /* Barra superior */
+  .barraP {
+    height: 12vw;
+  }
+  .logo {
+    width: 8vw;
+    height: 8vw;
+  }
+  .nome {
+    font-size: 3.5vw;
+  }
+  .input-container {
+    display: none; /* Esconde a busca em telas menores para simplificar */
+  }
+  .btn-icone {
+    font-size: 4vw;
+  }
+  .btn-home {
+    font-size: 3vw !important;
+  }
+
+  /* Barra de categorias */
+  .barraS {
+    margin-top: 12vw;
+    padding: 1.5vw;
+  }
+  .barraS button {
+    font-size: 2.5vw;
+  }
+  #categorias {
+      width: 30vw;
+  }
+  #categorias div {
+      font-size: 2vw;
+      height: 6vw;
+  }
+
+  /* Produtos */
+  .organizaProd {
+      gap: 2vw;
+  }
+  .produto {
+    width: 43vw; /* 2 produtos por linha */
+    height: 55vw;
+  }
+  .guardImg {
+    height: 28vw;
+  }
+  .guardImg > img {
+    top: -6vw;
+  }
+  .nomeProdut {
+    font-size: 2.5vw;
+  }
+  .precoProdut {
+    font-size: 3.5vw;
+  }
+  .precoProdutParcela {
+    font-size: 1.5vw;
+  }
+
+  /* Página de categoria */
+  .linha {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  #filtro2 {
+      width: 80%;
+      height: auto;
+      margin-bottom: 2vw;
+  }
+}
+
+/* ----- Estilos para Celulares (telas até 480px) ----- */
+@media (max-width: 480px) {
+  /* Barra superior */
+  .barraP {
+    height: 18vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .barraP > .d-flex.align-items-center {
+    order: 1;
+  }
+  .barraP > .d-flex.align-items-center.gap-3 {
+    order: 2;
+  }
+  .logo {
+      width: 10vw;
+      height: 10vw;
+  }
+  .nome {
+    display: none; /* Esconde o nome da loja para economizar espaço */
+  }
+  .btn-icone {
+    font-size: 6vw;
+  }
+
+  /* Barra de categorias */
+  .barraS {
+    margin-top: 18vw;
+  }
+  .barraS button {
+    font-size: 4vw;
+  }
+
+  /* Carrossel */
+  .carrossel {
+    height: 50vw;
+  }
+  .btn-carrossel {
+      width: 8vw;
+      height: 8vw;
+      font-size: 5vw;
+  }
+
+  /* Produtos */
+  .organizaProd {
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+  .produto {
+    width: 80vw; /* 1 produto por linha */
+    height: auto;
+    padding-bottom: 4vw;
+  }
+  .guardImg {
+    height: 50vw;
+  }
+  .guardImg > img {
+    top: -10vw;
+  }
+  .nomeProdut {
+    font-size: 5vw;
+  }
+  .precoProdut {
+    font-size: 6vw;
+  }
+  .precoProdutParcela {
+    font-size: 2.8vw;
+  }
+
+  /* Página de categoria */
+  #nomeFundo2 {
+      text-align: center;
+      font-size: 7vw;
+  }
+}
+#logo-container {
+  cursor: pointer;
+}
+.spanCheck {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer; /* Faz o mouse virar uma "mãozinha" */
+  gap: 0.5vw;
+}
+/* EM style.css, SUBSTITUA O CSS DA PÁGINA DE PRODUTO POR ESTE CÓDIGO ATUALIZADO */
+
+#fundoProduto {
+  padding: 2vw;
+  background-color: #f3f4f6; /* Cor de fundo principal do seu site */
+  width: 100%;
+}
+
+.produto-container-novo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  background-color: #ffffff; /* Fundo branco para o container */
+  padding: 1.5vw;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- COLUNA DA ESQUERDA --- */
+.coluna-imagens {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+
+.fotos-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
+  max-width: 60px;
+}
+
+.galeria-container {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#imagemPrincipalProduto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.produto-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnail-img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  object-fit: contain;
+  transition: border-color 0.2s;
+}
+
+.thumbnail-img:hover {
+  border-color: #ea580c; /* COR LARANJA PRINCIPAL */
+}
+
+
+/* --- COLUNA DA DIREITA --- */
+.coluna-detalhes {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-titulo-novo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
+  margin-bottom: 10px;
+}
+
+.tag-destaque {
+  background-color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.preco-container {
+  margin-bottom: 20px;
+}
+
+.preco-principal {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  display: block;
+}
+
+.preco-parcelado-novo {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+}
+
+.quantidade-container {
+  margin-bottom: 20px;
+}
+.quantidade-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.quantidade-container input {
+  width: 70px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-comprar-novo {
+  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+.btn-comprar-novo:hover {
+  background-color: #c2410c; /* COR LARANJA ESCURO (HOVER) */
+}
+
+.btn-whatsapp {
+  background-color: transparent;
+  color: #ea580c; /* COR LARANJA PRINCIPAL */
+  border: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+  margin-bottom: 25px;
+}
+.btn-whatsapp:hover {
+  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
+  color: white;
+}
+
+.frete-container {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.frete-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
+}
+.frete-input {
+  display: flex;
+  gap: 10px;
+}
+.frete-input input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+.frete-input button {
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 0 20px;
+  cursor: pointer;
+}
