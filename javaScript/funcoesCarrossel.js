@@ -169,8 +169,4 @@ function passarCarrossel() {
 
 // Inicia o carrossel automático ao carregar a página
 passarCarrossel();
-marcaSelecionada = 1
-function selecionaMarca(marcaSelecionada) {
-  alert(marcaSelecionada)  
- 
-}
+

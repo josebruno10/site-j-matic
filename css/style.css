@@ -15,6 +15,7 @@ body {
   /* Cor de fundo cinza-clara */
   color: #2e2e2e;
   /* Cor do texto principal (cinza escuro) */
+  margin-bottom: 10vw;
 }
 
 /* Barra superior */
@@ -36,8 +37,8 @@ body {
 }
 
 .logo {
-  width: 4vw;
-  height: 4vw;
+  width: 5vw;
+  height: 5vw;
   cursor: pointer;
   /* Tamanho responsivo da logo */
 }
@@ -85,18 +86,16 @@ body {
   height: 2.5vw;
   padding-left: 3vw;
   /* Espaço para a lupa à esquerda */
-  border: 0.15vw solid #d1d5db;
+  border: 0vw solid #d1d5db;
   /* Borda cinza clara */
-  border-radius: 10px;
+  border-radius: 0.2vw;
   /* Bordas arredondadas */
-  background-color: #e9ebee;
+  background-color: #e5e5e5;
   font-family: "Oswald", sans-serif;
   font-size: 1.1vw;
-  color: #111111;
+  color: #1f1f1f;
   /* Cor do texto */
-  box-shadow: inset 0 0 5px rgba(234, 88, 12, 0.1);
-  /* Sombra interna laranja suave */
-  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
 .btn-icone {
@@ -119,10 +118,11 @@ body {
   flex-wrap: wrap;
   /* Permite quebrar linha se precisar */
   gap: 1vw;
+  justify-content: start;
   /* Espaço entre os botões */
   padding: 1vw 2vw;
   /* Espaçamento interno */
-  margin-top: 5vw;
+  margin-top: 7vw;
   /* Distância da barra superior */
   background-color: #111;
   /* Fundo preto */
@@ -134,6 +134,8 @@ body {
 
 .barraS button {
   background: transparent;
+  position: relative;
+  left: 4vw;
   /* Sem fundo */
   border: none;
   /* Sem borda */
@@ -144,8 +146,9 @@ body {
   border-radius: 0.5vw;
   /* Bordas arredondadas */
   transition: 0.2s;
-  cursor: pointer;
   /* Mãozinha ao passar o mouse */
+  cursor: pointer;
+  
 }
 
 #categorias {
@@ -167,7 +170,7 @@ body {
 #categorias div {
   width: 98.2%;
   height: 4vw;
-  color: #e3e6ea;
+
   font-size: 1.4vw;
   display: flex;
   align-items: center;
@@ -175,10 +178,18 @@ body {
   cursor: pointer;
 }
 
+#categorias div a {
+  color: rgb(201, 201, 201); /* ou a cor que quiser */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
 #fundo1 {
   /*tela inicial*/
   display: flex;
   flex-direction: column;
+  background-color: #e6e6e6;
 }
 
 /* Carrossel */
@@ -271,15 +282,16 @@ body {
 
 /* Gradiente decorativo */
 .gradient {
-  background: #f3f4f6;
+
+  background: #E6E6E6;
   background: linear-gradient(0deg,
-      #f3f4f6 45%,
-      rgba(253, 187, 45, 0) 100%);
+  rgba(230, 230, 230, 1) 25%,
+  rgba(0, 0, 0, 0) 100%);
   /* Efeito de transição do carrossel pro conteúdo */
   width: 100%;
-  height: 10vw;
+  height: 12vw;
   position: absolute;
-  bottom: 5vw;
+  bottom: 5.6vw;
   z-index: 1;
 }
 
@@ -302,7 +314,49 @@ body {
   position: relative;
   z-index: 10;
 }
+.organizaProdInic {
+  width: 90vw;
+  height: 32vw;
+  padding: 2vw;
+  /* Largura da área de produtos */
+  min-height: 40vw;
+  /* Altura mínima da seção */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* Quebra linha quando necessário */
+  gap: 0.6vw;
+  /* Espaço entre os produtos */
+  justify-content: center;
+  align-items: center;
+  /* Centraliza os produtos */
+  position: relative;
+  z-index: 10;
+  border: #c7c7c7 0.1vw solid;
+  box-shadow: 0 0 0.1vw #bababa;
+  border-radius: 1vw;
+  background-color: #f6f6f6;
+}
 
+.produtoInic {
+  width: 18vw;
+  height: 32vw;
+  border: 0vw solid #dddddd;
+  /* Borda cinza clara */
+  background: #efefef;
+  border-radius: 1vw;
+  box-shadow: 0.1vw 0.1vw 0.8vw #c6c6c6;
+  /* Sombra suave */
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  transition: 0.6s;
+  cursor: pointer;
+}
 .produto {
   width: 23vw;
   height: 37vw;
@@ -322,7 +376,16 @@ body {
 
 .guardImg {
   width: 100%;
-  height: 23vw;
+  height: 60%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.5vw;
+  position: relative;
+  top: 0.6vw;
+}
+.guardImgInic {
+  width: 100%;
+  height: 60%;
   display: flex;
   overflow: hidden;
   border-radius: 0.5vw;
@@ -331,6 +394,13 @@ body {
 }
 
 .guardImg>img {
+  /* imagem do produto */
+  width: 100%;
+  height: 160%;
+  position: relative;
+  top: -5.5vw;
+}
+.guardImgInic>img {
   /* imagem do produto */
   width: 100%;
   height: 160%;
@@ -364,7 +434,7 @@ body {
 
 /* fundo ao selecionar uma categoria */
 #fundo2 {
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
@@ -596,7 +666,16 @@ input[type="checkbox"]:checked + svg polyline {
     margin-top: 10vw;
     gap: 4vw;
   }
+  .organizaProdInic {
+    margin-top: 10vw;
+    gap: 4vw;
+  }
   .produto {
+    width: 80vw; /* 1 produto por linha */
+    height: auto;
+    padding-bottom: 4vw;
+  }
+  .produtoInic {
     width: 80vw; /* 1 produto por linha */
     height: auto;
     padding-bottom: 4vw;
@@ -604,7 +683,13 @@ input[type="checkbox"]:checked + svg polyline {
   .guardImg {
     height: 50vw;
   }
+  .guardImgInic {
+    height: 50vw;
+  }
   .guardImg > img {
+    top: -10vw;
+  }
+  .guardImgInic > img {
     top: -10vw;
   }
   .nomeProdut {
@@ -623,9 +708,7 @@ input[type="checkbox"]:checked + svg polyline {
       font-size: 7vw;
   }
 }
-#logo-container {
-  cursor: pointer;
-}
+
 .spanCheck {
   display: flex;
   flex-direction: row;

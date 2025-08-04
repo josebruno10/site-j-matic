@@ -15,7 +15,7 @@
 #pesquisa:focus {
   outline: none;
   /* Remove a borda padrão azul */
-  border-color: #ea580c;
+  border-color: #ffbe9b;
   /* Destaca a borda ao focar */
   background-color: #ffffff;
   /* Fundo branco suave */
@@ -41,7 +41,12 @@
 #categorias div:hover {
   box-shadow: 0vw 0vw 0.4vw #171717;
   background-color: #292929;
+
 }
+#categorias div:hover a{
+  color: #ffffff;
+}
+
 
 .btn-carrossel:hover {
   background-color: #ea580c;
