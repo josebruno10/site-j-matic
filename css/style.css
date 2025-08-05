@@ -15,7 +15,6 @@ body {
   /* Cor de fundo cinza-clara */
   color: #2e2e2e;
   /* Cor do texto principal (cinza escuro) */
-  margin-bottom: 10vw;
 }
 a{
   text-decoration: none;
@@ -171,21 +170,18 @@ a{
   overflow: hidden;
 }
 
-#categorias div {
-  width: 98.2%;
-  height: 4vw;
 
-  font-size: 1.4vw;
+#categorias a {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-#categorias div a {
-  color: rgb(201, 201, 201); /* ou a cor que quiser */
+  width: 100%;
+  height: 4vw;
+  font-size: 1.4vw;
+  color: rgb(201, 201, 201);
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 
@@ -246,30 +242,25 @@ a{
   /* Altura maior que o container (provavelmente proposital) */
 }
 
+/* SUBSTITUA A REGRA ANTIGA POR ESTA */
 .btn-carrossel {
-  background-color: #fff9f4;
-  /* Fundo branco amarelado */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que fique acima das imagens e outros elementos */
+  background-color: rgba(255, 255, 255, 0.8);
   color: #ea580c;
-  /* Cor da seta laranja */
-  font-size: 2.5vw;
+  width: 45px; /* Tamanho fixo para melhor controle */
+  height: 45px;
   border-radius: 50%;
-  /* Botão redondo */
-  border: 0.2vw solid #ea580c;
-  width: 3vw;
-  height: 3vw;
+  border: 2px solid #ea580c;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px #0002;
-  /* Sombra leve */
-  transition: background 0.2s, color 0.2s;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  /* Centraliza verticalmente */
-  transform: translateY(-50%);
-  z-index: 9;
-  /* Garante que os botões fiquem acima das imagens */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer;
 }
 
 .btn-carrossel.esq {
@@ -298,7 +289,6 @@ a{
   bottom: 1vw;
   z-index: 1;
 }
-
 /* Produtos */
 .organizaProd {
   width: 90vw;
@@ -466,7 +456,7 @@ a{
 #filtro2 {
   width: 28%;
   flex-shrink: 0;
-  height: 37vw;
+  height: auto; /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
   margin-top: 2vw;
   padding: 1.5vw;
   display: flex;
@@ -475,7 +465,7 @@ a{
   border: 1px solid #e9ecef;
   border-radius: 0.7vw;
   box-shadow: none;
-  overflow: auto;
+  /* overflow: auto; foi removido pois não é mais necessário */
   position: sticky;
   top: 7.4vw;
 }
@@ -551,185 +541,6 @@ input[type="checkbox"]:checked + svg polyline {
   stroke-dashoffset: 0;
 }
 
-
-/* ########## CÓDIGO DE RESPONSIVIDADE ########## */
-/* Adicione este bloco ao final do seu arquivo style.css */
-
-/* ----- Estilos para Tablets (telas até 768px) ----- */
-@media (max-width: 768px) {
-  /* Barra superior */
-  .barraP {
-    height: 12vw;
-  }
-  .logo {
-    width: 8vw;
-    height: 8vw;
-  }
-  .nome {
-    font-size: 3.5vw;
-  }
-  .input-container {
-    display: none; /* Esconde a busca em telas menores para simplificar */
-  }
-  .btn-icone {
-    font-size: 4vw;
-  }
-  .btn-home {
-    font-size: 3vw !important;
-  }
-
-  /* Barra de categorias */
-  .barraS {
-    margin-top: 12vw;
-    padding: 1.5vw;
-  }
-  .barraS button {
-    font-size: 2.5vw;
-  }
-  #categorias {
-      width: 30vw;
-  }
-  #categorias div {
-      font-size: 2vw;
-      height: 6vw;
-  }
-
-  /* Produtos */
-  .organizaProd {
-      gap: 2vw;
-  }
-  .produto {
-    width: 43vw; /* 2 produtos por linha */
-    height: 55vw;
-  }
-  .guardImg {
-    height: 28vw;
-  }
-  .guardImg > img {
-    top: -6vw;
-  }
-  .nomeProdut {
-    font-size: 2.5vw;
-  }
-  .precoProdut {
-    font-size: 3.5vw;
-  }
-  .precoProdutParcela {
-    font-size: 1.5vw;
-  }
-
-  /* Página de categoria */
-  .linha {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  #filtro2 {
-      width: 80%;
-      height: auto;
-      margin-bottom: 2vw;
-  }
-}
-
-/* ----- Estilos para Celulares (telas até 480px) ----- */
-@media (max-width: 480px) {
-  /* Barra superior */
-  .barraP {
-    height: 18vw;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .barraP > .d-flex.align-items-center {
-    order: 1;
-  }
-  .barraP > .d-flex.align-items-center.gap-3 {
-    order: 2;
-  }
-  .logo {
-      width: 10vw;
-      height: 10vw;
-  }
-  .nome {
-    display: none; /* Esconde o nome da loja para economizar espaço */
-  }
-  .btn-icone {
-    font-size: 6vw;
-  }
-
-  /* Barra de categorias */
-  .barraS {
-    margin-top: 18vw;
-  }
-  .barraS button {
-    font-size: 4vw;
-  }
-
-  /* Carrossel */
-  .carrossel {
-    height: 50vw;
-  }
-  .btn-carrossel {
-      width: 8vw;
-      height: 8vw;
-      font-size: 5vw;
-  }
-
-  /* Produtos */
-  .organizaProd {
-    margin-top: 10vw;
-    gap: 4vw;
-  }
-  .organizaProdInic {
-    margin-top: 10vw;
-    gap: 4vw;
-  }
-  .produto {
-    width: 80vw; /* 1 produto por linha */
-    height: auto;
-    padding-bottom: 4vw;
-  }
-  .produtoInic {
-    width: 80vw; /* 1 produto por linha */
-    height: auto;
-    padding-bottom: 4vw;
-  }
-  .guardImg {
-    height: 50vw;
-  }
-  .guardImgInic {
-    height: 50vw;
-  }
-  .guardImg > img {
-    top: -10vw;
-  }
-  .guardImgInic > img {
-    top: -10vw;
-  }
-  .nomeProdut {
-    font-size: 5vw;
-  }
-  .precoProdut {
-    font-size: 6vw;
-  }
-  .precoProdutParcela {
-    font-size: 2.8vw;
-  }
-
-  /* Página de categoria */
-  #nomeFundo2 {
-      text-align: center;
-      font-size: 7vw;
-  }
-}
-
-.spanCheck {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer; /* Faz o mouse virar uma "mãozinha" */
-  gap: 0.5vw;
-}
-/* EM style.css, SUBSTITUA O CSS DA PÁGINA DE PRODUTO POR ESTE CÓDIGO ATUALIZADO */
-
 #fundoProduto {
   padding: 2vw;
   background-color: #f3f4f6; /* Cor de fundo principal do seu site */
@@ -795,11 +606,6 @@ input[type="checkbox"]:checked + svg polyline {
   object-fit: contain;
   transition: border-color 0.2s;
 }
-
-.thumbnail-img:hover {
-  border-color: #ea580c; /* COR LARANJA PRINCIPAL */
-}
-
 
 /* --- COLUNA DA DIREITA --- */
 .coluna-detalhes {
@@ -871,9 +677,6 @@ input[type="checkbox"]:checked + svg polyline {
   transition: background-color 0.2s;
   margin-bottom: 10px;
 }
-.btn-comprar-novo:hover {
-  background-color: #c2410c; /* COR LARANJA ESCURO (HOVER) */
-}
 
 .btn-whatsapp {
   background-color: transparent;
@@ -888,10 +691,6 @@ input[type="checkbox"]:checked + svg polyline {
   text-align: center;
   transition: all 0.2s;
   margin-bottom: 25px;
-}
-.btn-whatsapp:hover {
-  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
-  color: white;
 }
 
 .frete-container {
@@ -920,4 +719,67 @@ input[type="checkbox"]:checked + svg polyline {
   border-radius: 4px;
   padding: 0 20px;
   cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.site-footer {
+  background-color: #2E2E2E;
+  color: #D1D5DB;
+  padding: 40px 0;
+  font-size: 1rem;
+  border-top: 5px solid #F97316;
+}
+
+.footer-container, .footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #4e4e4e;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-section a, .footer-section p {
+  display: block;
+  color: #D1D5DB;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #F97316;
+}
+
+.footer-section i {
+  margin-right: 10px;
+  color: #F97316;
 }

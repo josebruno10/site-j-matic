@@ -4,23 +4,17 @@
 }
 .btn-icone:hover {
   color: #ffffff;
-  /* Muda cor para laranja ao passar o mouse */
 }
 #pesquisa::placeholder {
   color: #a3a3a3;
-  /* Cor do texto de dica */
   font-style: italic;
 }
 
 #pesquisa:focus {
   outline: none;
-  /* Remove a borda padrão azul */
   border-color: #ffbe9b;
-  /* Destaca a borda ao focar */
   background-color: #ffffff;
-  /* Fundo branco suave */
   box-shadow: 0 0 0.5vw #ea580c88;
-  /* Brilho ao redor do campo */
   transition: 0.5s;
 }
 
@@ -31,19 +25,14 @@
 
 .barraS button:hover {
   background-color: #ea580c;
-  color: #ffffff;
-  /* Fundo laranja */
   color: #111;
-  /* Texto escuro */
   transition: 0.5s;
 }
 
-#categorias div:hover {
+
+#categorias a:hover {
   box-shadow: 0vw 0vw 0.4vw #171717;
   background-color: #292929;
-
-}
-#categorias div:hover a{
   color: #ffffff;
 }
 .produtoInic:hover .nomeProdut{
@@ -52,25 +41,34 @@
 
 .btn-carrossel:hover {
   background-color: #ea580c;
-  /* Fundo laranja ao passar o mouse */
   color: #fff9f4;
-  /* Texto claro */
   transition: 0.2s;
 }
 
 .produto:hover {
   box-shadow: 0.2vw 0.2vw 0.3vw #dddddd;
-  /* Realça o produto */
   border: 0.1vw solid #dddddd;
-  /* Muda a cor da borda */
 }
 .botãoFiltrar:hover{
   transform: translateY(-0.2vw);
-  background-color: #ffffff; /* Um laranja mais escuro no hover */
+  background-color: #ffffff;
   box-shadow: 0 0.2vw 0.3vw #cbdcf0;
 }
 .botãoFiltrar:active{
   transform: translateY(-0.1vw);
   box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
   color: #4A90E2;
+}
+
+.thumbnail-img:hover {
+  border-color: #ea580c;
+}
+
+.btn-comprar-novo:hover {
+  background-color: #c2410c;
+}
+
+.btn-whatsapp:hover {
+  background-color: #ea580c;
+  color: white;
 }
