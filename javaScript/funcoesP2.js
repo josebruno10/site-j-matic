@@ -112,17 +112,16 @@ function pecaEscolhida() {
       nomeFundo2.innerHTML = "Outras Peças de Transmissão"
 
       break;
-
+      
+    }
   }
-}
-pecaEscolhida()
-
-function filtrar() {
-  const produto = document.querySelectorAll('.produto')
+  pecaEscolhida()
+  
+  function filtrar() {
   somaMarca = chev + fiat + niss + renau + ford + volk + audi + honda + jeep + mitsu + citro;
 
   if (somaMarca === -11) {
-    produto.forEach(produto => {
+    todosOsProdutos.forEach(produto => {
       produto.style.display = "flex";
     })
   } else {

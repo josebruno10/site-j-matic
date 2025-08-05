@@ -46,7 +46,9 @@
 #categorias div:hover a{
   color: #ffffff;
 }
-
+.produtoInic:hover .nomeProdut{
+  color: #2b54dd;
+}
 
 .btn-carrossel:hover {
   background-color: #ea580c;

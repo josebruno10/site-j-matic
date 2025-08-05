@@ -28,10 +28,10 @@
   <header class="barraP d-flex align-items-center justify-content-between px-4">
     <div class="d-flex align-items-center" id="logo-container" onclick="voltarInicial()">
       <a href="home.html">
-        <img src="imagens/logo.png" alt="Logo da J.Matic" class="logo me-3" />
+        <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
       </a>
-        <span class="nome">J.MATIC AUTOMÁTICOS</span>
-      </div>
+      <span class="nome">J.MATIC AUTOMÁTICOS</span>
+    </div>
     <div class="input-container">
       <i class="fa fa-search"></i>
       <input type="text" placeholder="Buscar" id="pesquisa" />
@@ -47,28 +47,28 @@
   </header>
   <!-- barra secundaria -->
   <nav class="barraS">
-    <button onclick="abrirCategorias()" >
+    <button onclick="abrirCategorias()">
       <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
     </button>
   </nav>
   <div id="categorias"> <!--div que contém todos os botões das categorias-->
     <div>
-      <a href="fundo2.html?peca=1" onclick="pecaEscolhida()">Corpo de Válvulas</a >
+      <a href="fundo2.html?peca=1" onclick="pecaEscolhida()">Corpo de Válvulas</a>
     </div>
     <div>
-      <a href="fundo2.html?peca=2" onclick="pecaEscolhida(2)">Conversores de Torque</a >
+      <a href="fundo2.html?peca=2" onclick="pecaEscolhida(2)">Conversores de Torque</a>
     </div>
     <div>
-      <a href="fundo2.html?peca=3" onclick="pecaEscolhida(3)">Transmissões Completas</a >
+      <a href="fundo2.html?peca=3" onclick="pecaEscolhida(3)">Transmissões Completas</a>
     </div>
     <div>
-      <a href="fundo2.html?peca=4" onclick="pecaEscolhida(4)">Módulo de Controle de Transmissão</a >
+      <a href="fundo2.html?peca=4" onclick="pecaEscolhida(4)">Módulo de Controle de Transmissão</a>
     </div>
     <div>
-      <a href="fundo2.html?peca=5" onclick="pecaEscolhida(5)">Carcaças</a >
+      <a href="fundo2.html?peca=5" onclick="pecaEscolhida(5)">Carcaças</a>
     </div>
     <div>
-      <a href="fundo2.html?peca=6" onclick="pecaEscolhida(6)">Outras Peças de Transmissão</a >
+      <a href="fundo2.html?peca=6" onclick="pecaEscolhida(6)">Outras Peças de Transmissão</a>
     </div>
   </div>
   <main style="background-color: #F3F4F6;">
@@ -96,120 +96,80 @@
       <!-- organiza os produtos para que fiquem alinhados -->
       <section class="organizaProdInic">
         <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
-        <div class="produtoInic">
-          <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+        <a href="comprar.html">
+
+          <div class="produtoInic">
+            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
+            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                299,99</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
+            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
           </div>
-          <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-              299,99</s></span><!--em caso de promoções-->
-          <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-            juros</span><!--preço parcelado-->
-        </div>
-        <div class="produtoInic">
-          <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+        </a>
+        <a href="comprar.html">
+
+          <div class="produtoInic">
+            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
+            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                299,99</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
+            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
           </div>
-          <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-              299,99</s></span><!--em caso de promoções-->
-          <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-            juros</span><!--preço parcelado-->
-        </div>
-        <div class="produtoInic">
-          <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+        </a>
+        <a href="comprar.html">
+
+          <div class="produtoInic">
+            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
+            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                299,99</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
+            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
           </div>
-          <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-              299,99</s></span><!--em caso de promoções-->
-          <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-            juros</span><!--preço parcelado-->
-        </div>
-        <div class="produtoInic">
-          <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+        </a>
+        <a href="comprar.html">
+
+          <div class="produtoInic">
+            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
+            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                299,99</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
+            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
           </div>
-          <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-              299,99</s></span><!--em caso de promoções-->
-          <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-            juros</span><!--preço parcelado-->
-        </div>
-        <div class="produtoInic">
-          <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+        </a>
+        <a href="comprar.html">
+
+          <div class="produtoInic">
+            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
+              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            </div>
+            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
+            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
+                299,99</s></span><!--em caso de promoções-->
+            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
+            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
+              juros</span><!--preço parcelado-->
           </div>
-          <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-          <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-              299,99</s></span><!--em caso de promoções-->
-          <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-          <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-            juros</span><!--preço parcelado-->
-        </div>
+        </a>
       </section>
     </div>
 
-    <div id="fundoProduto" style="display: none;">
-      <div class="produto-container-novo">
-
-        <div class="coluna-imagens">
-          <span class="fotos-label">Fotos</span>
-          <div class="galeria-container">
-            <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.00.33.jpeg" alt="Imagem Principal"
-              id="imagemPrincipalProduto">
-            <div class="produto-thumbnails">
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.00.33.jpeg" alt="Thumbnail 1"
-                class="thumbnail-img" onclick="mudarImagem(this.src)">
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.42.jpeg" alt="Thumbnail 2"
-                class="thumbnail-img" onclick="mudarImagem(this.src)">
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.57.jpeg" alt="Thumbnail 3"
-                class="thumbnail-img" onclick="mudarImagem(this.src)">
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="Thumbnail 4"
-                class="thumbnail-img" onclick="mudarImagem(this.src)">
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 12.07.11.jpeg" alt="Thumbnail 5"
-                class="thumbnail-img" onclick="mudarImagem(this.src)">
-            </div>
-          </div>
-        </div>
-
-        <div class="coluna-detalhes">
-          <h1 class="produto-titulo-novo">Caixa Satélite Montada - Volkswagen Kombi moderna</h1>
-          <span class="tag-destaque">Destaque</span>
-
-          <div class="preco-container">
-            <span class="preco-principal">R$ 649,00</span>
-            <span class="preco-parcelado-novo">ou 5x de R$ 129,80 Sem juros MasterCard - Vindi</span>
-            <span class="preco-parcelado-novo">ou 10x de R$ 77,62 com juros MasterCard - Vindi</span>
-          </div>
-
-          <div class="quantidade-container">
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" value="1" min="1">
-          </div>
-
-          <button class="btn-comprar-novo">
-            <i class="fa fa-plus"></i> Comprar
-          </button>
-
-          <a href="#" class="btn-whatsapp">
-            <i class="fa fa-whatsapp"></i> Envie agora sua dúvida no WhatsApp
-          </a>
-
-          <div class="frete-container">
-            <label for="cep">Simulador de Frete</label>
-            <div class="frete-input">
-              <input type="text" id="cep" placeholder="CEP:">
-              <button>Calcular frete</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </main>
 
   <script src="javaScript/funcoesCarrossel.js" defer></script>
