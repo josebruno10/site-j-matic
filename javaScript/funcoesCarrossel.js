@@ -10,34 +10,9 @@ let imagem2L = 0;
 let imagem3L = 100;
 let intervaloPassar;
 
-function updateDots() {
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (lado === 0) dots[1].classList.add('active');
-    if (lado === 1) dots[0].classList.add('active');
-    if (lado === 2) dots[2].classList.add('active');
-}
 
-function goToSlide(targetLado) {
-    if (targetLado === lado) return;
-    
-    clearInterval(intervaloPassar);
 
-    if (targetLado === 0) {
-        imagem1L = -100; imagem2L = 0; imagem3L = 100;
-    } else if (targetLado === 1) {
-        imagem1L = 0; imagem2L = 100; imagem3L = -100;
-    } else if (targetLado === 2) {
-        imagem1L = 100; imagem2L = -100; imagem3L = 0;
-    }
 
-    imagem1.style.left = imagem1L + "vw";
-    imagem2.style.left = imagem2L + "vw";
-    imagem3.style.left = imagem3L + "vw";
-    
-    lado = targetLado;
-    updateDots();
-    passarCarrossel();
-}
 
 function irPE() {
   clearInterval(intervaloPassar);
@@ -54,7 +29,7 @@ function animacao1E() {
     imagem2.style.left = imagem2L + "vw";
     requestAnimationFrame(animacao1E);
   } else {
-    lado = 1; updateDots(); passarCarrossel();
+    lado = 1;  passarCarrossel();
   }
 }
 
@@ -66,7 +41,7 @@ function animacao2E() {
     imagem1.style.left = imagem1L + "vw";
     requestAnimationFrame(animacao2E);
   } else {
-    lado = 2; updateDots(); passarCarrossel();
+    lado = 2;  passarCarrossel();
   }
 }
 
@@ -78,7 +53,7 @@ function animacao3E() {
     imagem3.style.left = imagem3L + "vw";
     requestAnimationFrame(animacao3E);
   } else {
-    lado = 0; updateDots(); passarCarrossel();
+    lado = 0; passarCarrossel();
   }
 }
 
@@ -97,7 +72,7 @@ function animacao1D() {
     imagem2.style.left = imagem2L + "vw";
     requestAnimationFrame(animacao1D);
   } else {
-    lado = 2; updateDots(); passarCarrossel();
+    lado = 2; passarCarrossel();
   }
 }
 
@@ -109,7 +84,7 @@ function animacao2D() {
     imagem1.style.left = imagem1L + "vw";
     requestAnimationFrame(animacao2D);
   } else {
-    lado = 0; updateDots(); passarCarrossel();
+    lado = 0; passarCarrossel();
   }
 }
 
@@ -121,7 +96,7 @@ function animacao3D() {
     imagem3.style.left = imagem3L + "vw";
     requestAnimationFrame(animacao3D);
   } else {
-    lado = 1; updateDots(); passarCarrossel();
+    lado = 1; passarCarrossel();
   }
 }
 

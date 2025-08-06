@@ -105,3 +105,28 @@ function mudarImagem(novaImagemSrc) {
     imagemPrincipal.src = novaImagemSrc;
   }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const btnConta = document.getElementById('btn-conta');
+    const contaDropdown = document.getElementById('conta-dropdown');
+    const closeDropdown = document.getElementById('close-dropdown');
+
+    if (btnConta) {
+        btnConta.addEventListener('click', function() {
+            // Alterna a classe 'aberto' para mostrar/esconder o menu
+            contaDropdown.classList.toggle('aberto');
+        });
+    }
+
+    if (closeDropdown) {
+        closeDropdown.addEventListener('click', function() {
+            contaDropdown.classList.remove('aberto');
+        });
+    }
+
+    // Opcional: Fecha o menu se clicar fora dele
+    window.addEventListener('click', function(event) {
+        if (contaDropdown && !btnConta.contains(event.target) && !contaDropdown.contains(event.target)) {
+            contaDropdown.classList.remove('aberto');
+        }
+    });
+});

@@ -15,11 +15,17 @@ body {
   /* Cor de fundo cinza-clara */
   color: #2e2e2e;
   /* Cor do texto principal (cinza escuro) */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 a{
   text-decoration: none;
   transition: 0.3s;
   position: relative;
+}
+main {
+  flex-grow: 1;
 }
 /* Barra superior */
 .barraP {
@@ -103,15 +109,23 @@ a{
 
 .btn-icone {
   background: none;
-  /* Fundo transparente */
   border: none;
-  /* Sem borda */
   color: rgb(185, 185, 185);
-  /* Cor cinza do ícone */
-  font-size: 2.3vw;
-  /* Tamanho responsivo do ícone */
+  font-size: 1.1rem; /* Tamanho de fonte mais consistente */
   transition: 0.2s;
-  /* Transição suave */
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center;
+  padding: 8px 12px; /* Espaçamento interno */
+  border-radius: 6px; /* Cantos levemente arredondados */
+}
+
+/* Regra específica para o botão da conta para não afetar o do carrinho */
+.btn-conta {
+    font-family: "Oswald", sans-serif;
+}
+
+.btn-conta i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
 
 /* Barra de categorias */
@@ -247,7 +261,7 @@ a{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* Garante que fique acima das imagens e outros elementos */
+  z-index: 2; /* Garante que fique acima das imagens e outros elementos */
   background-color: rgba(255, 255, 255, 0.8);
   color: #ea580c;
   width: 45px; /* Tamanho fixo para melhor controle */
@@ -290,24 +304,7 @@ a{
   z-index: 1;
 }
 /* Produtos */
-.organizaProd {
-  width: 90vw;
-  /* Largura da área de produtos */
-  min-height: 40vw;
-  /* Altura mínima da seção */
-  margin: 0 auto;
-  /* Centraliza horizontalmente */
-  margin-top: 5vw;
-  display: flex;
-  flex-wrap: wrap;
-  /* Quebra linha quando necessário */
-  gap: 0.6vw;
-  /* Espaço entre os produtos */
-  justify-content: center;
-  /* Centraliza os produtos */
-  position: relative;
-  z-index: 10;
-}
+
 .organizaProdInic {
   width: 95vw;
   height: 30vw;
@@ -350,22 +347,7 @@ a{
   max-height: 100%;
 }
 
-.produto {
-  width: 23vw;
-  height: 37vw;
-  border: 0.1vw solid #dddddd;
-  /* Borda cinza clara */
-  background: #efefef;
-  border-radius: 1vw;
-  box-shadow: 0.1vw 0.1vw 0.8vw #4e4e4e22;
-  /* Sombra suave */
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  flex-direction: column;
-  transition: 0.6s;
-  cursor: pointer;
-}
+
 .produto a.produtoInic a{
   display: flex;
   align-items: start;
@@ -375,15 +357,7 @@ a{
   height: 100%;
   position: relative;
 }
-.guardImg {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  overflow: hidden;
-  border-radius: 0.5vw;
-  position: relative;
-  top: 0.6vw;
-}
+
 .guardImgInic {
   width: 100%;
   height: 60%;
@@ -394,19 +368,12 @@ a{
   top: 0.6vw;
 }
 
-.guardImg>img {
-  /* imagem do produto */
-  width: 100%;
-  height: 160%;
-  position: relative;
-  top: -5.5vw;
-}
+
 .guardImgInic>img {
   /* imagem do produto */
   width: 100%;
   height: 160%;
   position: relative;
-  top: -5.5vw;
 }
 
 .nomeProdut {
@@ -434,113 +401,6 @@ a{
   color: #2e2e2e;
 }
 
-/* fundo ao selecionar uma categoria */
-#fundo2 {
-  display: flex;
-  flex-direction: column;
-}
-
-#nomeFundo2 {
-  font-size: 4vw;
-  margin-top: 1vw;
-  margin-left: 1vw;
-}
-
-.linha {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-}
-
-#filtro2 {
-  width: 28%;
-  flex-shrink: 0;
-  height: auto; /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
-  margin-top: 2vw;
-  padding: 1.5vw;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border: 1px solid #e9ecef;
-  border-radius: 0.7vw;
-  box-shadow: none;
-  /* overflow: auto; foi removido pois não é mais necessário */
-  position: sticky;
-  top: 7.4vw;
-}
-
-
-
-#filtro2 > span {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.8vw;
-  margin-left: 0;
-  margin-bottom: 1.5vw;
-  border-bottom: 2px solid #ea580c;
-  padding-bottom: 0.8vw;
-  /* --- ALTERAÇÃO AQUI --- */
-  align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
-}
-.marcas {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0;
-  gap: 1.2vw;
-}
-.botãoFiltrar{
-  padding: 0.8rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #585858; 
-  background-color: #ffffff;
-  border: 0.1vw solid #e6e6e6;
-  border-radius: 1.3vw; 
-  cursor: pointer;
-  box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
-  transition: all 0.5s ease;
-  margin-top: 2vw;
-  color: #4A90E2;
-}
-
-.spanCheck{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.checkbox-wrapper {
-  display: flex;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 0.1vw solid #a1a1a1;
-  border-radius: 0.3vw;
-  width: 1.3vw;
-  height: 1.3vw;
-  align-items: center;
-  justify-content: center;
-}
-
-
-input[type="checkbox"] {
-  display: none;
-  width: 100%;
-}
-
-svg polyline {
-  fill: none;
-  stroke: #4A90E2; /* cor da linha*/
-  stroke-width: 7; /* largura da linha */
-  stroke-linecap: round;
-  stroke-linejoin: miter;
-  stroke-dasharray: 30;
-  stroke-dashoffset: 30;
-  transition: stroke-dashoffset 0.3s ease-out;
-}
-
-input[type="checkbox"]:checked + svg polyline {
-  stroke-dashoffset: 0;
-}
-
 #fundoProduto {
   padding: 2vw;
   background-color: #f3f4f6; /* Cor de fundo principal do seu site */
@@ -548,187 +408,235 @@ input[type="checkbox"]:checked + svg polyline {
   display: flex;
 }
 
-.produto-container-novo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2vw;
-  background-color: #ffffff; /* Fundo branco para o container */
-  padding: 1.5vw;
+.conta-container {
+  position: relative; /* Essencial para o posicionamento do dropdown */
+}
+
+.btn-conta {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem; /* Tamanho de fonte ajustado */
+}
+
+.dropdown-menu {
+  display: none; /* Começa escondido */
+  position: absolute;
+  right: 0;
+  top: 130%; /* Posição abaixo do botão */
+  width: 250px;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 90vw;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border: 1px solid #D1D5DB;
+  z-index: 110; /* Garante que fique acima de outros elementos */
 }
 
-/* --- COLUNA DA ESQUERDA --- */
-.coluna-imagens {
-  flex: 1 1 45%;
-  min-width: 320px;
-}
-
-.fotos-label {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #ea580c; /* COR LARANJA PRINCIPAL */
+/* Mostra o menu quando a classe 'aberto' é adicionada via JS */
+.dropdown-menu.aberto {
   display: block;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
-  max-width: 60px;
 }
 
-.galeria-container {
-  border: 1px solid #eee;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-#imagemPrincipalProduto {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.produto-thumbnails {
+.dropdown-header {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #D1D5DB;
 }
 
-.thumbnail-img {
+.dropdown-header span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111111;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6B7280;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #2E2E2E;
+  text-decoration: none;
+}
+
+
+.btn-conta {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte consideravelmente */
+    padding: 10px 15px; /* Adiciona mais espaço interno */
+    color: #f3f4f6; /* Deixa o texto mais claro */
+}
+
+/* 2. Deixa o fundo do menu dropdown preto e ajusta os textos */
+.dropdown-menu {
+  background-color: #111111; /* Fundo Preto Carbono */
+  border: 1px solid #2E2E2E; /* Borda Cinza Chumbo */
+}
+
+.dropdown-header {
+  border-bottom: 1px solid #2E2E2E; /* Linha divisória mais escura */
+}
+
+.dropdown-header span {
+  color: #F3F4F6; /* Texto "Seja bem vindo" em cinza claro */
+}
+
+.close-btn {
+  color: #6B7280; /* Cor do botão 'x' */
+}
+
+.dropdown-menu a {
+  color: #D1D5DB; /* Cor dos links (Login, Cadastre-se) */
+}
+.btn-icone {
+  font-size: 1.1rem; /* Tamanho base */
+  padding: 10px 15px; /* Mais espaço interno */
+}
+.btn-icone i {
+    font-size: 1.5rem; /* Ícones maiores */
+}
+.btn-icone span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Badge (contador de itens) do carrinho */
+.btn-carrinho {
+    position: relative;
+}
+.badge-carrinho {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #EA580C; /* Laranja de Destaque */
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2E2E2E;
+}
+
+
+/* Estrutura base dos dropdowns */
+.conta-container, .carrinho-container {
+  position: relative;
+}
+
+.dropdown-menu-conta, .dropdown-menu-carrinho {
+  display: none; /* Começa escondido */
+  position: absolute;
+  right: 0;
+  top: 130%; 
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  border: 1px solid #D1D5DB;
+  z-index: 110;
+}
+
+.dropdown-menu-conta.aberto, .dropdown-menu-carrinho.aberto {
+  display: block;
+}
+
+/* Estilos específicos do Carrinho */
+.dropdown-menu-carrinho {
+    width: 380px; /* Largura do dropdown do carrinho */
+}
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #D1D5DB;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111111;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #6B7280;
+  padding: 0;
+  line-height: 1;
+}
+.carrinho-items {
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.carrinho-item img {
   width: 70px;
   height: 70px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  object-fit: contain;
-  transition: border-color 0.2s;
+  object-fit: cover;
+  border-radius: 4px;
 }
-
-/* --- COLUNA DA DIREITA --- */
-.coluna-detalhes {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
+.item-details {
+  flex-grow: 1;
 }
-
-.produto-titulo-novo {
-  font-size: 1.8rem;
+.item-name {
+  display: block;
+  font-size: 1rem;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+.item-price {
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
-  margin-bottom: 10px;
+  color: #F97316; /* Laranja Primário */
+}
+.item-remove {
+  background: none;
+  border: none;
+  color: #6B7280;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.tag-destaque {
-  background-color: #2e2e2e; /* COR CINZA ESCURO DO CABEÇALHO */
-  color: white;
-  font-size: 0.8rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  align-self: flex-start;
+.carrinho-footer {
+  padding: 1rem;
+  border-top: 1px solid #D1D5DB;
+  background-color: #F3F4F6;
 }
-
-.preco-container {
-  margin-bottom: 20px;
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-
-.preco-principal {
-  font-size: 2.5rem;
+.total-price {
+  color: #F97316;
+}
+.btn-avancar {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #ea580c; /* COR LARANJA PRINCIPAL */
-  display: block;
-}
-
-.preco-parcelado-novo {
-  font-size: 0.9rem;
-  color: #666;
-  display: block;
-}
-
-.quantidade-container {
-  margin-bottom: 20px;
-}
-.quantidade-container label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: #555;
-}
-.quantidade-container input {
-  width: 70px;
-  padding: 8px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.btn-comprar-novo {
-  background-color: #ea580c; /* COR LARANJA PRINCIPAL */
+  background-color: #22c55e; /* Verde do botão "Avançar" */
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
-  margin-bottom: 10px;
-}
-
-.btn-whatsapp {
-  background-color: transparent;
-  color: #ea580c; /* COR LARANJA PRINCIPAL */
-  border: 2px solid #ea580c; /* COR LARANJA PRINCIPAL */
-  border-radius: 5px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.2s;
-  margin-bottom: 25px;
-}
-
-.frete-container {
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-.frete-container label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #444;
-}
-.frete-input {
-  display: flex;
-  gap: 10px;
-}
-.frete-input input {
-  flex-grow: 1;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-}
-.frete-input button {
-  border: 1px solid #ccc;
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  padding: 0 20px;
-  cursor: pointer;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex-grow: 1;
+  transition: background-color 0.3s;
 }
 
 .site-footer {
@@ -737,6 +645,7 @@ main {
   padding: 40px 0;
   font-size: 1rem;
   border-top: 5px solid #F97316;
+  margin-top: 16vw;
 }
 
 .footer-container, .footer-bottom {
@@ -773,10 +682,6 @@ main {
   margin-bottom: 10px;
   text-decoration: none;
   transition: color 0.3s;
-}
-
-.footer-section a:hover {
-  color: #F97316;
 }
 
 .footer-section i {

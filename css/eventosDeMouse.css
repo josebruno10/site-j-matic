@@ -72,3 +72,15 @@
   background-color: #ea580c;
   color: white;
 }
+
+.btn-icone:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efeito de fundo sutil */
+  color: #f97316; /* Cor laranja do seu site */
+}
+.dropdown-menu a:hover {
+  color: #F97316;
+}
+.close-btn:hover {
+  color: #F97316;
+  background-color: transparent; /* Fundo transparente para manter o efeito */
+}

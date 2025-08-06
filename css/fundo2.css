@@ -1,0 +1,154 @@
+#fundo2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#nomeFundo2 {
+  font-size: 4vw;
+  margin-top: 1vw;
+  margin-left: 1vw;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+/* Produtos */
+.organizaProd {
+  width: 90vw;
+  /* Largura da área de produtos */
+  min-height: 40vw;
+  /* Altura mínima da seção */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  /* Quebra linha quando necessário */
+  gap: 0.6vw;
+  /* Espaço entre os produtos */
+  justify-content: center;
+  /* Centraliza os produtos */
+  position: relative;
+  z-index: 10;
+}
+.produto {
+  width: 23vw;
+  height: 37vw;
+  border: 0.1vw solid #dddddd;
+  /* Borda cinza clara */
+  background: #efefef;
+  border-radius: 1vw;
+  box-shadow: 0.1vw 0.1vw 0.8vw #4e4e4e22;
+  /* Sombra suave */
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.guardImg {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.5vw;
+  position: relative;
+  top: 0.6vw;
+}
+.guardImg>img {
+  /* imagem do produto */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#filtro2 {
+  width: 28%;
+  flex-shrink: 0;
+  height: 40vw; /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
+  margin-top: 2vw;
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 0.1vw solid #d3d3d3;
+  border-radius: 0.7vw;
+  box-shadow: none;
+  /* overflow: auto; foi removido pois não é mais necessário */
+  position: sticky;
+  top: 7.4vw;
+  bottom: 30vw;
+  overflow: auto;
+}
+
+input[type="checkbox"] {
+  display: none;
+  width: 100%;
+}
+
+svg polyline {
+  fill: none;
+  stroke: #4A90E2; /* cor da linha*/
+  stroke-width: 7; /* largura da linha */
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+
+input[type="checkbox"]:checked + svg polyline {
+  stroke-dashoffset: 0;
+}
+
+#filtro2 > span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8vw;
+  margin-left: 0;
+  margin-bottom: 1.5vw;
+  border-bottom: 2px solid #ea580c;
+  padding-bottom: 0.8vw;
+  /* --- ALTERAÇÃO AQUI --- */
+  align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
+}
+.marcas {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  gap: 1.2vw;
+}
+.botãoFiltrar{
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #585858; 
+  background-color: #ffffff;
+  border: 0.1vw solid #e6e6e6;
+  border-radius: 1.3vw; 
+  cursor: pointer;
+  box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
+  transition: all 0.5s ease;
+  margin-top: 2vw;
+  color: #4A90E2;
+}
+
+.spanCheck{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkbox-wrapper {
+  display: flex;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 0.1vw solid #a1a1a1;
+  border-radius: 0.3vw;
+  width: 1.3vw;
+  height: 1.3vw;
+  align-items: center;
+  justify-content: center;
+}
+
