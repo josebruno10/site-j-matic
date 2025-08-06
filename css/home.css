@@ -27,6 +27,7 @@ a{
 main {
   flex-grow: 1;
 }
+
 /* Barra superior */
 .barraP {
   width: 100%;
@@ -110,15 +111,15 @@ main {
 .btn-icone {
   background: none;
   border: none;
-  color: rgb(185, 185, 185);
-  font-size: 1.1rem; /* Tamanho de fonte mais consistente */
-  transition: 0.2s;
-  display: flex; /* Para alinhar ícone e texto */
+  color: #f3f4f6; /* Cor do texto e ícone */
+  display: flex;
   align-items: center;
-  padding: 8px 12px; /* Espaçamento interno */
-  border-radius: 6px; /* Cantos levemente arredondados */
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-
 /* Regra específica para o botão da conta para não afetar o do carrinho */
 .btn-conta {
     font-family: "Oswald", sans-serif;
@@ -408,140 +409,23 @@ main {
   display: flex;
 }
 
-.conta-container {
-  position: relative; /* Essencial para o posicionamento do dropdown */
-}
+/* ======================================================== */
+/* ESTILOS DOS MENUS DROPDOWN (CONTA E CARRINHO)            */
+/* ======================================================== */
 
-.btn-conta {
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem; /* Tamanho de fonte ajustado */
-}
-
-.dropdown-menu {
-  display: none; /* Começa escondido */
-  position: absolute;
-  right: 0;
-  top: 130%; /* Posição abaixo do botão */
-  width: 250px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  border: 1px solid #D1D5DB;
-  z-index: 110; /* Garante que fique acima de outros elementos */
-}
-
-/* Mostra o menu quando a classe 'aberto' é adicionada via JS */
-.dropdown-menu.aberto {
-  display: block;
-}
-
-.dropdown-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  border-bottom: 1px solid #D1D5DB;
-}
-
-.dropdown-header span {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #111111;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #6B7280;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 12px 15px;
-  font-size: 1rem;
-  color: #2E2E2E;
-  text-decoration: none;
-}
-
-
-.btn-conta {
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte consideravelmente */
-    padding: 10px 15px; /* Adiciona mais espaço interno */
-    color: #f3f4f6; /* Deixa o texto mais claro */
-}
-
-/* 2. Deixa o fundo do menu dropdown preto e ajusta os textos */
-.dropdown-menu {
-  background-color: #111111; /* Fundo Preto Carbono */
-  border: 1px solid #2E2E2E; /* Borda Cinza Chumbo */
-}
-
-.dropdown-header {
-  border-bottom: 1px solid #2E2E2E; /* Linha divisória mais escura */
-}
-
-.dropdown-header span {
-  color: #F3F4F6; /* Texto "Seja bem vindo" em cinza claro */
-}
-
-.close-btn {
-  color: #6B7280; /* Cor do botão 'x' */
-}
-
-.dropdown-menu a {
-  color: #D1D5DB; /* Cor dos links (Login, Cadastre-se) */
-}
-.btn-icone {
-  font-size: 1.1rem; /* Tamanho base */
-  padding: 10px 15px; /* Mais espaço interno */
-}
-.btn-icone i {
-    font-size: 1.5rem; /* Ícones maiores */
-}
-.btn-icone span {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Badge (contador de itens) do carrinho */
-.btn-carrinho {
-    position: relative;
-}
-.badge-carrinho {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: #EA580C; /* Laranja de Destaque */
-    color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #2E2E2E;
-}
-
-
-/* Estrutura base dos dropdowns */
+/* Estrutura base dos containers */
 .conta-container, .carrinho-container {
   position: relative;
 }
 
+/* Estrutura base dos menus */
 .dropdown-menu-conta, .dropdown-menu-carrinho {
-  display: none; /* Começa escondido */
+  display: none;
   position: absolute;
   right: 0;
   top: 130%; 
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  border: 1px solid #D1D5DB;
   z-index: 110;
 }
 
@@ -549,28 +433,56 @@ main {
   display: block;
 }
 
-/* Estilos específicos do Carrinho */
-.dropdown-menu-carrinho {
-    width: 380px; /* Largura do dropdown do carrinho */
-}
+/* Cabeçalho dos menus */
 .dropdown-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #D1D5DB;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #111111;
 }
 .close-btn {
   background: none;
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #6B7280;
   padding: 0;
   line-height: 1;
+}
+
+/* ESTILO ESPECÍFICO: Menu "Minha Conta" (FUNDO ESCURO) */
+.dropdown-menu-conta {
+  width: 280px;
+  background-color: #2E2E2E;
+  border: 1px solid #4e4e4e;
+}
+.dropdown-menu-conta .dropdown-header {
+  border-bottom: 1px solid #4e4e4e;
+  color: #F3F4F6;
+}
+.dropdown-menu-conta .close-btn {
+  color: #6B7280;
+}
+.dropdown-menu-conta a {
+  display: block;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #D1D5DB;
+}
+
+/* ALTERAÇÃO: Deixa o carrinho com o mesmo estilo da conta */
+.dropdown-menu-carrinho {
+  width: 380px;
+  background-color: #2E2E2E; /* Fundo Cinza Chumbo */
+  border: 1px solid #4e4e4e;
+}
+.dropdown-menu-carrinho .dropdown-header {
+  border-bottom: 1px solid #4e4e4e;
+  color: #F3F4F6; /* Texto claro */
+}
+.dropdown-menu-carrinho .close-btn {
+  color: #6B7280;
 }
 .carrinho-items {
   padding: 1rem;
@@ -581,6 +493,10 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+.carrinho-item:last-child {
+    margin-bottom: 0;
 }
 .carrinho-item img {
   width: 70px;
@@ -594,26 +510,25 @@ main {
 .item-name {
   display: block;
   font-size: 1rem;
-  color: #111111;
-  margin-bottom: 0.25rem;
+  color: #D1D5DB; /* Texto claro */
 }
 .item-price {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #F97316; /* Laranja Primário */
+  color: #F97316;
 }
 .item-remove {
   background: none;
   border: none;
-  color: #6B7280;
+  color: #a0aec0;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
 .carrinho-footer {
   padding: 1rem;
-  border-top: 1px solid #D1D5DB;
-  background-color: #F3F4F6;
+  border-top: 1px solid #4e4e4e;
+  background-color: #111111; /* Fundo mais escuro */
 }
 .total-section {
   display: flex;
@@ -622,6 +537,7 @@ main {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #F3F4F6;
 }
 .total-price {
   color: #F97316;
@@ -631,21 +547,39 @@ main {
   padding: 12px;
   font-size: 1.1rem;
   font-weight: bold;
-  background-color: #22c55e; /* Verde do botão "Avançar" */
+  background-color: #22c55e;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
+/* Badge (contador de itens) do carrinho */
+.badge-carrinho {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #EA580C;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2E2E2E;
+}
+
+
+/* Rodapé */
 .site-footer {
   background-color: #2E2E2E;
   color: #D1D5DB;
   padding: 40px 0;
   font-size: 1rem;
   border-top: 5px solid #F97316;
-  margin-top: 16vw;
 }
 
 .footer-container, .footer-bottom {
@@ -662,6 +596,8 @@ main {
   border-top: 1px solid #4e4e4e;
   padding-top: 20px;
   margin-top: 20px;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-section {
@@ -681,7 +617,6 @@ main {
   color: #D1D5DB;
   margin-bottom: 10px;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .footer-section i {

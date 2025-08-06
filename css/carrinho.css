@@ -1,0 +1,225 @@
+.carrinho-main {
+    padding: 2rem;
+    margin-top: 7vw; /* Espaçamento para o header fixo */
+    min-height: 60vh;
+    background-color: #F3F4F6; /* Cor de Fundo */
+}
+
+.carrinho-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D1D5DB; /* Bordas/Divisores */
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cart-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111111; /* Texto Principal */
+}
+
+.btn-continuar-top {
+    background-color: #F97316; /* Cor Primária */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.btn-continuar-top:hover {
+    background-color: #EA580C; /* Destaque/CTA */
+    color: white;
+}
+
+.cart-items {
+    border-bottom: 1px solid #D1D5DB; /* Bordas/Divisores */
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.remove-item-btn {
+    background: none;
+    border: 1px solid #D1D5DB;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    color: #6B7280; /* Texto Secundário */
+    cursor: pointer;
+}
+.remove-item-btn:hover {
+    background-color: #F3F4F6;
+    color: #EA580C;
+}
+
+.product-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2E2E2E; /* Cor Secundária */
+}
+.product-ref {
+    font-size: 0.9rem;
+    color: #6B7280; /* Texto Secundário */
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+.quantity-btn {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #D1D5DB;
+    border-right: 1px solid #D1D5DB;
+    font-size: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 150px;
+    text-align: right;
+    color: #111111; /* Texto Principal */
+}
+
+.cart-summary-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #D1D5DB;
+    padding-bottom: 1.5rem;
+}
+
+.shipping-section, .order-summary {
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #111111; /* Texto Principal */
+}
+
+.cep-input-container {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.cep-input-container .fa {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+}
+.cep-input {
+    width: 100%;
+    height: 45px;
+    padding-left: 40px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.cep-link {
+    font-size: 0.9rem;
+    color: #2E2E2E;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.summary-row.total {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.total-price {
+    color: #F97316; /* Cor Primária */
+}
+.installments-info {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #6B7280; /* Texto Secundário */
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.coupon-section h3 {
+    font-size: 1.2rem;
+}
+.coupon-section p {
+    color: #6B7280;
+}
+
+.buttons-section {
+    display: flex;
+    gap: 1rem;
+}
+.btn-choose-more {
+    background-color: #ffffff;
+    border: 1px solid #D1D5DB;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.btn-choose-more:hover {
+    background-color: #F3F4F6;
+    border-color: #6B7280;
+}
+
+.btn-checkout {
+    background-color: #F97316; /* Cor Primária */
+    color: white;
+    padding: 12px 40px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.btn-checkout:hover {
+    background-color: #EA580C; /* Destaque/CTA */
+    color: white;
+}

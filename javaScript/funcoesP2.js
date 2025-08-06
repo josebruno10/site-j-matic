@@ -97,36 +97,54 @@ document.addEventListener('DOMContentLoaded', function() {
             mostrarProduto(); 
         });
     });
-});
 
-function mudarImagem(novaImagemSrc) {
-  const imagemPrincipal = document.querySelector("#imagemPrincipalProduto");
-  if(imagemPrincipal) {
-    imagemPrincipal.src = novaImagemSrc;
-  }
-}
-document.addEventListener('DOMContentLoaded', function() {
     const btnConta = document.getElementById('btn-conta');
     const contaDropdown = document.getElementById('conta-dropdown');
-    const closeDropdown = document.getElementById('close-dropdown');
+    const btnCarrinho = document.getElementById('btn-carrinho');
+    const carrinhoDropdown = document.getElementById('carrinho-dropdown');
 
-    if (btnConta) {
-        btnConta.addEventListener('click', function() {
-            // Alterna a classe 'aberto' para mostrar/esconder o menu
+    if (btnConta && contaDropdown) {
+        const closeConta = contaDropdown.querySelector('.close-btn');
+        btnConta.addEventListener('click', function(event) {
+            event.stopPropagation();
+            if (carrinhoDropdown) carrinhoDropdown.classList.remove('aberto');
             contaDropdown.classList.toggle('aberto');
         });
+        if(closeConta) {
+            closeConta.addEventListener('click', function() {
+                contaDropdown.classList.remove('aberto');
+            });
+        }
     }
 
-    if (closeDropdown) {
-        closeDropdown.addEventListener('click', function() {
-            contaDropdown.classList.remove('aberto');
+    if (btnCarrinho && carrinhoDropdown) {
+        const closeCarrinho = carrinhoDropdown.querySelector('.close-btn');
+        btnCarrinho.addEventListener('click', function(event) {
+            event.stopPropagation();
+            if (contaDropdown) contaDropdown.classList.remove('aberto');
+            carrinhoDropdown.classList.toggle('aberto');
         });
+        if (closeCarrinho) {
+            closeCarrinho.addEventListener('click', function() {
+                carrinhoDropdown.classList.remove('aberto');
+            });
+        }
     }
 
-    // Opcional: Fecha o menu se clicar fora dele
     window.addEventListener('click', function(event) {
-        if (contaDropdown && !btnConta.contains(event.target) && !contaDropdown.contains(event.target)) {
+        if (contaDropdown && !contaDropdown.contains(event.target) && !event.target.closest('.conta-container')) {
             contaDropdown.classList.remove('aberto');
+        }
+        if (carrinhoDropdown && !carrinhoDropdown.contains(event.target) && !event.target.closest('.carrinho-container')) {
+            carrinhoDropdown.classList.remove('aberto');
         }
     });
 });
+
+Fontes
+
+
+
+
+
+

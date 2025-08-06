@@ -22,23 +22,63 @@
 
 <body>
     <header class="barraP d-flex align-items-center justify-content-between px-4">
-        <a href="home.html" class="d-flex align-items-center" id="logo-container">
-            <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
-            <span class="nome">J.MATIC AUTOMÁTICOS</span>
-        </a>
-        <div class="input-container">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar" id="pesquisa" />
-        </div>
-        <div class="d-flex align-items-center gap-3">
-            <button class="btn-icone btn-conta" title="Minha conta" style="font-size: 1.7vw;" a href="conta.html">
-                Conta
+    <a href="home.html" class="d-flex align-items-center" id="logo-container">
+        <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
+        <span class="nome">J.MATIC AUTOMÁTICOS</span>
+    </a>
+    <div class="input-container">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Buscar" id="pesquisa" />
+    </div>
+    <div class="d-flex align-items-center gap-3">
+        
+        <div class="conta-container">
+            <button id="btn-conta" class="btn-icone btn-conta" title="Minha conta">
+                <i class="fa fa-user"></i>
+                <span>Minha Conta</span>
             </button>
-            <button class="btn-icone" title="Carrinho" a href="carrinho.html">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </button>
+            <div id="conta-dropdown" class="dropdown-menu-conta">
+                <div class="dropdown-header">
+                    <span>Seja bem vindo</span>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <a href="conta.html">Login</a>
+                <a href="#">Cadastre-se</a>
+            </div>
         </div>
-    </header>
+
+        <div class="carrinho-container">
+            <button id="btn-carrinho" class="btn-icone btn-carrinho" title="Carrinho">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="badge-carrinho">1</span>
+            </button>
+            <div id="carrinho-dropdown" class="dropdown-menu-carrinho">
+                <div class="dropdown-header">
+                    <span>Carrinho</span>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="carrinho-items">
+                    <div class="carrinho-item">
+                        <img src="imagens/produtos/Conversor de Torque 6T31 ( Spin, Cobalt.).jpeg" alt="Produto 1">
+                        <div class="item-details">
+                            <span class="item-name">Conversor de Torque 6T31</span>
+                            <span class="item-price">R$ 499,00</span>
+                        </div>
+                        <button class="item-remove">&times;</button>
+                    </div>
+                </div>
+                <div class="carrinho-footer">
+                    <div class="total-section">
+                        <span>Total:</span>
+                        <span class="total-price">R$ 499,00</span>
+                    </div>
+                    <a href="carrinho.html" class="btn-avancar">Avançar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
     <nav class="barraS">
         <button onclick="abrirCategorias()">
             <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
