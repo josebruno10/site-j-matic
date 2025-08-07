@@ -80,7 +80,31 @@
 .dropdown-menu a:hover {
   color: #F97316;
 }
+
+.dropdown-menu-conta a:hover{
+  color: #ffffff;
+}
 .close-btn:hover {
   color: #F97316;
   background-color: transparent; /* Fundo transparente para manter o efeito */
+}
+
+
+/*-------------------------------
+  eventos de mouse do conta.css
+-------------------------------*/
+.informacoes-conta span::after{
+  content: "";
+  display: block;
+  border: #ea580c 0.1vw solid;
+}
+.informacoes-conta div input:focus +  label::before{
+  top: -20%;
+  left: 0.9vw;
+  font-size: 1.1vw;
+  width: 3.5vw;
+}
+.informacoes-conta div input:focus{
+  border: 0.1vw solid #b7b7b7;
+  outline: none
 }

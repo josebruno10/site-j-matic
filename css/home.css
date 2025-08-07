@@ -34,15 +34,15 @@ main {
   /* Ocupa toda a largura da tela */
   height: 7vw;
   /* Altura responsiva baseada na largura da tela */
-  background-color: #2e2e2e;
+  background-color: #111111;
   /* Cor de fundo escura */
   position: fixed;
   /* Fixa a barra no topo mesmo com rolagem */
   top: 0;
   /* Gruda no topo da página */
-  z-index: 100;
+  z-index: 30;
   /* Garante que fique acima dos outros elementos */
-  box-shadow: 0 2px 8px #0002;
+  box-shadow: 0 0vw 0.7vw rgb(12, 12, 12);
   /* Sombra sutil abaixo da barra */
 }
 
@@ -56,7 +56,7 @@ main {
 .nome {
   font-size: 2.5vw;
   /* Tamanho responsivo da fonte do nome */
-  color: #f97316;
+  color: #EA580C;
   /* Cor laranja vibrante */
   font-weight: bold;
   /* Deixa em negrito */
@@ -142,7 +142,7 @@ main {
   /* Espaçamento interno */
   margin-top: 7vw;
   /* Distância da barra superior */
-  background-color: #111;
+  background-color:#3a3a3a;
   /* Fundo preto */
   border-bottom: 1px solid #4e4e4e;
   /* Linha de separação cinza escura */
@@ -423,10 +423,10 @@ main {
   display: none;
   position: absolute;
   right: 0;
-  top: 130%; 
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  z-index: 110;
+  top: 150%; 
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  box-shadow: 0 0.2vw 0.4vw rgba(0,0,0,0.2);
 }
 
 .dropdown-menu-conta.aberto, .dropdown-menu-carrinho.aberto {
@@ -442,6 +442,7 @@ main {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 .close-btn {
   background: none;
   border: none;
