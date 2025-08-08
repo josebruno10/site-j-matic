@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J.MATIC AUTOMÁTICOS</title>
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,17 +32,31 @@
     <main class="main-login">
 
         <div class="informacoes-conta">
-            <span>Email da conta</span>
+            <span>Acesse sua conta</span>
             
-            <div class="guardEmail">
-                <input type="text" >
-                <label for=""></label>
+            <div class="guardInput">
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
             </div>
-            <a href="cadastre.html">Criar conta</a>
-            <label for="">ou</label>
-            <button>
+
+            <div class="guardInput">
+                <input type="password" id="senha" required>
+                <label for="senha">Senha</label>
+            </div>
+            
+            <button class="btn-entrar">Entrar</button>
+
+            <a href="cadastre.html" class="link-criar-conta">Criar conta</a>
+            
+            <div class="ou-container">
+                <hr>
+                <span>ou</span>
+                <hr>
+            </div>
+
+            <button class="btn-google">
                 <i class="fa fa-google"></i>
-                Entrar com google
+                Entrar com Google
             </button>
         </div>
     </main>

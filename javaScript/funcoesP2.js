@@ -35,6 +35,7 @@ function abrirCategorias() {
 }
 
 function abrindoCategorias() {
+  categorias.style.display = "flex";
   if (categoriasT < 11.5) {
     categoriasT += 1.05;
     categorias.style.top = categoriasT + "vw";
@@ -50,6 +51,7 @@ function fechandoCategorias() {
     requestAnimationFrame(fechandoCategorias);
   } else {
     abreCate = 0;
+    categorias.style.display = "none";
   }
 }
 
@@ -140,11 +142,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-
-
-
-
-

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J.MATIC AUTOMÁTICOS</title>
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,8 +43,8 @@
                     <span>Seja bem vindo</span>
                     <button class="close-btn">&times;</button>
                 </div>
-                <a href="conta.html">Login</a>
-                <a href="#">Cadastre-se</a>
+                <a href="login.html">Login</a>
+                <a href="cadastre.html">Cadastre-se</a>
             </div>
         </div>
 
@@ -85,12 +86,12 @@
         </button>
     </nav>
     <div id="categorias">
-        <a href="fundo2.html?peca=1" onclick="pecaEscolhida(1)">Corpo de Válvulas</a>
-        <a href="fundo2.html?peca=2" onclick="pecaEscolhida(2)">Conversores de Torque</a>
-        <a href="fundo2.html?peca=3" onclick="pecaEscolhida(3)">Transmissões Completas</a>
-        <a href="fundo2.html?peca=4" onclick="pecaEscolhida(4)">Módulo de Controle de Transmissão</a>
-        <a href="fundo2.html?peca=5" onclick="pecaEscolhida(5)">Carcaças</a>
-        <a href="fundo2.html?peca=6" onclick="pecaEscolhida(6)">Outras Peças de Transmissão</a>
+        <a href="fundo2.html?peca=1">Corpo de Válvulas</a>
+        <a href="fundo2.html?peca=2">Conversores de Torque</a>
+        <a href="fundo2.html?peca=3">Transmissões Completas</a>
+        <a href="fundo2.html?peca=4">Módulo de Controle de Transmissão</a>
+        <a href="fundo2.html?peca=5">Carcaças</a>
+        <a href="fundo2.html?peca=6">Outras Peças de Transmissão</a>
     </div>
     <div id="fundoProduto">
 
@@ -124,13 +125,13 @@
             </div>
 
             <div class="coluna-detalhes">
-                <h1 class="produto-titulo-novo">Caixa Satélite Montada - Volkswagen Kombi moderna</h1>
+                <h1 class="produto-titulo-novo">Transmissão Automática TF72SC</h1>
                 <span class="tag-destaque">Destaque</span>
 
                 <div class="preco-container">
-                    <span class="preco-principal">R$ 649,00</span>
-                    <span class="preco-parcelado-novo">ou 5x de R$ 129,80 Sem juros MasterCard - Vindi</span>
-                    <span class="preco-parcelado-novo">ou 10x de R$ 77,62 com juros MasterCard - Vindi</span>
+                    <span class="preco-principal">R$ 4.499,00</span>
+                    <span class="preco-parcelado-novo">ou 8x de R$ 562,37 Sem juros MasterCard - Vindi</span>
+                    <span class="preco-parcelado-novo">ou 10x de R$ 449,90 com juros MasterCard - Vindi</span>
                 </div>
 
                 <div class="quantidade-container">
@@ -169,8 +170,8 @@
             </div>
             <div class="footer-section">
                 <h4>Contato</h4>
-                <p><i class="fa fa-phone"></i> (XX) XXXX-XXXX</p>
-                <p><i class="fa fa-whatsapp"></i> (XX) XXXXXX-XXX</p>
+                <p><i class="fa fa-phone"></i> (11) 4555-5555</p>
+                <p><i class="fa fa-whatsapp"></i> (11) 99999-9999</p>
                 <p><i class="fa fa-envelope"></i> contato@jmatic.com.br</p>
                 <p><i class="fa fa-facebook-square"></i> Siga-nos no Facebook</p>
             </div>
@@ -178,15 +179,15 @@
                 <h4>Endereço</h4>
                 <p><i class="fa fa-map-marker"></i> Avenida Capitão João, 1534, Matriz, Mauá, SP, CEP: 09360-120</p>
                 <h4>Atendimento</h4>
-                <p><i class="fa fa-clock-o"></i> Segunda a Sexta das X:XXh às XXh.</p>
+                <p><i class="fa fa-clock-o"></i> Segunda a Sexta das 8:00h às 18h.</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-section">
                 <h4>Formas de Pagamento</h4>
-                <img src="" alt="Visa" style="height: 25px;">
-                <img src="" alt="Mastercard" style="height: 25px;">
-                <img src="" alt="American Express" style="height: 25px;">
+                <img src="https://logopng.com.br/logos/visa-26.svg" alt="Visa" style="height: 25px;">
+                <img src="https://logopng.com.br/logos/mastercard-2-2019.svg" alt="Mastercard" style="height: 25px;">
+                <img src="https://logopng.com.br/logos/american-express-2.svg" alt="American Express" style="height: 25px;">
             </div>
             <div class="footer-section">
                 <h4>Segurança</h4>
@@ -194,6 +195,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        function mudarImagem(src) {
+            document.getElementById('imagemPrincipalProduto').src = src;
+        }
+    </script>
     <script src="javaScript/funcoesCarrossel.js" defer></script>
     <script src="javaScript/funcoesP2.js" defer></script>
 </body>

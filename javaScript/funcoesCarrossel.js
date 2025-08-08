@@ -1,4 +1,4 @@
-lado = 0; // Índice atual do carrossel: 0 = imagem do meio (posição inicial)
+let lado = 0; // Índice atual do carrossel: 0 = imagem do meio (posição inicial)
 
 let imagem1 = document.querySelector(".imagem1");
 let imagem2 = document.querySelector(".imagem2");
@@ -9,10 +9,6 @@ let imagem1L = -100;
 let imagem2L = 0;
 let imagem3L = 100;
 let intervaloPassar;
-
-
-
-
 
 function irPE() {
   clearInterval(intervaloPassar);
