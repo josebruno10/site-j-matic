@@ -8,7 +8,7 @@ let chev = -1, fiat = -1, niss = -1, renau = -1, ford = -1, volk = -1,
     audi = -1, honda = -1, jeep = -1, mitsu = -1, citro = -1;
 
 let abreCate = 0;
-let categoriasT = -9;
+let categoriasT = -18;
 
 function voltarInicial() {
   if (fundo1) {
@@ -36,22 +36,21 @@ function abrirCategorias() {
 
 function abrindoCategorias() {
   categorias.style.display = "flex";
-  if (categoriasT < 11.5) {
-    categoriasT += 1.05;
-    categorias.style.top = categoriasT + "vw";
+  if (categoriasT < 23) {
+    categoriasT += 2.1;
+    categorias.style.top = categoriasT + "vh";
     requestAnimationFrame(abrindoCategorias);
   } else {
     abreCate = 1;
   }
 }
 function fechandoCategorias() {
-  if (categoriasT > -9) {
-    categoriasT -= 1;
-    categorias.style.top = categoriasT + "vw";
+  if (categoriasT > -18) {
+    categoriasT -= 2;
+    categorias.style.top = categoriasT + "vh";
     requestAnimationFrame(fechandoCategorias);
   } else {
-    abreCate = 0;
-    categorias.style.display = "none";
+    abreCate = 0;;
   }
 }
 

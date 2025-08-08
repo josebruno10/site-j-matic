@@ -32,7 +32,7 @@ main {
 .barraP {
   width: 100%;
   /* Ocupa toda a largura da tela */
-  height: 7vw;
+  height: 14.8vh;
   /* Altura responsiva baseada na largura da tela */
   background-color: #111111;
   /* Cor de fundo escura */
@@ -41,26 +41,39 @@ main {
   top: 0;
   /* Gruda no topo da página */
   z-index: 30;
+  display: grid;
+  grid-template-columns: 1.9fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas: 
+  "a inputContainer ... contaCarrinho"
+  "... ... ... menuConta"
+  ;
+  grid-gap: 0vw;
+  grid-row-gap: 0vw;
   /* Garante que fique acima dos outros elementos */
   box-shadow: 0 0vw 0.7vw rgb(12, 12, 12);
   /* Sombra sutil abaixo da barra */
 }
-
+.contaCarrinho{
+  grid-area: contaCarrinho;
+}
 .logo {
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 14vh;
   cursor: pointer;
   /* Tamanho responsivo da logo */
+  margin-left: 1vw;
 }
 
 .nome {
-  font-size: 2.5vw;
+  font-size: 5vh;
   /* Tamanho responsivo da fonte do nome */
   color: #EA580C;
   /* Cor laranja vibrante */
   font-weight: bold;
   /* Deixa em negrito */
-  letter-spacing: 1px;
+  letter-spacing: 0.1vw;
   /* Espaçamento entre letras */
 }
 
@@ -69,22 +82,25 @@ main {
   /* Permite posicionar o ícone da lupa dentro */
   width: 28vw;
   /* Largura do campo de busca */
-  margin-right: 13rem;
-  /* Espaço à direita do campo */
+  height: 6vh;
   max-width: 400px;
+  margin-top: 2vw;
   /* Limita tamanho máximo em telas grandes */
+  display: flex;
+  flex-direction: row;
+  grid-area: inputContainer;
 }
 
 .input-container i {
   position: absolute;
   /* Posiciona a lupa dentro do input */
-  left: 1vw;
-  top: 50%;
+  left: 0.8vw;
+  top: 2.6vh;
   transform: translateY(-50%);
   /* Centraliza verticalmente */
   color: #ea580c;
   /* Cor da lupa (laranja) */
-  font-size: 1.3vw;
+  font-size: 2.6vh;
   transition: color 0.3s;
   /* Suaviza mudança de cor */
   pointer-events: none;
@@ -93,7 +109,7 @@ main {
 
 #pesquisa {
   width: 100%;
-  height: 2.5vw;
+  height: 5vh;
   padding-left: 3vw;
   /* Espaço para a lupa à esquerda */
   border: 0vw solid #d1d5db;
@@ -102,7 +118,7 @@ main {
   /* Bordas arredondadas */
   background-color: #e5e5e5;
   font-family: "Oswald", sans-serif;
-  font-size: 1.1vw;
+  font-size: 2.2vh;
   color: #1f1f1f;
   /* Cor do texto */
   transition: 0.3s;
@@ -114,11 +130,12 @@ main {
   color: #f3f4f6; /* Cor do texto e ícone */
   display: flex;
   align-items: center;
-  gap: 8px; /* Espaço entre o ícone e o texto */
-  padding: 10px 15px;
+  gap: 0.3vw; /* Espaço entre o ícone e o texto */
+  padding: 0.7vw 0.9vw;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.2s;
+  margin-left: 1vw;
 }
 /* Regra específica para o botão da conta para não afetar o do carrinho */
 .btn-conta {
@@ -126,7 +143,7 @@ main {
 }
 
 .btn-conta i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-right: 0.3vw; /* Espaço entre o ícone e o texto */
 }
 
 /* Barra de categorias */
@@ -144,7 +161,7 @@ main {
   /* Distância da barra superior */
   background-color:#3a3a3a;
   /* Fundo preto */
-  border-bottom: 1px solid #4e4e4e;
+  border-bottom: 0.1vh solid #4e4e4e;
   /* Linha de separação cinza escura */
   z-index: 11;
   position: relative;
@@ -159,7 +176,7 @@ main {
   /* Sem borda */
   color: #f3f4f6;
   /* Texto branco acinzentado */
-  font-size: 1.4vw;
+  font-size: 2.8vh;
   padding: 0.5vw 1vw;
   border-radius: 0.5vw;
   /* Bordas arredondadas */
@@ -171,17 +188,17 @@ main {
 
 #categorias {
   width: 20vw;
-  height: 20vw;
+  height: 40vh;
   background-color: #2e2e2e;
   position: absolute;
-  top: -9vw;
+  top: -21vh;
   z-index: 10;
   transition: 0.3s ease;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-bottom-left-radius: 0.4vw;
-  border-bottom-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.8vh;
+  border-bottom-right-radius: 0.8vh;
   overflow: hidden;
 }
 
@@ -191,8 +208,8 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4vw;
-  font-size: 1.4vw;
+  height: 8vh;
+  font-size: 2.8vh;
   color: rgb(201, 201, 201);
   text-decoration: none;
   transition: 0.3s;
@@ -204,18 +221,18 @@ main {
   /*tela inicial*/
   display: flex;
   flex-direction: column;
-  background-color: #e6e6e6;
+  background-color: rgba(230, 230, 230, 1);
 }
 
 /* Carrossel */
 .carrossel {
   width: 100%;
-  height: 32vw;
+  height: 64vh;
   /* Altura do carrossel */
   overflow: hidden;
   /* Esconde as imagens fora do espaço visível */
   position: relative;
-  background: white;
+  background: rgb(0, 0, 0);
   /* Fundo branco */
   box-shadow: 0 4px 16px #0002;
   /* Sombra externa */
@@ -265,16 +282,16 @@ main {
   z-index: 2; /* Garante que fique acima das imagens e outros elementos */
   background-color: rgba(255, 255, 255, 0.8);
   color: #ea580c;
-  width: 45px; /* Tamanho fixo para melhor controle */
-  height: 45px;
+  width: 3vw; /* Tamanho fixo para melhor controle */
+  height: 6vh;
   border-radius: 50%;
-  border: 2px solid #ea580c;
+  border: 0.1vw solid #ea580c;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0.1vw 0.3vw rgba(0,0,0,0.15);
   transition: background-color 0.2s, color 0.2s;
-  font-size: 1.2rem; /* Tamanho do ícone */
+  font-size: 3vh; /* Tamanho do ícone */
   cursor: pointer;
 }
 
@@ -299,16 +316,16 @@ main {
   rgba(0, 0, 0, 0) 100%);
   /* Efeito de transição do carrossel pro conteúdo */
   width: 100%;
-  height: 12vw;
+  height: 24vh;
   position: absolute;
-  bottom: 1vw;
+  top: 34vw;
   z-index: 1;
 }
 /* Produtos */
 
 .organizaProdInic {
   width: 95vw;
-  height: 30vw;
+  height: 60vh;
   padding: 2vw;
   min-height: 40vw;/* Largura da área de produtos */
   margin: 0 auto;/* Altura mínima da seção */
@@ -329,7 +346,7 @@ main {
 
 .produtoInic {
   width: 18vw;
-  height: 32vw;
+  height: 64vh;
   border: 0vw solid #dddddd;
   /* Borda cinza clara */
   background: #efefef;
@@ -378,7 +395,7 @@ main {
 }
 
 .nomeProdut {
-  font-size: 1.5vw;
+  font-size: 3vh;
   margin-top: 1vw;
   margin-left: 1vw;
   color: #111;
@@ -391,7 +408,7 @@ main {
 }
 
 .precoProdut {
-  font-size: 1.9vw;
+  font-size: 3.8vh;
   margin-left: 1vw;
   color: #ea580c;
 }
@@ -416,23 +433,33 @@ main {
 /* Estrutura base dos containers */
 .conta-container, .carrinho-container {
   position: relative;
+  font-size: 1.4vw;
 }
 
 /* Estrutura base dos menus */
 .dropdown-menu-conta, .dropdown-menu-carrinho {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 150%; 
+  display: none; 
   border-bottom-left-radius: 0.5vw;
   border-bottom-right-radius: 0.5vw;
   box-shadow: 0 0.2vw 0.4vw rgba(0,0,0,0.2);
 }
 
 .dropdown-menu-conta.aberto, .dropdown-menu-carrinho.aberto {
-  display: block;
+  display: grid;
+  flex-direction: column;
 }
+.dropdown-menu-conta.aberto{
+  grid-area: menuConta;
+  width: 100%;
+  height: 90%;
+  position: relative;
+  right: 8vw;
+  grid-template-rows: 1fr 1fr 1fr;
 
+}
+.dropdown-menu-carrinho.aberto{
+  grid-area: menuCarrinho;
+}
 /* Cabeçalho dos menus */
 .dropdown-header {
   display: flex;
@@ -441,6 +468,7 @@ main {
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+  position: relative;
 }
 
 .close-btn {
@@ -454,12 +482,12 @@ main {
 
 /* ESTILO ESPECÍFICO: Menu "Minha Conta" (FUNDO ESCURO) */
 .dropdown-menu-conta {
-  width: 280px;
+  width: 5.6vw;
   background-color: #2E2E2E;
-  border: 1px solid #4e4e4e;
+  border: 0.1vw solid #4e4e4e;
 }
 .dropdown-menu-conta .dropdown-header {
-  border-bottom: 1px solid #4e4e4e;
+  border-bottom: 0.1vw solid #4e4e4e;
   color: #F3F4F6;
 }
 .dropdown-menu-conta .close-btn {
@@ -467,22 +495,30 @@ main {
 }
 .dropdown-menu-conta a {
   display: block;
-  padding: 12px 15px;
-  font-size: 1rem;
+  font-size: 3vh;
   color: #D1D5DB;
+  position: relative;
+}
+.dropdown-menu-conta div {
+  display: flex;
+  font-size: 3vh;
+  color: #D1D5DB;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --- NOVO ESTILO DO CARRINHO --- */
 .dropdown-menu-carrinho {
-    width: 400px;
+    width: 80vw;
     background-color: #1a1a1a;
-    border: 1px solid #2e2e2e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 0.1 solid #2e2e2e;
+    box-shadow: 0 0.2vw 0.3vw rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-menu-carrinho .dropdown-header {
     padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid #2e2e2e;
+    border-bottom: 0.1vw solid #2e2e2e;
     color: #f3f4f6;
     display: flex;
     justify-content: space-between;
@@ -512,7 +548,7 @@ main {
     gap: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #2e2e2e;
+    border-bottom: 0.1vw solid #2e2e2e;
 }
 
 .carrinho-item:last-child {
@@ -522,10 +558,10 @@ main {
 }
 
 .carrinho-item img {
-    width: 80px;
-    height: 80px;
+    width: 2.4vw;
+    height: 4.8vh;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 0.2vw;
 }
 
 .item-details {
@@ -562,7 +598,7 @@ main {
 .carrinho-footer {
     padding: 1.2rem 1.5rem;
     background-color: #111111;
-    border-top: 1px solid #2e2e2e;
+    border-top: 0.1vw solid #2e2e2e;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -608,15 +644,15 @@ main {
     right: 0px;
     background-color: #EA580C;
     color: white;
-    width: 20px;
-    height: 20px;
+    width: 1.4vw;
+    height: 2.8vh;
     border-radius: 50%;
     font-size: 0.8rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #2E2E2E;
+    border: 0.1vw solid #2E2E2E;
 }
 
 
@@ -624,25 +660,25 @@ main {
 .site-footer {
   background-color: #2E2E2E;
   color: #D1D5DB;
-  padding: 40px 0;
+  padding: 1.2vw 0;
   font-size: 1rem;
-  border-top: 5px solid #F97316;
+  border-top: 0.2vw solid #F97316;
 }
 
 .footer-container, .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0.6vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 0.9vw;
 }
 
 .footer-bottom {
-  border-top: 1px solid #4e4e4e;
-  padding-top: 20px;
-  margin-top: 20px;
+  border-top: 0.1vw solid #4e4e4e;
+  padding-top: 0.6vw;
+  margin-top: 0.6vw;
   text-align: center;
   width: 100%;
 }
@@ -655,19 +691,19 @@ main {
 .footer-section h4 {
   color: #ffffff;
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 0.5vw;
   text-transform: uppercase;
 }
 
 .footer-section a, .footer-section p {
   display: block;
   color: #D1D5DB;
-  margin-bottom: 10px;
+  margin-bottom: 0.4vw;
   text-decoration: none;
 }
 
 .footer-section i {
-  margin-right: 10px;
+  margin-right: 0.4vw;
   color: #F97316;
 }
 /* --- ADIÇÃO: Layout para Seções de Categoria na Home --- */
@@ -702,12 +738,12 @@ main {
 }
 
 .btn-ver-mais {
-    padding: 8px 20px;
+    padding: 0.3vw 1vw;
     font-size: 0.9rem;
     font-weight: bold;
     color: #EA580C;
-    border: 2px solid #EA580C;
-    border-radius: 6px;
+    border: 0.2vw solid #EA580C;
+    border-radius: 0.3vw;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -736,4 +772,26 @@ main {
     height: 100%;
     margin: 0;
     max-height: none;
+}
+
+/*____________________ */
+/*____Responsividade___*/
+/*____________________ */
+@media(max-width: 768px){
+  .barraP{
+    height: 22vh;
+    
+  }
+
+  .logo{
+    width: 11vw;
+    height: 22vh;
+  }
+  .nome{
+    display: none;
+  }
+  .gradient{
+    display: none;
+  }
+
 }
