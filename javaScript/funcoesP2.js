@@ -27,32 +27,16 @@ function mostrarProduto() {
 function abrirCategorias() {
   if (abreCate === 0) {
     setaCate.style.transform = "rotate(-180deg)";
-    abrindoCategorias();
+    categorias.classList.add("aberto")
+    abreCate=1
   } else {
     setaCate.style.transform = "rotate(0deg)";
-    fechandoCategorias();
+    categorias.classList.remove("aberto")
+    abreCate=0
   }
 }
 
-function abrindoCategorias() {
-  categorias.style.display = "flex";
-  if (categoriasT < 23) {
-    categoriasT += 2.1;
-    categorias.style.top = categoriasT + "vh";
-    requestAnimationFrame(abrindoCategorias);
-  } else {
-    abreCate = 1;
-  }
-}
-function fechandoCategorias() {
-  if (categoriasT > -18) {
-    categoriasT -= 2;
-    categorias.style.top = categoriasT + "vh";
-    requestAnimationFrame(fechandoCategorias);
-  } else {
-    abreCate = 0;;
-  }
-}
+
 
 function pecaEscolhida() {
   let nomeFundo2 = document.querySelector("#nomeFundo2");
