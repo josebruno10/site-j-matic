@@ -11,14 +11,15 @@ main.main-login {
     justify-content: center;
     position: relative;
     background-color: #f3f4f6;
-    padding: 9vw 1rem 3rem; /* Adiciona padding lateral para telas menores */
+    padding: 20vh 1rem 3rem;
+    /* Adiciona padding lateral para telas menores */
 }
 
 .informacoes-conta {
     width: 35vw;
     max-width: 500px;
     padding: 2.5rem;
-    border: 1px solid #dcdcdc;
+    border: 0.2vh solid #dcdcdc;
     background-color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -27,6 +28,7 @@ main.main-login {
     align-items: center;
     gap: 1.2rem;
 }
+
 .informacoes-conta.cadastro {
     width: 45vw;
     max-width: 650px;
@@ -55,7 +57,8 @@ main.main-login {
 }
 
 
-#form-pf, #form-pj {
+#form-pf,
+#form-pj {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -92,8 +95,8 @@ main.main-login {
     pointer-events: none;
 }
 
-.guardInput input:focus + label,
-.guardInput input:valid + label {
+.guardInput input:focus+label,
+.guardInput input:valid+label {
     top: 0;
     font-size: 0.9rem;
     color: #ea580c;
@@ -142,6 +145,7 @@ main.main-login {
     gap: 1rem;
     color: #aaa;
 }
+
 .ou-container hr {
     flex-grow: 1;
     border-top: 1px solid #ddd;
@@ -163,6 +167,7 @@ main.main-login {
     gap: 10px;
     transition: background-color 0.3s ease;
 }
+
 .btn-google .fa-google {
     color: #DB4437;
     font-size: 1.3rem;
@@ -179,6 +184,7 @@ main.main-login {
     .informacoes-conta {
         width: 60vw;
     }
+
     .informacoes-conta.cadastro {
         width: 70vw;
     }
@@ -187,8 +193,10 @@ main.main-login {
 /* Para celulares */
 @media (max-width: 768px) {
     main.main-login {
-        padding-top: 15vw; /* Aumenta o espaçamento do topo */
-        align-items: flex-start; /* Alinha o form no topo */
+        padding-top: 15vw;
+        /* Aumenta o espaçamento do topo */
+        align-items: flex-start;
+        /* Alinha o form no topo */
     }
 
     .informacoes-conta,
@@ -200,17 +208,38 @@ main.main-login {
     }
 
     .informacoes-conta span {
-        font-size: 1.8rem; /* Ajusta o título */
+        font-size: 1.8rem;
+        /* Ajusta o título */
     }
 
     .guardInput input,
     .guardInput label,
     .btn-google,
     .tipo-pessoa-container {
-        font-size: 1rem; /* Ajusta o tamanho da fonte dos inputs e labels */
+        font-size: 1rem;
+        /* Ajusta o tamanho da fonte dos inputs e labels */
     }
 
     .btn-entrar {
         font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 768px) {
+    main.main-login {
+        padding: 20vh 1rem 3rem;
+    }
+    .barraP {
+        height: 13vh;
+    }
+
+    .logo {
+        width: 17vw;
+        height: 17vw;
+    }
+
+    .nome {
+        display: block;
+        font-size: 3vh;
     }
 }

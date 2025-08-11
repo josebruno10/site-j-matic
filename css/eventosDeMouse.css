@@ -52,11 +52,11 @@
 .botãoFiltrar:hover{
   transform: translateY(-0.2vw);
   background-color: #ffffff;
-  box-shadow: 0 0.2vw 0.3vw #cbdcf0;
+  box-shadow: 0 0.4vh 0.6vh #a1c1e7;
 }
 .botãoFiltrar:active{
   transform: translateY(-0.1vw);
-  box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.08);
   color: #4A90E2;
 }
 

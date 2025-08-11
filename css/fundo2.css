@@ -4,8 +4,8 @@
 }
 
 #nomeFundo2 {
-  font-size: 4vw;
-  margin-top: 1vw;
+  font-size: 8vh;
+  margin-top: 15vh;
   margin-left: 1vw;
 }
 
@@ -15,6 +15,7 @@
   width: 100%;
   height: auto;
 }
+
 /* Produtos */
 .organizaProd {
   width: 90vw;
@@ -34,9 +35,10 @@
   position: relative;
   z-index: 10;
 }
+
 .produto {
-  width: 23vw;
-  height: 37vw;
+  width: 30vh;
+  height: 63vh;
   border: 0.1vw solid #dddddd;
   /* Borda cinza clara */
   background: #efefef;
@@ -50,6 +52,7 @@
   transition: 0.6s;
   cursor: pointer;
 }
+
 .guardImg {
   width: 100%;
   height: 60%;
@@ -59,16 +62,21 @@
   position: relative;
   top: 0.6vw;
 }
+
 .guardImg>img {
   /* imagem do produto */
   width: 100%;
   height: 100%;
   position: relative;
 }
+.btn-abre-filtro2{
+  display: none;
+}
 #filtro2 {
   width: 28%;
   flex-shrink: 0;
-  height: 40vw; /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
+  height: 40vw;
+  /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
   margin-top: 2vw;
   padding: 1.5vw;
   display: flex;
@@ -89,10 +97,23 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+.checkbox-wrapper {
+  display: flex;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 0.2vh solid #a1a1a1;
+  border-radius: 0.3vw;
+  width: 2vh;
+  height: 2vh;
+  align-items: center;
+  justify-content: center;
+}
 svg polyline {
   fill: none;
-  stroke: #4A90E2; /* cor da linha*/
-  stroke-width: 7; /* largura da linha */
+  stroke: #4A90E2;
+  /* cor da linha*/
+  stroke-width: 7;
+  /* largura da linha */
   stroke-linecap: round;
   stroke-linejoin: miter;
   stroke-dasharray: 30;
@@ -100,34 +121,37 @@ svg polyline {
   transition: stroke-dashoffset 0.3s ease-out;
 }
 
-input[type="checkbox"]:checked + svg polyline {
+input[type="checkbox"]:checked+svg polyline {
   stroke-dashoffset: 0;
 }
 
-#filtro2 > span {
+#filtro2>span {
   font-family: 'Oswald', sans-serif;
   font-size: 1.8vw;
   margin-left: 0;
   margin-bottom: 1.5vw;
-  border-bottom: 2px solid #ea580c;
+  border-bottom: 0.3vh solid #ea580c;
   padding-bottom: 0.8vw;
   /* --- ALTERAÇÃO AQUI --- */
-  align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
+  align-self: flex-start;
+  /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
 }
+
 .marcas {
   display: flex;
   flex-direction: column;
   margin-left: 0;
   gap: 1.2vw;
 }
-.botãoFiltrar{
+
+.botãoFiltrar {
   padding: 0.8rem 2.5rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #585858; 
+  color: #585858;
   background-color: #ffffff;
   border: 0.1vw solid #e6e6e6;
-  border-radius: 1.3vw; 
+  border-radius: 1.3vw;
   cursor: pointer;
   box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
@@ -135,20 +159,44 @@ input[type="checkbox"]:checked + svg polyline {
   color: #4A90E2;
 }
 
-.spanCheck{
+.spanCheck {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.checkbox-wrapper {
-  display: flex;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 0.1vw solid #a1a1a1;
-  border-radius: 0.3vw;
-  width: 1.3vw;
-  height: 1.3vw;
-  align-items: center;
-  justify-content: center;
-}
 
+
+@media(max-width: 768px) {
+  .linha.linha1{
+    flex-direction: row;
+  }
+  .btn-abre-filtro2{
+    display: flex;
+    border: 0px solid;
+    width: 10vh;
+    font-size: 20vh;
+  }
+  .linha{
+    flex-direction: column;
+  }
+  #nomeFundo2{
+
+    font-size: 4vh;
+  }
+  #filtro2 {
+    width: 100vw;
+    flex-shrink: 0;
+    height:auto;
+    /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 0.1vw solid #d3d3d3;
+    border-radius: 0.7vw;
+    box-shadow: none;
+    /* overflow: auto; foi removido pois não é mais necessário */
+    position: relative;
+    top: 1vh;
+  }
+}
