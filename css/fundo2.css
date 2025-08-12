@@ -5,7 +5,6 @@
 
 #nomeFundo2 {
   font-size: 8vh;
-  margin-top: 15vh;
   margin-left: 1vw;
 }
 
@@ -69,9 +68,11 @@
   height: 100%;
   position: relative;
 }
-.btn-abre-filtro2{
+
+.btn-abre-filtro2 {
   display: none;
 }
+
 #filtro2 {
   width: 28%;
   flex-shrink: 0;
@@ -108,6 +109,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
 }
+
 svg polyline {
   fill: none;
   stroke: #4A90E2;
@@ -142,6 +144,7 @@ input[type="checkbox"]:checked+svg polyline {
   flex-direction: column;
   margin-left: 0;
   gap: 1.2vw;
+  margin-left: 2vh;
 }
 
 .botãoFiltrar {
@@ -167,36 +170,88 @@ input[type="checkbox"]:checked+svg polyline {
 
 
 @media(max-width: 768px) {
-  .linha.linha1{
-    flex-direction: row;
+  .linha.linha1 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 9fr  1fr;
+    position: relative;
+    grid-gap: 10vh;
+    padding: 1vh;
+    margin-top: 15vh;
   }
-  .btn-abre-filtro2{
+
+  .btn-abre-filtro2 {
     display: flex;
-    border: 0px solid;
-    width: 10vh;
-    font-size: 20vh;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8vw;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 1vh;
+    /* --- ALTERAÇÃO AQUI --- */
+    align-self: flex-start;
+    border: 0px;
   }
-  .linha{
+
+  .btn-abre-filtro2 svg polyline {
+    fill: none;
+    stroke: #000000;
+    /* cor da linha*/
+    stroke-width: 4;
+    /* largura da linha */
+    stroke-linecap:round;
+    stroke-linejoin: miter;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 0;
+
+  }
+
+  .linha {
     flex-direction: column;
   }
-  #nomeFundo2{
+
+  #nomeFundo2 {
 
     font-size: 4vh;
   }
-  #filtro2 {
+  #filtro2.aberto{
+    width: 60vw;
+    visibility: visible;
+    transition: .4s;
+  }
+  body.fechado{
+    overflow: hidden;
+    height: 100vh;
+  }
+  .escuro{
+    background-color: #000000a2;
+    position: absolute;
+    z-index: 39;
     width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  .escuro.aberto{
+    display: block;
+  }
+  #filtro2 {
+    width: 0%;
     flex-shrink: 0;
-    height:auto;
+    height: 100vh;
     /* ALTERAÇÃO PRINCIPAL: Altura se ajusta ao conteúdo */
-    padding: 1.5vw;
-    display: flex;
+    padding: 0%;
+    display:  flex;
     flex-direction: column;
     background-color: #ffffff;
-    border: 0.1vw solid #d3d3d3;
+    border: 0vw solid #d3d3d3;
     border-radius: 0.7vw;
     box-shadow: none;
     /* overflow: auto; foi removido pois não é mais necessário */
-    position: relative;
-    top: 1vh;
+    position: absolute;
+    top: -2vh;
+    overflow: hidden;
+    transition: .4s ease-out;
+    z-index: 40;
   }
 }

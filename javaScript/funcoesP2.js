@@ -54,6 +54,7 @@ if(document.getElementById('fundo2')){
 }
   
 function filtrar() {
+  abreFiltro2()
   const produtos = document.querySelectorAll('#fundo2 .produto');
   const filtros = {fChevrolet: chev, fFiat: fiat, fNissan: niss, fRenaut: renau, fFord: ford, fVolkswagen: volk, fAudi: audi, fHonda: honda, fJeep: jeep, fMitsubishi: mitsu, fCitroen: citro};
   
@@ -125,3 +126,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+let btnAbreFiltro2 = document.querySelector('.btn-abre-filtro2')
+function abreFiltro2() {
+  let filtro2 = document.querySelector('#filtro2')
+  let escuro = document.querySelector('.escuro')
+  escuro.classList.toggle("aberto")
+  document.body.classList.toggle('fechado')
+  filtro2.classList.toggle("aberto")
+  
+}

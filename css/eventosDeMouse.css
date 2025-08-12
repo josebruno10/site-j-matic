@@ -108,3 +108,10 @@
   border: 0.1vw solid #b7b7b7;
   outline: none
 }
+/*-------------------------------
+  eventos de mouse do fundo2.css
+-------------------------------*/
+.btn-abre-filtro2:hover.btn-abre-filtro2 svg polyline{
+  stroke: #252b37;
+
+}

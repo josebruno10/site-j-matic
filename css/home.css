@@ -171,7 +171,7 @@ main {
   /* Fundo preto */
   border-bottom: 0.1vh solid #4e4e4e;
   /* Linha de separação cinza escura */
-  z-index: 11;
+  z-index: 20;
   align-items:center ;
 }
 
@@ -199,8 +199,8 @@ main {
   height: 40vh;
   background-color: #2e2e2e;
   position: absolute;
-  top: -21vh;
-  z-index: 10;
+  top: -20vh;
+  z-index: 19;
   transition: 0.5s ease;
   display: flex;
   align-items: center;
@@ -515,7 +515,7 @@ main {
 
 /* ESTILO ESPECÍFICO: Menu "Minha Conta" (FUNDO ESCURO) */
 .dropdown-menu-conta {
-  z-index: 20;
+  z-index: 29;
   width: 20vw;
   background-color: #2E2E2E;
   border: 0.1vw solid #4e4e4e;
@@ -558,7 +558,7 @@ main {
   background-color: #1a1a1a;
   border: 0.1 solid #2e2e2e;
   box-shadow: 0 0.2vw 0.3vw rgba(0, 0, 0, 0.3);
-  z-index: 20;
+  z-index: 29;
   transition: .6s;
   right: 0vh;
   overflow: hidden;
@@ -854,7 +854,7 @@ main {
   }
 
   #categorias.aberto {
-    top: 21vh;
+    top: 22.8vh;
   }
 
   #categorias a {
@@ -880,7 +880,6 @@ main {
         DROPDOWN
     ================*/
   .dropdown-menu-conta {
-    z-index: 20;
     width: 40vw;
     background-color: #2E2E2E;
     border: 0.1vw solid #4e4e4e;
