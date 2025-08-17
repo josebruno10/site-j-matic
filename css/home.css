@@ -11,7 +11,7 @@
 body {
   font-family: "Oswald", sans-serif;
   /* Define a fonte da página */
-  background-color: #ffffff;
+  background-color: rgba(230, 230, 230, 1);
   /* Cor de fundo cinza-clara */
   color: #2e2e2e;
   /* Cor do texto principal (cinza escuro) */
@@ -238,7 +238,7 @@ main {
 /* Carrossel */
 .carrossel {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   /* Altura do carrossel */
   overflow: hidden;
   /* Esconde as imagens fora do espaço visível */
@@ -250,7 +250,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: row;
-  top: -0.1vw;
+  top: 14.8vh;
 }
 
 .imagem {
@@ -288,7 +288,6 @@ main {
 /* SUBSTITUA A REGRA ANTIGA POR ESTA */
 .btn-carrossel {
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
   z-index: 2;
   /* Garante que fique acima das imagens e outros elementos */
@@ -321,21 +320,6 @@ main {
 
 /* fimCarrossel */
 
-/* Gradiente decorativo */
-.gradient {
-
-  background: #E6E6E6;
-  background: linear-gradient(0deg,
-      rgba(230, 230, 230, 1) 25%,
-      rgba(0, 0, 0, 0) 100%);
-  /* Efeito de transição do carrossel pro conteúdo */
-  width: 100%;
-  height: 24vh;
-  position: absolute;
-  top: 34vw;
-  z-index: 1;
-}
-
 /* Produtos */
 
 .organizaProdInic {
@@ -346,12 +330,12 @@ main {
   /* Largura da área de produtos */
   margin: 0 auto;
   /* Altura mínima da seção */
-  margin-top: 5vw;
+  margin-top: 20vh;
   /* Centraliza horizontalmente */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.7vw;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  row-gap: 6vh;
+  column-gap: 4vh;
   /* Espaço entre os produtos */
   justify-content: center;
   justify-content: space-around;
@@ -366,8 +350,8 @@ main {
 }
 
 .produtoInic {
-  width: 30vh;
-  height: 63vh;
+  width: 35vh;
+  height: 68vh;
   border: 0vw solid #dddddd;
   /* Borda cinza clara */
   background: #efefef;
@@ -411,7 +395,7 @@ main {
 .guardImgInic>img {
   /* imagem do produto */
   width: 100%;
-  height: 160%;
+  height: 100%;
   position: relative;
 }
 
@@ -708,26 +692,29 @@ main {
 .site-footer {
   background-color: #2E2E2E;
   color: #D1D5DB;
-  padding: 1.2vw 0;
+  padding: 2.4vh 0;
   font-size: 1rem;
-  border-top: 0.2vw solid #F97316;
+  border-top: 0.4vh solid #F97316;
+  margin-top: 10vh;
 }
 
 .footer-container,
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.6vw;
+  padding: 0 1.7vh;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 0.9vw;
 }
 
 .footer-bottom {
   border-top: 0.1vw solid #4e4e4e;
-  padding-top: 0.6vw;
-  margin-top: 0.6vw;
+  padding-top: 1.2vh;
+  margin-top: 1.2vh;
+  padding-bottom: 3vh;
   text-align: center;
   width: 100%;
 }
@@ -861,13 +848,16 @@ main {
     font-size: 3vh;
   }
 
-  .gradient {
-    display: none;
-  }
-
   .carrossel {
-    height: 64vh;
+    height: 40vh;
     align-items: center;
+  }
+  .organizaProdInic{
+    grid-template-columns: 1fr 1fr;
+  }
+  .produtoInic{
+    width: 30vh;
+    height: 50vh;
   }
 
   .btn-carrossel {

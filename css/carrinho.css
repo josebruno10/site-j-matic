@@ -1,8 +1,12 @@
+.barraP a{
+    display: flex;
+    align-items: center;
+}
 .carrinho-main {
     padding: 2rem;
     margin-top: 7vw;
     min-height: 70vh;
-    background-color: #F3F4F6;
+    background-color: rgba(230, 230, 230, 1);
 }
 
 .carrinho-container-grid {
@@ -258,5 +262,7 @@
 
     .carrinho-main, .carrinho-items-col, .order-summary {
         padding: 1rem;
+        position: relative;
+        top: 5vh;
     }
 }

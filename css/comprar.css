@@ -5,10 +5,11 @@
   background-color: #ffffff; /* Fundo branco para o container */
   padding: 1.5vw;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.05);
   max-width: 1200px;
   margin: 0 auto;
   width: 90vw;
+  margin-top: 15vh;
 }
 
 /* --- COLUNA DA ESQUERDA --- */
@@ -168,4 +169,6 @@
   border-radius: 4px;
   padding: 0 20px;
   cursor: pointer;
+}
+@media(max-width: 768px) {
 }

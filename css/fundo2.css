@@ -226,7 +226,7 @@ input[type="checkbox"]:checked+svg polyline {
   }
   .escuro{
     background-color: #000000a2;
-    position: absolute;
+    position: fixed;
     z-index: 39;
     width: 100vw;
     height: 100vh;
@@ -248,7 +248,7 @@ input[type="checkbox"]:checked+svg polyline {
     border-radius: 0.7vw;
     box-shadow: none;
     /* overflow: auto; foi removido pois não é mais necessário */
-    position: absolute;
+    position: fixed;
     top: -2vh;
     overflow: hidden;
     transition: .4s ease-out;
