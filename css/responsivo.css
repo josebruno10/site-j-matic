@@ -1,0 +1,307 @@
+/* media query para telas com largura máxima de 900px */
+@media (max-width: 900px) {
+  .produtos-categoria {
+    gap: 3vw; /* aumenta espaçamento entre produtos */
+  }
+  .card-produto {
+    width: 40vw; /* largura responsiva do card */
+    min-width: 160px; /* largura mínima */
+    max-width: 90vw; /* largura máxima */
+    padding: 3vw 2vw; /* padding interno maior para telas menores */
+  }
+  .img-produto {
+    height: 22vw; /* altura da imagem ajustada */
+  }
+  .nome-produto,
+  .preco-produto,
+  .desc-produto,
+  .btn-whatsapp {
+    font-size: 2.5vw; /* fontes maiores para melhor leitura */
+  }
+}
+
+/* media query para telas com largura máxima de 600px */
+@media (max-width: 600px) {
+  .produtos-categoria {
+    flex-direction: column; /* produtos em coluna */
+    gap: 4vw; /* maior espaçamento entre produtos */
+    align-items: center; /* centraliza os produtos */
+  }
+  .card-produto {
+    width: 90vw; /* largura quase total da tela */
+    min-width: 0; /* remove limite mínimo */
+    max-width: 100vw; /* largura máxima igual a tela */
+    padding: 5vw 2vw; /* padding interno maior */
+  }
+  .img-produto {
+    height: 40vw; /* altura da imagem proporcional à tela */
+  }
+  .titulo-categoria {
+    font-size: 5vw; /* título maior para telas pequenas */
+  }
+}
+
+/* media query para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+  .card-produto {
+    width: 28vw; /* ajusta largura dos cards */
+    max-width: 40vw; /* largura máxima do card */
+  }
+}
+
+/* media query para telas com largura máxima de 900px (modal, navbar e produtos) */
+@media (max-width: 900px) {
+  .nav-link {
+    font-size: 2.5vw; /* aumenta tamanho da fonte dos links */
+    padding: 1vw 2vw; /* padding maior */
+  }
+  .modal-produto {
+    width: 98vw; /* largura quase total da tela */
+    padding: 4vw 2vw 2vw 2vw; /* padding interno ajustado */
+  }
+  .modal-produto-title {
+    font-size: 4vw; /* título do modal maior */
+  }
+  .modal-produto-img-principal {
+    width: 40vw; /* largura da imagem principal do modal */
+    height: 40vw; /* altura proporcional */
+  }
+  .modal-produto-thumbs img {
+    width: 8vw; /* largura das miniaturas */
+    height: 8vw; /* altura das miniaturas */
+  }
+  .modal-produto-preco,
+  .modal-produto-desc,
+  .modal-produto-ficha {
+    font-size: 2.5vw; /* fontes maiores dentro do modal */
+  }
+  .modal-carrinho {
+    width: 95vw; /* largura do modal do carrinho */
+    padding: 4vw 2vw 2vw 2vw; /* padding ajustado */
+  }
+  .modal-carrinho-title {
+    font-size: 4vw; /* título do modal maior */
+  }
+  .carrinho-item-nome,
+  .carrinho-item-preco,
+  #carrinho-total {
+    font-size: 2.5vw; /* fontes do carrinho aumentadas */
+  }
+  .carrinho-item-img {
+    width: 12vw; /* imagem do item maior */
+    height: 12vw; /* altura proporcional */
+  }
+  .carrinho-item-qtd-btn,
+  .carrinho-item-remove {
+    font-size: 3vw; /* botões maiores */
+    width: 6vw; /* largura dos botões */
+    height: 6vw; /* altura dos botões */
+  }
+  .produtos-categoria {
+    gap: 3vw 3vw; /* espaçamento entre produtos ajustado */
+    padding: 0 1vw; /* padding lateral */
+  }
+  .card-produto {
+    width: 40vw; /* largura do card */
+    min-width: 160px; /* largura mínima */
+    max-width: 90vw; /* largura máxima */
+    padding: 3vw 2vw; /* padding interno */
+    margin: 0; /* remove margem */
+  }
+  .img-produto {
+    height: 22vw; /* altura da imagem do produto */
+  }
+  .nome-produto,
+  .preco-produto,
+  .desc-produto,
+  .btn-whatsapp {
+    font-size: 2.5vw; /* fontes responsivas */
+  }
+}
+
+/* media query para telas com largura máxima de 600px (última adaptação de produtos) */
+@media (max-width: 600px) {
+  .produtos-categoria {
+    flex-direction: column; /* produtos em coluna */
+    gap: 4vw; /* maior espaçamento */
+    align-items: center; /* centraliza produtos */
+  }
+  .card-produto {
+    width: 90vw; /* card ocupa quase toda a tela */
+    min-width: 0; /* remove largura mínima */
+    max-width: 100vw; /* largura máxima igual à tela */
+    padding: 5vw 2vw; /* padding maior para telas pequenas */
+  }
+  .img-produto {
+    height: 40vw; /* altura proporcional à tela */
+  }
+  .titulo-categoria {
+    font-size: 5vw; /* título maior */
+  }
+}
+/* ----- Estilos para Tablets (telas até 768px) ----- */
+@media (max-width: 768px) {
+  /* Barra superior */
+  .barraP {
+    height: 12vw;
+  }
+  .logo {
+    width: 8vw;
+    height: 8vw;
+  }
+  .nome {
+    font-size: 3.5vw;
+  }
+  .input-container {
+    display: none; /* Esconde a busca em telas menores para simplificar */
+  }
+  .btn-icone {
+    font-size: 4vw;
+  }
+  .btn-home {
+    font-size: 3vw !important;
+  }
+
+  /* Barra de categorias */
+  .barraS {
+    margin-top: 12vw;
+    padding: 1.5vw;
+  }
+  .barraS button {
+    font-size: 2.5vw;
+  }
+  #categorias {
+    width: 30vw;
+  }
+  #categorias div {
+    font-size: 2vw;
+    height: 6vw;
+  }
+
+  /* Produtos */
+  .organizaProd {
+    gap: 2vw;
+  }
+  .produto {
+    width: 43vw; /* 2 produtos por linha */
+    height: 55vw;
+  }
+  .guardImg {
+    height: 28vw;
+  }
+  .guardImg > img {
+    top: -6vw;
+  }
+  .nomeProdut {
+    font-size: 2.5vw;
+  }
+  .precoProdut {
+    font-size: 3.5vw;
+  }
+  .precoProdutParcela {
+    font-size: 1.5vw;
+  }
+
+  /* Página de categoria */
+  .linha {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #filtro2 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2vw;
+  }
+}
+
+/* ----- Estilos para Celulares (telas até 480px) ----- */
+@media (max-width: 480px) {
+  /* Barra superior */
+  .barraP {
+    height: 18vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .barraP > .d-flex.align-items-center {
+    order: 1;
+  }
+  .barraP > .d-flex.align-items-center.gap-3 {
+    order: 2;
+  }
+  .logo {
+    width: 10vw;
+    height: 10vw;
+  }
+  .nome {
+    display: none; /* Esconde o nome da loja para economizar espaço */
+  }
+  .btn-icone {
+    font-size: 6vw;
+  }
+
+  /* Barra de categorias */
+  .barraS {
+    margin-top: 18vw;
+  }
+  .barraS button {
+    font-size: 4vw;
+  }
+
+  /* Carrossel */
+  .carrossel {
+    height: 50vw;
+  }
+  .btn-carrossel {
+    width: 8vw;
+    height: 8vw;
+    font-size: 5vw;
+  }
+
+  /* Produtos */
+  .organizaProd {
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+  .organizaProdInic {
+    margin-top: 10vw;
+    gap: 4vw;
+  }
+  .produto {
+    width: 80vw; /* 1 produto por linha */
+    height: auto;
+    padding-bottom: 4vw;
+  }
+  .produtoInic {
+    width: 80vw; /* 1 produto por linha */
+    height: auto;
+    padding-bottom: 4vw;
+  }
+  .guardImg {
+    height: 50vw;
+  }
+  .guardImgInic {
+    height: 50vw;
+  }
+  .guardImg > img {
+    top: -10vw;
+  }
+  .guardImgInic > img {
+    top: -10vw;
+  }
+  .nomeProdut {
+    font-size: 5vw;
+  }
+  .precoProdut {
+    font-size: 6vw;
+  }
+  .precoProdutParcela {
+    font-size: 2.8vw;
+  }
+
+  /* Página de categoria */
+  #nomeFundo2 {
+    text-align: center;
+    font-size: 7vw;
+  }
+}
+

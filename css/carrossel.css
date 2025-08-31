@@ -1,0 +1,67 @@
+/* carrossel */
+.carrossel {
+  width: 100%; /* define que o carrossel ocupa toda a largura da tela */
+  height: 32vw; /* altura proporcional à largura da tela */
+  overflow: hidden; /* esconde conteúdo que ultrapassa a área do carrossel */
+  position: relative; /* permite posicionar elementos filhos de forma absoluta */
+  background: white; /* define fundo branco */
+  box-shadow: 0 4px 16px #0002; /* adiciona sombra ao redor do carrossel */
+  display: flex; /* ativa layout flexível */
+  align-items: center; /* centraliza verticalmente os itens dentro do carrossel */
+  flex-direction: row; /* posiciona os itens em linha */
+  top: -0.1vw; /* move levemente o carrossel para cima */
+}
+
+.imagem {
+  position: absolute; /* posiciona cada imagem de forma absoluta dentro do carrossel */
+  width: 100%; /* imagem ocupa toda a largura */
+  height: 100%; /* imagem ocupa toda a altura */
+}
+
+.imagem1 {
+  left: -100%; /* primeira imagem começa fora da tela à esquerda */
+  z-index: 1; /* define ordem de empilhamento */
+}
+
+.imagem2 {
+  left: 0%; /* segunda imagem aparece no centro do carrossel */
+  z-index: 1; /* define ordem de empilhamento */
+}
+
+.imagem3 {
+  left: 100%; /* terceira imagem começa fora da tela à direita */
+  z-index: 1; /* define ordem de empilhamento */
+}
+
+.imagem img {
+  width: 100%; /* imagem dentro do container ocupa toda a largura */
+  height: 150%; /* altura maior que o container para evitar cortes */
+}
+
+.btn-carrossel {
+  background-color: #fff9f4; /* cor de fundo clara */
+  color: #ea580c; /* cor do ícone (laranja) */
+  font-size: 2.5vw; /* tamanho do ícone proporcional à largura da tela */
+  border-radius: 50%; /* formato circular */
+  border: 0.2vw solid #ea580c; /* borda laranja */
+  width: 3vw; /* largura do botão proporcional à tela */
+  height: 3vw; /* altura do botão proporcional à tela */
+  display: flex; /* ativa layout flexível */
+  align-items: center; /* centraliza verticalmente o conteúdo */
+  justify-content: center; /* centraliza horizontalmente o conteúdo */
+  box-shadow: 0 2px 8px #0002; /* sombra para destaque */
+  transition: background 0.2s, color 0.2s; /* animação suave em hover */
+  z-index: 2; /* coloca o botão acima das imagens */
+  position: absolute; /* posiciona de forma absoluta dentro do carrossel */
+  top: 50%; /* posiciona no meio vertical */
+  transform: translateY(-50%); /* corrige para centralizar exatamente */
+  z-index: 9; /* garante que fique na frente de todos os elementos */
+}
+
+.btn-carrossel.esq {
+  left: 1vw; /* botão da esquerda fica encostado à esquerda */
+}
+
+.btn-carrossel.dir {
+  right: 1vw; /* botão da direita fica encostado à direita */
+}

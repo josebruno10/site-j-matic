@@ -1,0 +1,101 @@
+/* barra superior e busca */
+
+/* container da barra superior */
+.barraP {
+  width: 100%; /* ocupa toda a largura da tela */
+  height: 7vw; /* altura responsiva baseada na largura da tela */
+  background-color: #2e2e2e; /* cor de fundo escura */
+  position: fixed; /* fixa a barra no topo mesmo com rolagem */
+  top: 0; /* gruda no topo da página */
+  z-index: 100; /* garante que fique acima dos outros elementos */
+  box-shadow: 0 2px 8px #0002; /* sombra sutil abaixo da barra */
+}
+
+/* logo da página */
+.logo {
+  width: 5vw; /* largura responsiva */
+  height: 5vw; /* altura responsiva */
+  cursor: pointer; /* cursor de mão ao passar */
+}
+
+/* nome da marca */
+.nome {
+  font-size: 2.5vw; /* tamanho responsivo da fonte */
+  color: #f97316; /* cor laranja vibrante */
+  font-weight: bold; /* deixa em negrito */
+  letter-spacing: 1px; /* espaçamento entre letras */
+}
+
+/* container do input de busca */
+.input-container {
+  position: relative; /* permite posicionar ícone dentro */
+  width: 28vw; /* largura do campo de busca */
+  margin-right: 13rem; /* espaço à direita do campo */
+  max-width: 400px; /* limita tamanho máximo em telas grandes */
+}
+
+/* ícone de lupa dentro do input */
+.input-container i {
+  position: absolute; /* posiciona dentro do input */
+  left: 1vw; /* distância da esquerda */
+  top: 50%; /* centraliza verticalmente */
+  transform: translateY(-50%); /* ajuste fino da centralização */
+  color: #ea580c; /* cor laranja */
+  font-size: 1.3vw; /* tamanho responsivo do ícone */
+  transition: color 0.3s; /* suaviza mudança de cor */
+  pointer-events: none; /* clique ignora o ícone e vai para o input */
+}
+
+/* campo de pesquisa */
+#pesquisa {
+  width: 100%; /* ocupa toda largura do container */
+  height: 2.5vw; /* altura responsiva */
+  padding-left: 3vw; /* espaço para a lupa à esquerda */
+  border: 0vw solid #d1d5db; /* borda cinza clara */
+  border-radius: 0.2vw; /* bordas arredondadas */
+  background-color: #e5e5e5; /* fundo cinza claro */
+  font-family: "Oswald", sans-serif; /* fonte do input */
+  font-size: 1.1vw; /* tamanho da fonte */
+  color: #1f1f1f; /* cor do texto */
+  transition: 0.3s; /* suaviza alterações visuais */
+}
+
+/* botões de ícones (ex: lupa, carrinho) */
+.btn-icone {
+  background: none; /* fundo transparente */
+  border: none; /* sem borda */
+  color: rgb(185, 185, 185); /* cor cinza do ícone */
+  font-size: 2.3vw; /* tamanho responsivo do ícone */
+  transition: 0.2s; /* transição suave */
+}
+
+/* links de navegação */
+.nav-links {
+  gap: 2vw; /* espaçamento entre links */
+  align-items: center; /* centraliza verticalmente */
+}
+
+/* link individual */
+.nav-link {
+  color: #fff; /* cor branca */
+  font-size: 1.2vw; /* tamanho da fonte */
+  text-decoration: none; /* remove sublinhado */
+  font-weight: 500; /* peso da fonte */
+  padding: 0.5vw 1vw; /* espaçamento interno */
+  border-radius: 0.4vw; /* cantos arredondados */
+  transition: background 0.2s, color 0.2s; /* animação de hover */
+}
+
+/* efeito ao passar o mouse sobre o link */
+.nav-link:hover {
+  background: #ea580c; /* fundo laranja */
+  color: #fff; /* cor do texto branca */
+}
+
+/* responsivo para telas menores que 900px */
+@media (max-width: 900px) {
+  .nav-link {
+    font-size: 2.5vw; /* aumenta tamanho da fonte */
+    padding: 1vw 2vw; /* aumenta espaçamento interno */
+  }
+}

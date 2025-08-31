@@ -1,0 +1,110 @@
+/* seção de categorias */
+
+/* container da seção */
+.secao-categoria {
+  margin: 0 0 2vw 0; /* margem inferior de 2vw, outras margens zero */
+  padding: 0; /* sem preenchimento interno */
+  background: none; /* sem cor de fundo */
+}
+
+/* título da categoria */
+.titulo-categoria {
+  font-size: 2.2vw; /* tamanho responsivo do título */
+  color: #ea580c; /* cor laranja */
+  margin-bottom: 1.5vw; /* espaço abaixo do título */
+  margin-left: 2vw; /* espaço à esquerda */
+  font-weight: 700; /* fonte negrito */
+  letter-spacing: 1px; /* espaçamento entre letras */
+}
+
+/* container dos produtos da categoria */
+.produtos-categoria {
+  display: flex; /* organiza produtos em linha */
+  flex-wrap: wrap; /* permite quebra de linha */
+  gap: 2vw 2vw; /* espaçamento horizontal e vertical entre cards */
+  justify-content: flex-start; /* alinha à esquerda */
+  padding: 0 0.5vw 0 0.5vw; /* espaçamento horizontal interno */
+  margin-top: 1vw; /* espaçamento acima dos produtos */
+}
+
+/* card individual do produto */
+.card-produto {
+  background: #fff; /* fundo branco */
+  border-radius: 1vw; /* cantos arredondados */
+  box-shadow: 0 2px 12px #0001; /* sombra suave */
+  padding: 1.5vw 1vw 1.5vw 1vw; /* espaçamento interno */
+  width: 22vw; /* largura responsiva */
+  min-width: 220px; /* largura mínima */
+  max-width: 320px; /* largura máxima */
+  display: flex; /* flex container */
+  flex-direction: column; /* itens em coluna */
+  align-items: center; /* centraliza horizontalmente */
+  transition: box-shadow 0.2s, transform 0.2s; /* animação ao hover */
+  position: relative; /* permite posicionamento relativo de elementos internos */
+  margin: 0; /* sem margem */
+}
+
+/* ajustes para telas menores que 1200px */
+@media (max-width: 1200px) {
+  .card-produto {
+    width: 28vw; /* largura maior proporcional */
+    max-width: 40vw; /* ajuste máximo */
+  }
+}
+
+/* ajustes para telas menores que 900px */
+@media (max-width: 900px) {
+  .produtos-categoria {
+    gap: 3vw 3vw; /* aumenta espaçamento entre cards */
+    padding: 0 1vw; /* aumenta espaçamento interno horizontal */
+  }
+  .card-produto {
+    width: 40vw; /* largura responsiva maior */
+    min-width: 160px; /* largura mínima reduzida */
+    max-width: 90vw; /* largura máxima aumentada */
+    padding: 3vw 2vw; /* aumento do padding para telas pequenas */
+    margin: 0; /* sem margem */
+  }
+}
+
+/* efeito ao passar o mouse sobre o card */
+.card-produto:hover {
+  box-shadow: 0 4px 24px #ea580c33; /* sombra mais intensa */
+  transform: translateY(-0.5vw) scale(1.03); /* leve elevação e aumento */
+}
+
+/* imagem do produto dentro do card */
+.img-produto {
+  width: 100%; /* ocupa toda largura do card */
+  height: 11vw; /* altura responsiva */
+  object-fit: cover; /* mantém proporção da imagem, cortando se necessário */
+  border-radius: 0.7vw; /* cantos arredondados */
+  margin-bottom: 1vw; /* espaço abaixo da imagem */
+  background: #f3f4f6; /* fundo cinza claro enquanto carrega imagem */
+}
+
+/* nome do produto */
+.nome-produto {
+  font-size: 1.2vw; /* tamanho responsivo da fonte */
+  font-weight: 600; /* fonte semi-negrito */
+  color: #222; /* cor escura */
+  margin-bottom: 0.5vw; /* espaçamento abaixo do nome */
+  text-align: center; /* centraliza o texto */
+}
+
+/* preço do produto */
+.preco-produto {
+  font-size: 1.1vw; /* tamanho da fonte */
+  color: #ea580c; /* cor laranja */
+  font-weight: bold; /* negrito */
+  margin-bottom: 0.5vw; /* espaçamento abaixo do preço */
+}
+
+/* descrição curta do produto */
+.desc-produto {
+  font-size: 0.95vw; /* tamanho da fonte */
+  color: #444; /* cor cinza escura */
+  margin-bottom: 1vw; /* espaçamento abaixo */
+  text-align: center; /* centraliza o texto */
+  min-height: 2vw; /* altura mínima para alinhar cards */
+}

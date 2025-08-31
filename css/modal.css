@@ -1,0 +1,322 @@
+/* modal.css - estilos de modais extraídos do style.css */
+
+/* fundo do modal de produto */
+.modal-produto-bg {
+  position: fixed; /* fixa a posição em relação à tela */
+  top: 0; /* topo da tela */
+  left: 0; /* esquerda da tela */
+  right: 0; /* direita da tela */
+  bottom: 0; /* base da tela */
+  background: rgba(0, 0, 0, 0.35); /* fundo semi-transparente preto */
+  z-index: 9999; /* fica acima de outros elementos */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* container principal do modal de produto */
+.modal-produto {
+  background: #fff; /* fundo branco */
+  border-radius: 1vw; /* cantos arredondados */
+  box-shadow: 0 4px 32px #0003; /* sombra suave preta */
+  width: 40vw; /* largura relativa à tela */
+  max-width: 98vw; /* largura máxima para telas pequenas */
+  padding: 2vw 2vw 1vw 2vw; /* espaçamento interno top, right, bottom, left */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  max-height: 90vh; /* altura máxima relativa à tela */
+  overflow-y: auto; /* barra de rolagem vertical se necessário */
+}
+
+/* cabeçalho do modal */
+.modal-produto-header {
+  display: flex; /* layout flexível */
+  justify-content: space-between; /* espaço entre título e botão fechar */
+  align-items: center; /* centraliza verticalmente */
+  margin-bottom: 1vw; /* espaço abaixo do header */
+}
+
+/* título do modal */
+.modal-produto-title {
+  font-size: 1.5vw; /* tamanho da fonte */
+  font-weight: bold; /* fonte em negrito */
+  color: #ea580c; /* cor laranja */
+}
+
+/* botão de fechar modal */
+.modal-produto-close {
+  background: none; /* sem fundo */
+  border: none; /* sem borda */
+  font-size: 3vw; /* tamanho grande do ícone */
+  color: #222; /* cor cinza escuro */
+  cursor: pointer; /* cursor de mão */
+  line-height: 1; /* altura da linha */
+  width: 3vw; /* largura do botão */
+  height: 3vw; /* altura do botão */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* corpo do modal */
+.modal-produto-body {
+  display: flex; /* layout flexível */
+  gap: 2vw; /* espaçamento entre elementos */
+  flex-wrap: wrap; /* quebra em múltiplas linhas se necessário */
+}
+
+/* container das fotos do produto */
+.modal-produto-fotos {
+  flex: 1 1 40%; /* ocupa 40% do espaço, flexível */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza em coluna */
+  align-items: center; /* centraliza horizontalmente */
+}
+
+/* imagem principal do produto */
+.modal-produto-img-principal {
+  width: 18vw; /* largura proporcional à tela */
+  height: 18vw; /* altura proporcional à tela */
+  object-fit: cover; /* ajusta a imagem para preencher o container */
+  border-radius: 0.7vw; /* cantos arredondados */
+  margin-bottom: 1vw; /* espaço abaixo da imagem */
+  background: #f3f4f6; /* fundo cinza claro enquanto carrega imagem */
+}
+
+/* container de miniaturas */
+.modal-produto-thumbs {
+  display: flex; /* layout flexível */
+  gap: 0.5vw; /* espaçamento entre miniaturas */
+  flex-wrap: wrap; /* quebra em múltiplas linhas se necessário */
+}
+
+/* imagens das miniaturas */
+.modal-produto-thumbs img {
+  width: 3vw; /* largura da miniatura */
+  height: 3vw; /* altura da miniatura */
+  object-fit: cover; /* ajusta imagem ao container */
+  border-radius: 0.3vw; /* cantos arredondados */
+  cursor: pointer; /* cursor de mão */
+  border: 2px solid transparent; /* borda invisível padrão */
+  transition: border 0.2s; /* animação suave da borda */
+}
+
+/* miniatura selecionada */
+.modal-produto-thumbs img.selected {
+  border: 2px solid #ea580c; /* borda laranja quando selecionada */
+}
+
+/* informações do produto */
+.modal-produto-info {
+  flex: 1 1 50%; /* ocupa 50% do espaço, flexível */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza em coluna */
+  gap: 1vw; /* espaçamento entre elementos */
+}
+
+/* preço do produto */
+.modal-produto-preco {
+  font-size: 1.3vw; /* tamanho da fonte */
+  color: #ea580c; /* cor laranja */
+  font-weight: bold; /* negrito */
+}
+
+/* descrição do produto */
+.modal-produto-desc {
+  font-size: 1vw; /* tamanho da fonte */
+  color: #444; /* cor cinza escura */
+}
+
+/* ficha técnica ou informações adicionais */
+.modal-produto-ficha {
+  font-size: 0.95vw; /* tamanho da fonte */
+  color: #222; /* cor cinza escura */
+  background: #f3f4f6; /* fundo cinza claro */
+  border-radius: 0.4vw; /* cantos arredondados */
+  padding: 0.7vw 1vw; /* espaçamento interno */
+}
+
+/* responsivo para telas menores que 900px */
+@media (max-width: 900px) {
+  .modal-produto {
+    width: 98vw; /* ocupa quase toda a largura da tela */
+    padding: 4vw 2vw 2vw 2vw; /* aumenta espaçamento interno */
+  }
+  .modal-produto-title {
+    font-size: 4vw; /* aumenta tamanho do título */
+  }
+  .modal-produto-img-principal {
+    width: 40vw; /* aumenta imagem principal */
+    height: 40vw; /* aumenta imagem principal */
+  }
+  .modal-produto-thumbs img {
+    width: 8vw; /* miniaturas maiores */
+    height: 8vw; /* miniaturas maiores */
+  }
+  .modal-produto-preco,
+  .modal-produto-desc,
+  .modal-produto-ficha {
+    font-size: 2.5vw; /* aumenta fontes para melhor leitura em mobile */
+  }
+}
+
+/* fundo do modal de carrinho */
+.modal-carrinho-bg {
+  position: fixed; /* fixa posição na tela */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35); /* fundo semi-transparente preto */
+  z-index: 9999; /* acima de outros elementos */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* container principal do modal de carrinho */
+.modal-carrinho {
+  background: #fff; /* fundo branco */
+  border-radius: 1vw; /* cantos arredondados */
+  box-shadow: 0 4px 32px #0003; /* sombra suave preta */
+  width: 32vw; /* largura relativa */
+  max-width: 95vw; /* largura máxima para telas pequenas */
+  padding: 2vw 2vw 1vw 2vw; /* espaçamento interno */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  max-height: 80vh; /* altura máxima relativa à tela */
+  overflow-y: auto; /* barra de rolagem vertical */
+}
+
+/* cabeçalho do modal de carrinho */
+.modal-carrinho-header {
+  display: flex; /* layout flexível */
+  justify-content: space-between; /* espaço entre título e botão fechar */
+  align-items: center; /* centraliza verticalmente */
+  margin-bottom: 1vw; /* espaço abaixo do header */
+}
+
+/* título do carrinho */
+.modal-carrinho-title {
+  font-size: 1.5vw; /* tamanho da fonte */
+  font-weight: bold; /* negrito */
+  color: #ea580c; /* cor laranja */
+}
+
+/* botão de fechar carrinho */
+.modal-carrinho-close {
+  background: none; /* sem fundo */
+  border: none; /* sem borda */
+  font-size: 2vw; /* tamanho da fonte */
+  color: #222; /* cor cinza escura */
+  cursor: pointer; /* cursor de mão */
+}
+
+/* container dos itens do carrinho */
+#carrinho-itens {
+  margin-bottom: 1vw; /* espaço abaixo */
+}
+
+/* item individual do carrinho */
+.carrinho-item {
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  gap: 1vw; /* espaço entre elementos */
+  border-bottom: 1px solid #eee; /* linha separadora */
+  padding: 0.7vw 0; /* espaçamento vertical */
+}
+
+/* imagem do item do carrinho */
+.carrinho-item-img {
+  width: 4vw; /* largura */
+  height: 4vw; /* altura */
+  object-fit: cover; /* ajusta imagem ao container */
+  border-radius: 0.5vw; /* cantos arredondados */
+}
+
+/* informações do item */
+.carrinho-item-info {
+  flex: 1; /* ocupa o restante do espaço */
+}
+
+/* nome do item */
+.carrinho-item-nome {
+  font-size: 1vw; /* tamanho da fonte */
+  font-weight: 600; /* semi-negrito */
+}
+
+/* preço do item */
+.carrinho-item-preco {
+  font-size: 0.95vw; /* tamanho da fonte */
+  color: #ea580c; /* cor laranja */
+}
+
+/* quantidade do item */
+.carrinho-item-qtd {
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  gap: 0.5vw; /* espaço entre botões e quantidade */
+}
+
+/* botão de aumentar/diminuir quantidade */
+.carrinho-item-qtd-btn {
+  background: #ea580c; /* fundo laranja */
+  color: #fff; /* cor do texto branca */
+  border: none; /* sem borda */
+  border-radius: 0.3vw; /* cantos arredondados */
+  width: 2vw; /* largura */
+  height: 2vw; /* altura */
+  font-size: 1.2vw; /* tamanho da fonte */
+  cursor: pointer; /* cursor de mão */
+}
+
+/* botão de remover item */
+.carrinho-item-remove {
+  background: none; /* sem fundo */
+  border: none; /* sem borda */
+  color: #c00; /* cor vermelha */
+  font-size: 1.2vw; /* tamanho da fonte */
+  cursor: pointer; /* cursor de mão */
+}
+
+/* rodapé do carrinho */
+.modal-carrinho-footer {
+  margin-top: 1vw; /* espaço acima */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza itens em coluna */
+  gap: 0.5vw; /* espaçamento entre elementos */
+}
+
+/* total do carrinho */
+#carrinho-total {
+  font-size: 1.2vw; /* tamanho da fonte */
+  font-weight: bold; /* negrito */
+  color: #222; /* cor cinza escura */
+  margin-bottom: 0.5vw; /* espaço abaixo */
+}
+
+/* responsivo para telas menores que 900px */
+@media (max-width: 900px) {
+  .modal-carrinho {
+    width: 95vw; /* ocupa quase toda a largura */
+    padding: 4vw 2vw 2vw 2vw; /* aumenta espaçamento interno */
+  }
+  .modal-carrinho-title {
+    font-size: 4vw; /* aumenta tamanho do título */
+  }
+  .carrinho-item-nome,
+  .carrinho-item-preco,
+  #carrinho-total {
+    font-size: 2.5vw; /* aumenta tamanho da fonte */
+  }
+  .carrinho-item-img {
+    width: 12vw; /* aumenta imagem do item */
+    height: 12vw; /* aumenta imagem do item */
+  }
+  .carrinho-item-qtd-btn,
+  .carrinho-item-remove {
+    font-size: 3vw; /* aumenta botão de quantidade e remover */
+    width: 6vw; /* aumenta largura */
+    height: 6vw; /* aumenta altura */
+  }
+}

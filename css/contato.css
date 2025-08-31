@@ -1,0 +1,193 @@
+body,
+html {
+  font-family: "oswald", arial, helvetica, sans-serif; /* define a fonte padrão da página */
+}
+
+.contato-header {
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  margin-top: 3vw; /* espaço acima do header */
+  margin-bottom: 2vw; /* espaço abaixo do header */
+}
+
+.contato-logo {
+  width: 100px; /* largura do logo */
+  height: 100px; /* altura do logo */
+  margin-bottom: 1vw; /* espaço abaixo do logo */
+  filter: drop-shadow(0 2px 8px #ea580c33); /* sombra suave laranja */
+}
+
+.contato-titulo {
+  color: #ea580c; /* cor laranja do título */
+  font-size: 2.5vw; /* tamanho proporcional à largura da tela */
+  font-weight: 800; /* fonte extra negrito */
+  margin-bottom: 0.3vw; /* espaço abaixo do título */
+  letter-spacing: 1.5px; /* espaçamento entre letras */
+  text-shadow: 0 2px 8px #fff7; /* sombra leve branca no texto */
+}
+
+.contato-desc {
+  color: #444; /* cor cinza escura para descrição */
+  font-size: 1.2vw; /* tamanho da fonte */
+  margin-bottom: 2vw; /* espaço abaixo da descrição */
+  text-align: center; /* centraliza o texto */
+  max-width: 520px; /* largura máxima do texto */
+  line-height: 1.5; /* altura da linha para melhor leitura */
+}
+
+.contato-main {
+  max-width: 900px; /* largura máxima do container principal */
+  margin: 0 auto 3vw auto; /* centraliza horizontalmente e adiciona espaço abaixo */
+  padding: 2.5vw 2vw 3vw 2vw; /* espaçamento interno: top, right, bottom, left */
+  background: #fff; /* fundo branco */
+  border-radius: 1vw; /* cantos arredondados */
+  box-shadow: 0 4px 24px #ea580c11; /* sombra leve laranja */
+}
+
+.contato-flex {
+  display: flex; /* layout flexível */
+  flex-wrap: wrap; /* permite quebra de linha em telas menores */
+  gap: 2.5vw; /* espaçamento entre itens */
+  align-items: stretch; /* estica itens verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+.contato-infos {
+  flex: 1 1 300px; /* item flexível com largura mínima de 300px */
+  min-width: 260px; /* largura mínima absoluta */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  justify-content: center; /* centraliza verticalmente */
+  gap: 1.5vw; /* espaçamento interno entre itens */
+}
+
+.contato-card {
+  background: #f8fafc; /* fundo cinza claro */
+  border-radius: 1vw; /* cantos arredondados */
+  padding: 1.7vw 1.2vw 1.2vw 1.2vw; /* espaçamento interno top, right, bottom, left */
+  box-shadow: 0 2px 12px #ea580c11; /* sombra leve laranja */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  gap: 1vw; /* espaço entre itens */
+}
+
+.contato-item {
+  font-size: 1.25vw; /* tamanho da fonte */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente ícone e texto */
+  gap: 0.7vw; /* espaço entre ícone e texto */
+  margin: 0; /* remove margem padrão */
+}
+
+.contato-icone {
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  background: #ea580c22; /* fundo laranja translúcido */
+  padding: 0.5vw 0.7vw; /* espaçamento interno */
+  border-radius: 0.5vw; /* cantos arredondados */
+  font-size: 1.5vw; /* tamanho do ícone */
+}
+
+.contato-icone-whats {
+  background: #25d36622; /* fundo verde translúcido para whatsapp */
+}
+
+.contato-icone-mail {
+  background: #ea580c22; /* fundo laranja translúcido para email */
+}
+
+.contato-label {
+  font-weight: 600; /* texto semi-negrito */
+  color: #222; /* cor cinza escura */
+}
+
+.contato-link {
+  font-size: 1.2vw; /* tamanho da fonte */
+  font-weight: 700; /* fonte em negrito */
+  text-decoration: none; /* remove sublinhado */
+  transition: color 0.2s; /* animação suave de cor no hover */
+}
+
+.contato-link-tel {
+  color: #ea580c; /* cor laranja para telefone */
+}
+.contato-link-tel:hover {
+  color: #c2410c; /* laranja mais escuro ao passar o mouse */
+}
+
+.contato-link-whats {
+  color: #25d366; /* verde whatsapp */
+}
+.contato-link-whats:hover {
+  color: #128c4b; /* verde mais escuro ao passar o mouse */
+}
+
+.contato-link-mail {
+  color: #ea580c; /* laranja para email */
+}
+.contato-link-mail:hover {
+  color: #c2410c; /* laranja escuro ao passar o mouse */
+}
+
+.contato-horario {
+  font-size: 1.1vw; /* tamanho da fonte */
+  margin: 0 0 0.2vw 0; /* margem inferior pequena */
+  color: #444; /* cor cinza escura */
+  display: block; /* exibe como bloco */
+}
+
+.contato-mapa {
+  flex: 2 1 340px; /* ocupa mais espaço flexível e largura mínima 340px */
+  min-width: 260px; /* largura mínima absoluta */
+  display: flex; /* layout flexível */
+  flex-direction: column; /* organiza elementos em coluna */
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* centraliza horizontalmente */
+}
+
+.contato-mapa-box {
+  width: 100%; /* ocupa toda a largura do container */
+  height: 290px; /* altura fixa */
+  border-radius: 1vw; /* cantos arredondados */
+  overflow: hidden; /* esconde conteúdo que ultrapassa o container */
+  box-shadow: 0 2px 16px #ea580c22; /* sombra suave laranja */
+}
+
+.contato-endereco {
+  font-size: 1.1vw; /* tamanho da fonte */
+  margin-top: 1vw; /* espaço acima */
+  color: #444; /* cor cinza escura */
+  text-align: center; /* centraliza texto */
+}
+
+/* responsivo para telas pequenas */
+@media (max-width: 700px) {
+  .contato-header {
+    margin-top: 6vw; /* aumenta espaço superior do header */
+  }
+  .contato-titulo {
+    font-size: 2rem; /* reduz tamanho do título */
+  }
+  .contato-desc {
+    font-size: 1rem; /* reduz tamanho da descrição */
+  }
+  .contato-main {
+    padding: 4vw 2vw 4vw 2vw; /* aumenta espaçamento interno */
+  }
+  .contato-flex {
+    flex-direction: column; /* organiza itens em coluna */
+    gap: 2vw; /* reduz espaçamento entre itens */
+  }
+  .contato-item {
+    font-size: 1rem; /* reduz fonte dos itens */
+  }
+  .contato-link {
+    font-size: 1rem; /* reduz fonte dos links */
+  }
+  .contato-endereco {
+    font-size: 1rem; /* reduz fonte do endereço */
+  }
+}

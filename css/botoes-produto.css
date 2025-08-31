@@ -1,0 +1,75 @@
+/* botoes-produto.css - botões de ação extraídos do style.css */
+.btn-carrinho { /* classe do botão de carrinho */
+  display: flex; /* define o botão como flex container */
+  align-items: center; /* alinha o conteúdo do botão verticalmente ao centro */
+  justify-content: center; /* centraliza o conteúdo horizontalmente */
+  background: #ea580c; /* define cor de fundo laranja */
+  color: #fff; /* define a cor do texto como branco */
+  font-size: 1vw; /* define o tamanho da fonte proporcional à largura da tela */
+  font-weight: 600; /* define peso da fonte semi-negrito */
+  border: none; /* remove qualquer borda */
+  border-radius: 0.5vw; /* arredonda os cantos em 0.5vw */
+  padding: 0.7vw 1.2vw; /* espaçamento interno: 0.7 em cima/baixo e 1.2 nos lados */
+  margin-top: 0.7vw; /* adiciona espaço acima do botão */
+  transition: background 0.2s, color 0.2s; /* anima suavemente mudanças de cor de fundo e texto */
+  text-decoration: none; /* remove sublinhado em caso de link */
+  box-shadow: 0 1px 4px #0001; /* adiciona sombra leve ao botão */
+  cursor: pointer; /* muda o cursor para mãozinha */
+}
+.btn-carrinho:hover { /* estilo do botão quando passa o mouse */
+  background: #c2410c; /* muda a cor de fundo para um laranja mais escuro */
+  color: #fff; /* mantém o texto branco */
+}
+
+/* espaçamento extra para o botão de adicionar ao carrinho dentro do container de botões */
+.botoes-produto { /* container dos botões de produto */
+  display: flex; /* usa flexbox */
+  flex-direction: column; /* organiza os botões em coluna */
+  gap: 0.7vw; /* define espaço entre os botões */
+}
+.botoes-produto .btn-carrinho { /* botão de carrinho dentro do container */
+  margin-top: 1vw; /* adiciona espaçamento extra acima do botão */
+}
+
+/* botão whatsapp: verde, destaque, mais largo */
+.btn-whatsapp { /* classe do botão de whatsapp */
+  background: #25d366; /* define cor de fundo verde whatsapp */
+  color: #fff; /* define cor do texto como branco */
+  border-radius: 0.7vw; /* cantos arredondados maiores */
+  border: none; /* remove borda */
+  font-weight: 700; /* fonte em negrito */
+  box-shadow: 0 2px 8px #25d36633; /* sombra esverdeada */
+  min-width: 210px; /* define largura mínima do botão */
+  padding: 0.8vw 1.5vw; /* espaçamento interno maior que o do carrinho */
+  font-size: 1.05vw; /* tamanho da fonte levemente maior */
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s; /* adiciona animações suaves em hover */
+}
+.btn-whatsapp:hover { /* estilo quando passa o mouse no botão whatsapp */
+  background: #128c4b; /* verde mais escuro */
+  box-shadow: 0 4px 16px #128c4b33; /* sombra mais forte */
+}
+
+/* botão carrinho: laranja, borda branca, formato mais "reto" */
+.btn-carrinho { /* redefinição do estilo do botão carrinho */
+  background: #ea580c; /* cor de fundo laranja */
+  color: #fff; /* cor do texto branca */
+  border-radius: 0.4vw; /* cantos levemente arredondados */
+  border: 2px solid #fff; /* borda branca de 2px */
+  font-weight: 700; /* texto em negrito */
+  min-width: 180px; /* largura mínima menor que a do whatsapp */
+  padding: 0.8vw 1.2vw; /* espaçamento interno */
+  font-size: 1vw; /* tamanho da fonte proporcional */
+  box-shadow: 0 2px 8px #ea580c33; /* sombra alaranjada */
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s; /* animações suaves */
+}
+.btn-carrinho:hover { /* estilo quando passa o mouse no botão carrinho */
+  background: #c2410c; /* cor de fundo laranja mais escura */
+  box-shadow: 0 4px 16px #c2410c33; /* sombra mais forte */
+}
+
+/* ícones alinhados */
+.btn-whatsapp i, /* ícone dentro do botão whatsapp */
+.btn-carrinho i { /* ícone dentro do botão carrinho */
+  margin-right: 0.5vw; /* adiciona espaço à direita do ícone */
+  font-size: 1.2vw; /* aumenta o tamanho do ícone */
+}

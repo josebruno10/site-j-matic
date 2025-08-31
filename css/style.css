@@ -1,118 +1,37 @@
-/* Reset e fontes */
-* {
-  margin: 0;
-  /* Remove margem padrão de todos os elementos */
-  padding: 0;
-  /* Remove preenchimento interno padrão */
-  box-sizing: border-box;
-  /* Inclui padding e borda no cálculo do tamanho total */
+/* ícone do carrinho dentro do botão de adicionar ao carrinho */
+.btn-carrinho i {
+  margin-right: 0.5vw; /* espaço à direita do ícone */
+  font-size: 1.2vw; /* tamanho do ícone */
 }
 
-body {
-  font-family: "Oswald", sans-serif;
-  /* Define a fonte da página */
-  background-color: #ffffff;
-  /* Cor de fundo cinza-clara */
-  color: #2e2e2e;
-  /* Cor do texto principal (cinza escuro) */
-  margin-bottom: 10vw;
-}
-a{
-  text-decoration: none;
-  transition: 0.3s;
-  position: relative;
-}
-/* Barra superior */
-.barraP {
-  width: 100%;
-  /* Ocupa toda a largura da tela */
-  height: 7vw;
-  /* Altura responsiva baseada na largura da tela */
-  background-color: #2e2e2e;
-  /* Cor de fundo escura */
-  position: fixed;
-  /* Fixa a barra no topo mesmo com rolagem */
-  top: 0;
-  /* Gruda no topo da página */
-  z-index: 100;
-  /* Garante que fique acima dos outros elementos */
-  box-shadow: 0 2px 8px #0002;
-  /* Sombra sutil abaixo da barra */
+/* botão de compra via whatsapp */
+.btn-whatsapp {
+  display: flex; /* usa flexbox para alinhar conteúdo */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  background: #25d366; /* cor de fundo verde whatsapp */
+  color: #fff; /* cor do texto branca */
+  font-size: 1vw; /* tamanho da fonte */
+  font-weight: 600; /* negrito */
+  border: none; /* sem borda */
+  border-radius: 0.5vw; /* bordas arredondadas */
+  padding: 0.7vw 1.2vw; /* espaçamento interno */
+  margin-top: auto; /* empurra o botão para o final do card */
+  transition: background 0.2s, color 0.2s; /* suaviza mudança de cor */
+  text-decoration: none; /* remove sublinhado */
+  box-shadow: 0 1px 4px #0001; /* sombra leve */
 }
 
-.logo {
-  width: 5vw;
-  height: 5vw;
-  cursor: pointer;
-  /* Tamanho responsivo da logo */
+/* efeito ao passar o mouse no botão whatsapp */
+.btn-whatsapp:hover {
+  background: #128c7e; /* verde mais escuro */
+  color: #fff; /* mantém texto branco */
 }
 
-.nome {
-  font-size: 2.5vw;
-  /* Tamanho responsivo da fonte do nome */
-  color: #f97316;
-  /* Cor laranja vibrante */
-  font-weight: bold;
-  /* Deixa em negrito */
-  letter-spacing: 1px;
-  /* Espaçamento entre letras */
-}
-
-.input-container {
-  position: relative;
-  /* Permite posicionar o ícone da lupa dentro */
-  width: 28vw;
-  /* Largura do campo de busca */
-  margin-right: 13rem;
-  /* Espaço à direita do campo */
-  max-width: 400px;
-  /* Limita tamanho máximo em telas grandes */
-}
-
-.input-container i {
-  position: absolute;
-  /* Posiciona a lupa dentro do input */
-  left: 1vw;
-  top: 50%;
-  transform: translateY(-50%);
-  /* Centraliza verticalmente */
-  color: #ea580c;
-  /* Cor da lupa (laranja) */
-  font-size: 1.3vw;
-  transition: color 0.3s;
-  /* Suaviza mudança de cor */
-  pointer-events: none;
-  /* Clique ignora o ícone e vai pro input */
-}
-
-#pesquisa {
-  width: 100%;
-  height: 2.5vw;
-  padding-left: 3vw;
-  /* Espaço para a lupa à esquerda */
-  border: 0vw solid #d1d5db;
-  /* Borda cinza clara */
-  border-radius: 0.2vw;
-  /* Bordas arredondadas */
-  background-color: #e5e5e5;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.1vw;
-  color: #1f1f1f;
-  /* Cor do texto */
-  transition: 0.3s;
-}
-
-.btn-icone {
-  background: none;
-  /* Fundo transparente */
-  border: none;
-  /* Sem borda */
-  color: rgb(185, 185, 185);
-  /* Cor cinza do ícone */
-  font-size: 2.3vw;
-  /* Tamanho responsivo do ícone */
-  transition: 0.2s;
-  /* Transição suave */
+/* ícone do whatsapp dentro do botão */
+.btn-whatsapp i {
+  margin-right: 0.5vw; /* espaço à direita do ícone */
+  font-size: 1.2vw; /* tamanho do ícone */
 }
 
 /* Barra de categorias */
@@ -138,205 +57,179 @@ a{
 
 .barraS button {
   background: transparent;
-  position: relative;
-  left: 4vw;
-  /* Sem fundo */
-  border: none;
-  /* Sem borda */
-  color: #f3f4f6;
-  /* Texto branco acinzentado */
-  font-size: 1.4vw;
-  padding: 0.5vw 1vw;
-  border-radius: 0.5vw;
-  /* Bordas arredondadas */
-  transition: 0.2s;
-  /* Mãozinha ao passar o mouse */
-  cursor: pointer;
-  
+
+  position: relative; /* posiciona o botão em relação ao container */
+  left: 4vw; /* desloca o botão para a direita */
+  border: none; /* sem borda */
+  color: #f3f4f6; /* texto branco acinzentado */
+  font-size: 1.4vw; /* tamanho da fonte */
+  padding: 0.5vw 1vw; /* espaçamento interno */
+  border-radius: 0.5vw; /* bordas arredondadas */
+  transition: 0.2s; /* suaviza efeitos */
+  cursor: pointer; /* muda cursor ao passar o mouse */
 }
 
+/* dropdown de categorias */
 #categorias {
-  width: 20vw;
-  height: 20vw;
-  background-color: #2e2e2e;
-  position: absolute;
-  top: -9vw;
-  z-index: 10;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-bottom-left-radius: 0.4vw;
-  border-bottom-right-radius: 0.4vw;
-  overflow: hidden;
+  width: 20vw; /* largura do dropdown */
+  height: 20vw; /* altura do dropdown */
+  background-color: #2e2e2e; /* fundo escuro */
+  position: absolute; /* sobrepõe outros elementos */
+  top: -9vw; /* posição vertical */
+  z-index: 10; /* sobrepõe outros elementos */
+  transition: 0.3s ease; /* suaviza abertura */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  flex-direction: column; /* coluna */
+  border-bottom-left-radius: 0.4vw; /* borda arredondada esquerda */
+  border-bottom-right-radius: 0.4vw; /* borda arredondada direita */
+  overflow: hidden; /* esconde excesso */
 }
 
+/* itens do dropdown de categorias */
 #categorias div {
-  width: 98.2%;
-  height: 4vw;
-
-  font-size: 1.4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  width: 98.2%; /* largura quase total */
+  height: 4vw; /* altura dos itens */
+  font-size: 1.4vw; /* tamanho da fonte */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  cursor: pointer; /* muda cursor ao passar o mouse */
 }
 
+/* links dentro do dropdown */
 #categorias div a {
-  color: rgb(201, 201, 201); /* ou a cor que quiser */
-  text-decoration: none;
-  transition: 0.3s;
+  color: rgb(201, 201, 201); /* cor do texto */
+  text-decoration: none; /* remove sublinhado */
+  transition: 0.3s; /* suaviza efeito */
 }
 
-
+/* seção inicial da página */
 #fundo1 {
-  /*tela inicial*/
-  display: flex;
-  flex-direction: column;
-  background-color: #e6e6e6;
+  display: flex; /* layout flexível */
+  flex-direction: column; /* coluna */
+  background-color: #e6e6e6; /* fundo cinza claro */
 }
 
-/* Carrossel */
+/* carrossel de imagens */
 .carrossel {
-  width: 100%;
-  height: 32vw;
+  width: 100%; /* ocupa toda a largura */
+  height: 32vw; /* altura do carrossel */
   /* Altura do carrossel */
   overflow: hidden;
-  /* Esconde as imagens fora do espaço visível */
-  position: relative;
-  background: white;
-  /* Fundo branco */
-  box-shadow: 0 4px 16px #0002;
-  /* Sombra externa */
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  top: -0.1vw;
+
+  /* esconde as imagens fora do espaço visível */
+  position: relative; /* posiciona o carrossel em relação ao container */
+  background: white; /* fundo branco */
+  box-shadow: 0 4px 16px #0002; /* sombra externa */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  flex-direction: row; /* organiza em linha */
+  top: -0.1vw; /* pequeno ajuste vertical */
 }
 
+/* imagem do carrossel, sobreposta */
 .imagem {
-  position: absolute;
-  /* Sobrepõe as imagens */
-  width: 100%;
-  height: 100%;
+  position: absolute; /* sobrepõe as imagens */
+  width: 100%; /* ocupa toda a largura */
+  height: 100%; /* ocupa toda a altura */
 }
 
+/* primeira imagem do carrossel, fora da tela à esquerda */
 .imagem1 {
-  left: -100%;
-  /* Fora da tela à esquerda */
-  z-index: 1;
+  left: -100%; /* fora da tela à esquerda */
+  z-index: 1; /* ordem de sobreposição */
 }
 
+/* segunda imagem do carrossel, visível no centro */
 .imagem2 {
-  left: 0%;
-  /* Imagem visível no centro */
-  z-index: 1;
+  left: 0%; /* imagem visível no centro */
+  z-index: 1; /* ordem de sobreposição */
 }
 
+/* terceira imagem do carrossel, fora da tela à direita */
 .imagem3 {
-  left: 100%;
-  /* Fora da tela à direita */
-  z-index: 1;
+  left: 100%; /* fora da tela à direita */
+  z-index: 1; /* ordem de sobreposição */
 }
 
+/* imagem dentro do carrossel */
 .imagem img {
-  width: 100%;
-  /* Imagem ocupa largura total */
-  height: 150%;
-  /* Altura maior que o container (provavelmente proposital) */
+  width: 100%; /* ocupa largura total */
+  height: 150%; /* altura maior que o container */
 }
 
+/* botões de navegação do carrossel */
 .btn-carrossel {
-  background-color: #fff9f4;
-  /* Fundo branco amarelado */
-  color: #ea580c;
-  /* Cor da seta laranja */
-  font-size: 2.5vw;
-  border-radius: 50%;
-  /* Botão redondo */
-  border: 0.2vw solid #ea580c;
-  width: 3vw;
-  height: 3vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px #0002;
-  /* Sombra leve */
+  background-color: #fff9f4; /* fundo branco amarelado */
+  color: #ea580c; /* cor da seta laranja */
+  font-size: 2.5vw; /* tamanho da seta */
+  border-radius: 50%; /* botão redondo */
+  border: 0.2vw solid #ea580c; /* borda laranja */
+  width: 3vw; /* largura do botão */
+  height: 3vw; /* altura do botão */
+  display: flex; /* layout flexível */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  box-shadow: 0 2px 8px #0002; /* sombra leve */
   transition: background 0.2s, color 0.2s;
   z-index: 2;
   position: absolute;
   top: 50%;
   /* Centraliza verticalmente */
-  transform: translateY(-50%);
-  z-index: 9;
-  /* Garante que os botões fiquem acima das imagens */
+
+  transform: translateY(-50%); /* centraliza verticalmente o botão */
+  z-index: 9; /* garante que os botões fiquem acima das imagens */
 }
 
+/* botão do carrossel à esquerda */
 .btn-carrossel.esq {
-  left: 1vw;
-  /* Botão esquerdo */
+  left: 1vw; /* posiciona à esquerda */
 }
 
+/* botão do carrossel à direita */
 .btn-carrossel.dir {
-  right: 1vw;
-  /* Botão direito */
+  right: 1vw; /* posiciona à direita */
 }
 
-/* fimCarrossel */
+/* fim do bloco de carrossel */
 
-/* Gradiente decorativo */
-.gradient {
+/* gradiente decorativo (não utilizado) */
 
-  background: #E6E6E6;
-  background: linear-gradient(0deg,
-  rgba(230, 230, 230, 1) 25%,
-  rgba(0, 0, 0, 0) 100%);
-  /* Efeito de transição do carrossel pro conteúdo */
-  width: 100%;
-  height: 12vw;
-  position: absolute;
-  bottom: 1vw;
-  z-index: 1;
-}
-
-/* Produtos */
+/* produtos - grid principal */
 .organizaProd {
-  width: 90vw;
-  /* Largura da área de produtos */
-  min-height: 40vw;
-  /* Altura mínima da seção */
-  margin: 0 auto;
-  /* Centraliza horizontalmente */
-  margin-top: 5vw;
-  display: flex;
-  flex-wrap: wrap;
-  /* Quebra linha quando necessário */
-  gap: 0.6vw;
-  /* Espaço entre os produtos */
-  justify-content: center;
-  /* Centraliza os produtos */
-  position: relative;
-  z-index: 10;
+  width: 90vw; /* largura da área de produtos */
+  min-height: 40vw; /* altura mínima da seção */
+  margin: 0 auto; /* centraliza horizontalmente */
+  margin-top: 5vw; /* espaço do topo */
+  display: flex; /* layout flexível */
+  flex-wrap: wrap; /* quebra linha quando necessário */
+  gap: 0.6vw; /* espaço entre os produtos */
+  justify-content: center; /* centraliza os produtos */
+  position: relative; /* contexto de sobreposição */
+  z-index: 10; /* sobrepõe outros elementos */
 }
+
+/* grid inicial de produtos em destaque */
 .organizaProdInic {
-  width: 95vw;
-  height: 30vw;
-  padding: 2vw;
-  min-height: 40vw;/* Largura da área de produtos */
-  margin: 0 auto;/* Altura mínima da seção */
-  margin-top: 5vw;/* Centraliza horizontalmente */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0.7vw;/* Espaço entre os produtos */
-  justify-content: center;
-  align-items: center;/* Centraliza os produtos */
-  position: relative;
-  z-index: 10;
-  border: #c7c7c7 0.1vw solid;
-  box-shadow: 0 0 0.1vw #bababa;
-  border-radius: 1vw;
-  background-color: #f6f6f6;
+  width: 95vw; /* largura maior */
+  height: 30vw; /* altura fixa */
+  padding: 2vw; /* espaçamento interno */
+  min-height: 40vw; /* largura da área de produtos */
+  margin: 0 auto; /* altura mínima da seção */
+  margin-top: 5vw; /* centraliza horizontalmente */
+  display: flex; /* layout flexível */
+  flex-direction: row; /* linha */
+  flex-wrap: nowrap; /* não quebra linha */
+  gap: 0.7vw; /* espaço entre os produtos */
+  justify-content: center; /* centraliza os produtos */
+  align-items: center; /* centraliza verticalmente */
+  position: relative; /* contexto de sobreposição */
+  z-index: 10; /* sobrepõe outros elementos */
+  border: #c7c7c7 0.1vw solid; /* borda cinza clara */
+  box-shadow: 0 0 0.1vw #bababa; /* sombra leve */
+  border-radius: 1vw; /* bordas arredondadas */
+  background-color: #f6f6f6; /* fundo cinza claro */
 }
 
 .produtoInic {
@@ -376,7 +269,7 @@ a{
   transition: 0.6s;
   cursor: pointer;
 }
-.produto a.produtoInic a{
+.produto a.produtoInic a {
   display: flex;
   align-items: start;
   justify-content: start;
@@ -404,14 +297,14 @@ a{
   top: 0.6vw;
 }
 
-.guardImg>img {
+.guardImg > img {
   /* imagem do produto */
   width: 100%;
   height: 160%;
   position: relative;
   top: -5.5vw;
 }
-.guardImgInic>img {
+.guardImgInic > img {
   /* imagem do produto */
   width: 100%;
   height: 160%;
@@ -480,16 +373,13 @@ a{
   top: 7.4vw;
 }
 
-
-
 #filtro2 > span {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.8vw;
   margin-left: 0;
   margin-bottom: 1.5vw;
   border-bottom: 2px solid #ea580c;
   padding-bottom: 0.8vw;
-  /* --- ALTERAÇÃO AQUI --- */
   align-self: flex-start; /* Faz com que o elemento e a barra se ajustem ao tamanho do texto */
 }
 .marcas {
@@ -498,22 +388,22 @@ a{
   margin-left: 0;
   gap: 1.2vw;
 }
-.botãoFiltrar{
+.botãoFiltrar {
   padding: 0.8rem 2.5rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #585858; 
+  color: #585858;
   background-color: #ffffff;
   border: 0.1vw solid #e6e6e6;
-  border-radius: 1.3vw; 
+  border-radius: 1.3vw;
   cursor: pointer;
   box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
   margin-top: 2vw;
-  color: #4A90E2;
+  color: #4a90e2;
 }
 
-.spanCheck{
+.spanCheck {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -530,7 +420,6 @@ a{
   justify-content: center;
 }
 
-
 input[type="checkbox"] {
   display: none;
   width: 100%;
@@ -538,7 +427,7 @@ input[type="checkbox"] {
 
 svg polyline {
   fill: none;
-  stroke: #4A90E2; /* cor da linha*/
+  stroke: #4a90e2; /* cor da linha*/
   stroke-width: 7; /* largura da linha */
   stroke-linecap: round;
   stroke-linejoin: miter;
@@ -551,176 +440,6 @@ input[type="checkbox"]:checked + svg polyline {
   stroke-dashoffset: 0;
 }
 
-
-/* ########## CÓDIGO DE RESPONSIVIDADE ########## */
-/* Adicione este bloco ao final do seu arquivo style.css */
-
-/* ----- Estilos para Tablets (telas até 768px) ----- */
-@media (max-width: 768px) {
-  /* Barra superior */
-  .barraP {
-    height: 12vw;
-  }
-  .logo {
-    width: 8vw;
-    height: 8vw;
-  }
-  .nome {
-    font-size: 3.5vw;
-  }
-  .input-container {
-    display: none; /* Esconde a busca em telas menores para simplificar */
-  }
-  .btn-icone {
-    font-size: 4vw;
-  }
-  .btn-home {
-    font-size: 3vw !important;
-  }
-
-  /* Barra de categorias */
-  .barraS {
-    margin-top: 12vw;
-    padding: 1.5vw;
-  }
-  .barraS button {
-    font-size: 2.5vw;
-  }
-  #categorias {
-      width: 30vw;
-  }
-  #categorias div {
-      font-size: 2vw;
-      height: 6vw;
-  }
-
-  /* Produtos */
-  .organizaProd {
-      gap: 2vw;
-  }
-  .produto {
-    width: 43vw; /* 2 produtos por linha */
-    height: 55vw;
-  }
-  .guardImg {
-    height: 28vw;
-  }
-  .guardImg > img {
-    top: -6vw;
-  }
-  .nomeProdut {
-    font-size: 2.5vw;
-  }
-  .precoProdut {
-    font-size: 3.5vw;
-  }
-  .precoProdutParcela {
-    font-size: 1.5vw;
-  }
-
-  /* Página de categoria */
-  .linha {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  #filtro2 {
-      width: 80%;
-      height: auto;
-      margin-bottom: 2vw;
-  }
-}
-
-/* ----- Estilos para Celulares (telas até 480px) ----- */
-@media (max-width: 480px) {
-  /* Barra superior */
-  .barraP {
-    height: 18vw;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .barraP > .d-flex.align-items-center {
-    order: 1;
-  }
-  .barraP > .d-flex.align-items-center.gap-3 {
-    order: 2;
-  }
-  .logo {
-      width: 10vw;
-      height: 10vw;
-  }
-  .nome {
-    display: none; /* Esconde o nome da loja para economizar espaço */
-  }
-  .btn-icone {
-    font-size: 6vw;
-  }
-
-  /* Barra de categorias */
-  .barraS {
-    margin-top: 18vw;
-  }
-  .barraS button {
-    font-size: 4vw;
-  }
-
-  /* Carrossel */
-  .carrossel {
-    height: 50vw;
-  }
-  .btn-carrossel {
-      width: 8vw;
-      height: 8vw;
-      font-size: 5vw;
-  }
-
-  /* Produtos */
-  .organizaProd {
-    margin-top: 10vw;
-    gap: 4vw;
-  }
-  .organizaProdInic {
-    margin-top: 10vw;
-    gap: 4vw;
-  }
-  .produto {
-    width: 80vw; /* 1 produto por linha */
-    height: auto;
-    padding-bottom: 4vw;
-  }
-  .produtoInic {
-    width: 80vw; /* 1 produto por linha */
-    height: auto;
-    padding-bottom: 4vw;
-  }
-  .guardImg {
-    height: 50vw;
-  }
-  .guardImgInic {
-    height: 50vw;
-  }
-  .guardImg > img {
-    top: -10vw;
-  }
-  .guardImgInic > img {
-    top: -10vw;
-  }
-  .nomeProdut {
-    font-size: 5vw;
-  }
-  .precoProdut {
-    font-size: 6vw;
-  }
-  .precoProdutParcela {
-    font-size: 2.8vw;
-  }
-
-  /* Página de categoria */
-  #nomeFundo2 {
-      text-align: center;
-      font-size: 7vw;
-  }
-}
-
 .spanCheck {
   display: flex;
   flex-direction: row;
@@ -728,7 +447,6 @@ input[type="checkbox"]:checked + svg polyline {
   cursor: pointer; /* Faz o mouse virar uma "mãozinha" */
   gap: 0.5vw;
 }
-/* EM style.css, SUBSTITUA O CSS DA PÁGINA DE PRODUTO POR ESTE CÓDIGO ATUALIZADO */
 
 #fundoProduto {
   padding: 2vw;
@@ -744,7 +462,7 @@ input[type="checkbox"]:checked + svg polyline {
   background-color: #ffffff; /* Fundo branco para o container */
   padding: 1.5vw;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   margin: 0 auto;
   width: 90vw;
@@ -799,7 +517,6 @@ input[type="checkbox"]:checked + svg polyline {
 .thumbnail-img:hover {
   border-color: #ea580c; /* COR LARANJA PRINCIPAL */
 }
-
 
 /* --- COLUNA DA DIREITA --- */
 .coluna-detalhes {

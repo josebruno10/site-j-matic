@@ -1,0 +1,22 @@
+/* reset geral para todos os elementos */
+* {
+  margin: 0; /* remove margem padrão de todos os elementos */
+  padding: 0; /* remove padding/preenchimento padrão */
+  box-sizing: border-box; /* inclui padding e borda no cálculo da largura/altura */
+}
+
+/* corpo da página */
+body {
+  font-family: "oswald", sans-serif; /* fonte padrão do site */
+  background-color: #ffffff; /* fundo branco */
+  color: #2e2e2e; /* cor padrão do texto */
+  margin-bottom: 10vw; /* espaço inferior responsivo */
+  overflow-x: hidden; /* impede rolagem horizontal */
+}
+
+/* links */
+a {
+  text-decoration: none; /* remove sublinhado padrão */
+  transition: 0.3s; /* transição suave para efeitos */
+  position: relative; /* permite posicionamento de pseudo-elementos se necessário */
+}

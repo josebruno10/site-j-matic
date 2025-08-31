@@ -1,0 +1,27 @@
+/* barra lateral de filtros e filtros avançados */
+#busca-filtros {
+  background: #fff; /* fundo branco da barra de filtros */
+  border-radius: 1vw; /* bordas arredondadas */
+  box-shadow: 0 4px 24px #0002; /* sombra suave ao redor da barra */
+  display: flex; /* usa flexbox para organizar elementos */
+  flex-direction: column; /* organiza os elementos em coluna */
+  gap: 2vw; /* espaçamento entre elementos internos */
+  margin-top: 5vw; /* distância do topo da página */
+  width: 23vw; /* largura responsiva da barra */
+  min-width: 240px; /* largura mínima para telas pequenas */
+  padding: 2.5vw 1.5vw 2.5vw 1.5vw; /* padding interno da barra */
+}
+
+#busca-filtros label {
+  font-weight: 600; /* deixa o texto dos labels em negrito */
+}
+
+#busca-filtros input,
+#busca-filtros select {
+  width: 100%; /* ocupa toda a largura disponível */
+  padding: 0.6vw 1vw; /* padding interno do input/select */
+  border-radius: 0.4vw; /* bordas arredondadas */
+  border: 1px solid #ccc; /* borda cinza clara */
+  font-size: 1vw; /* tamanho da fonte responsivo */
+  margin-bottom: 0.5vw; /* espaço abaixo de cada campo */
+}

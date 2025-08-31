@@ -1,274 +1,312 @@
-<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J.MATIC AUTOMÁTICOS</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>J.MATIC AUTOMÁTICOS</title>
+    <!-- Fonte personalizada (Google Fonts: Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <!-- Ícones do Font Awesome (carrinho, whatsapp etc.) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- CSS específico para os botões de ação dos produtos -->
+    <link rel="stylesheet" href="css/botoes-produto.css" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Biblioteca Bootstrap (CSS + JS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/eventosDeMouse.css" />
+    <!-- Arquivos de estilos separados por funcionalidade -->
+    <link rel="stylesheet" href="css/reset-base.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="stylesheet" href="css/sidebar-filtros.css" />
+    <link rel="stylesheet" href="css/carrossel.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+    <link rel="stylesheet" href="css/eventosDeMouse.css" />
+  </head>
 
-</head>
+  <body>
+    <!-- ===================== MODAL DE DETALHE DO PRODUTO ===================== -->
+    <!-- Abre quando o usuário clica em um produto -->
+    <div id="modal-produto" class="modal-produto-bg" style="display: none">
+      <div class="modal-produto">
+        <!-- Cabeçalho do modal -->
+        <div class="modal-produto-header">
+          <span class="modal-produto-title" id="modal-produto-title"></span>
+          <button class="modal-produto-close" id="fechar-produto-btn">
+            &times;
+          </button>
+        </div>
+        <!-- Corpo do modal: imagens + informações -->
+        <div class="modal-produto-body">
+          <div class="modal-produto-fotos">
+            <!-- Imagem principal do produto -->
+            <img
+              id="modal-produto-img"
+              src=""
+              alt=""
+              class="modal-produto-img-principal"
+            />
+            <!-- Miniaturas adicionais -->
+            <div id="modal-produto-thumbs" class="modal-produto-thumbs"></div>
+          </div>
+          <div class="modal-produto-info">
+            <!-- Informações dinâmicas do produto -->
+            <div class="modal-produto-preco" id="modal-produto-preco"></div>
+            <div class="modal-produto-desc" id="modal-produto-desc"></div>
+            <div class="modal-produto-ficha" id="modal-produto-ficha"></div>
+            <!-- Botões de ação -->
+            <div class="botoes-produto">
+              <button id="modal-produto-whatsapp" class="btn-whatsapp">
+                <i class="fa fa-whatsapp"></i> Comprar no WhatsApp
+              </button>
+              <button id="modal-produto-carrinho" class="btn-carrinho">
+                <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<body>
-  <header class="barraP d-flex align-items-center justify-content-between px-4">
-    <div class="d-flex align-items-center" id="logo-container" onclick="voltarInicial()">
-      <a href="home.html">
-        <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
-      </a>
-      <span class="nome">J.MATIC AUTOMÁTICOS</span>
-    </div>
-    <div class="input-container">
-      <i class="fa fa-search"></i>
-      <input type="text" placeholder="Buscar" id="pesquisa" />
-    </div>
-    <div class="d-flex align-items-center gap-3">
-      <button class="btn-icone btn-conta" title="Minha conta" style="font-size: 1.7vw;">
-        Conta
-      </button>
-      <button class="btn-icone" title="Carrinho">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      </button>
-    </div>
-  </header>
-  <!-- barra secundaria -->
-  <nav class="barraS">
-    <button onclick="abrirCategorias()">
-      <span>Categorias <i class="fa fa-caret-down setaCate" style="transition: 0.6s;"></i></span>
-    </button>
-  </nav>
-  <div id="categorias"> <!--div que contém todos os botões das categorias-->
-    <div>
-      <a href="fundo2.html?peca=1" onclick="pecaEscolhida()">Corpo de Válvulas</a>
-    </div>
-    <div>
-      <a href="fundo2.html?peca=2" onclick="pecaEscolhida(2)">Conversores de Torque</a>
-    </div>
-    <div>
-      <a href="fundo2.html?peca=3" onclick="pecaEscolhida(3)">Transmissões Completas</a>
-    </div>
-    <div>
-      <a href="fundo2.html?peca=4" onclick="pecaEscolhida(4)">Módulo de Controle de Transmissão</a>
-    </div>
-    <div>
-      <a href="fundo2.html?peca=5" onclick="pecaEscolhida(5)">Carcaças</a>
-    </div>
-    <div>
-      <a href="fundo2.html?peca=6" onclick="pecaEscolhida(6)">Outras Peças de Transmissão</a>
-    </div>
-  </div>
-  <main style="background-color: #F3F4F6;">
-    <div id="fundo1">
-      <!-- carrossel -->
-      <section class="carrossel">
-        <button class="btn-carrossel esq" onclick="irPE()">
-          < </button>
-            <button class="btn-carrossel dir" onclick="irPD()">
+    <!-- ===================== CABEÇALHO / NAVBAR ===================== -->
+    <header
+      class="barraP d-flex align-items-center justify-content-between px-4"
+    >
+      <!-- Logo e nome da empresa -->
+      <div class="d-flex align-items-center" id="logo-container">
+        <a href="home.html">
+          <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
+        </a>
+        <span class="nome">J.MATIC AUTOMÁTICOS</span>
+      </div>
+
+      <!-- Links de navegação e carrinho -->
+      <nav
+        class="nav-links"
+        style="display: flex; gap: 2vw; align-items: center"
+      >
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Sobre</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+
+        <!-- Botão do carrinho com contador de itens -->
+        <button
+          class="btn-icone"
+          title="Carrinho"
+          style="position: relative"
+          id="abrir-carrinho-btn"
+        >
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span
+            id="badge-carrinho"
+            style="
+              position: absolute;
+              top: -0.5vw;
+              right: -0.5vw;
+              background: #ea580c;
+              color: #fff;
+              font-size: 0.9vw;
+              padding: 0.2vw 0.5vw;
+              border-radius: 1vw;
+              min-width: 1vw;
+              text-align: center;
+            "
+          ></span>
+        </button>
+
+        <!-- ===================== MODAL DO CARRINHO ===================== -->
+        <div
+          id="modal-carrinho"
+          class="modal-carrinho-bg"
+          style="display: none"
+        >
+          <div class="modal-carrinho">
+            <!-- Cabeçalho do carrinho -->
+            <div class="modal-carrinho-header">
+              <span class="modal-carrinho-title">Seu Carrinho</span>
+              <button class="modal-carrinho-close" id="fechar-carrinho-btn">
+                &times;
+              </button>
+            </div>
+
+            <!-- Itens do carrinho (renderizados via JS) -->
+            <div id="carrinho-itens"></div>
+
+            <!-- Rodapé: total e botões -->
+            <div class="modal-carrinho-footer">
+              <span id="carrinho-total"></span>
+              <div style="display: flex; gap: 1vw; margin-top: 1vw">
+                <!-- Limpar carrinho -->
+                <button
+                  id="limpar-carrinho"
+                  class="btn-carrinho"
+                  style="flex: 1; background: #e11d48; border: none"
+                >
+                  <i class="fa fa-trash"></i> Limpar Carrinho
+                </button>
+                <!-- Finalizar compra no WhatsApp -->
+                <button
+                  id="finalizar-whatsapp"
+                  class="btn-whatsapp"
+                  style="flex: 2"
+                >
+                  <i class="fa fa-whatsapp"></i> Finalizar compra no WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main style="background-color: #f3f4f6">
+      <div id="fundo1">
+        <!-- Carrossel de imagens/promos -->
+        <section class="carrossel">
+          <button class="btn-carrossel esq" onclick="irPE()"><</button>
+          <button class="btn-carrossel dir" onclick="irPD()">></button>
+          <div class="imagem imagem1" style="background-color: black">
+            <img src="" alt="Peça 1" />
+          </div>
+          <div class="imagem imagem2" style="background-color: rgb(255, 0, 0)">
+            <img src="" alt="Peça 2" />
+          </div>
+          <div class="imagem imagem3" style="background-color: rgb(0, 8, 255)">
+            <img src="" alt="Peça 3" />
+          </div>
+        </section>
+
+        <!-- Barra lateral de busca e filtros -->
+        <div style="display: flex; gap: 2vw; align-items: flex-start">
+          <aside
+            id="busca-filtros"
+            style="
+              width: 23vw;
+              min-width: 240px;
+              background: #fff;
+              border-radius: 1vw;
+              padding: 2.5vw 1.5vw 2.5vw 1.5vw;
+              box-shadow: 0 4px 24px #0002;
+              display: flex;
+              flex-direction: column;
+              gap: 2vw;
+              margin-top: 5vw;
+            "
+          >
+            <!-- Campo de busca -->
+            <div>
+              <label for="input-busca" style="font-weight: 600"
+                >Buscar produto:</label
               >
-            </button>
-
-            <div class="imagem imagem1" style="background-color: black;">
-              <img src="" alt="Peça 1" />
+              <input
+                id="input-busca"
+                type="text"
+                placeholder="Nome, categoria, aplicação..."
+              />
             </div>
-            <div class="imagem imagem2" style="background-color: rgb(255, 0, 0);">
-              <img src="" alt="Peça 2" />
+
+            <!-- Filtro por categoria -->
+            <div>
+              <label for="filtro-categoria" style="font-weight: 600"
+                >Categoria:</label
+              >
+              <select id="filtro-categoria">
+                <option value="">Todas</option>
+                <option value="Corpo de Válvulas">Corpo de Válvulas</option>
+                <option value="Módulo de Controle de Transmissão">
+                  Módulo de Controle de Transmissão
+                </option>
+                <option value="Conversores de Torque">
+                  Conversores de Torque
+                </option>
+                <option value="Transmissões Completas">
+                  Transmissões Completas
+                </option>
+                <option value="Carcaças">Carcaças</option>
+                <option value="Outras Peças de Transmissão">
+                  Outras Peças de Transmissão
+                </option>
+              </select>
             </div>
-            <div class="imagem imagem3" style="background-color: rgb(0, 8, 255);">
-              <img src="" alt="Peça 3" />
+
+            <!-- Filtro por preço -->
+            <div>
+              <label for="filtro-preco" style="font-weight: 600"
+                >Preço até:</label
+              >
+              <input id="filtro-preco" type="number" placeholder="R$" />
             </div>
-      </section>
 
-      <div class="gradient"></div>
-      <!-- organiza os produtos para que fiquem alinhados -->
-      <section class="organizaProdInic">
-        <!-- div que contém as informações basicas do produto (nome, preço, imagem) -->
-        <a href="comprar.html">
-
-          <div class="produtoInic">
-            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            <!-- Filtro por modelo -->
+            <div>
+              <label for="filtro-modelo" style="font-weight: 600"
+                >Modelo:</label
+              >
+              <input id="filtro-modelo" type="text" placeholder="Ex: 6T30, JF015E..." />
             </div>
-            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-                299,99</s></span><!--em caso de promoções-->
-            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-              juros</span><!--preço parcelado-->
-          </div>
-        </a>
-        <a href="comprar.html">
 
-          <div class="produtoInic">
-            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            <!-- Filtro por tipo -->
+            <div>
+              <label for="filtro-tipo" style="font-weight: 600">Tipo:</label>
+              <input id="filtro-tipo" type="text" placeholder="Ex: Módulo, Corpo de Válvulas..." />
             </div>
-            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-                299,99</s></span><!--em caso de promoções-->
-            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-              juros</span><!--preço parcelado-->
-          </div>
-        </a>
-        <a href="comprar.html">
 
-          <div class="produtoInic">
-            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            <!-- Filtro por motor -->
+            <div>
+              <label for="filtro-motor" style="font-weight: 600">Motor:</label>
+              <input id="filtro-motor" type="text" placeholder="Ex: 1.8, 2.0, TSI..." />
             </div>
-            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-                299,99</s></span><!--em caso de promoções-->
-            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-              juros</span><!--preço parcelado-->
-          </div>
-        </a>
-        <a href="comprar.html">
 
-          <div class="produtoInic">
-            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
+            <!-- Filtro por garantia -->
+            <div>
+              <label for="filtro-garantia" style="font-weight: 600"
+                >Garantia:</label
+              >
+              <select id="filtro-garantia">
+                <option value="">Todas</option>
+                <option value="3 meses">3 meses</option>
+                <option value="6 meses">6 meses</option>
+              </select>
             </div>
-            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-                299,99</s></span><!--em caso de promoções-->
-            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-              juros</span><!--preço parcelado-->
-          </div>
-        </a>
-        <a href="comprar.html">
+          </aside>
 
-          <div class="produtoInic">
-            <div class="guardImgInic"> <!-- guarda as imagens para organizalas na div produto -->
-              <img src="imagens/produtos/WhatsApp Image 2025-07-20 at 11.54.50.jpeg" alt="">
-            </div>
-            <span class="nomeProdut">psh psh psh</span><!--nome do produto-->
-            <span style="font-size: 0.7vw; color: black; margin-left:1vw"><s> R$
-                299,99</s></span><!--em caso de promoções-->
-            <span class="precoProdut"><b> R$ 299,99</b></span><!--preço debito-->
-            <span class="precoProdutParcela">10% OFF no pix <br> ou XXX,XX em 8x de XX,XX sem
-              juros</span><!--preço parcelado-->
-          </div>
-        </a>
-      </section>
-    </div>
-
-    
-  </main>
-
-  <script src="javaScript/funcoesCarrossel.js" defer></script>
-  <script src="javaScript/funcoesP2.js" defer></script>
-</body>
-
+          <!-- Área onde os produtos serão renderizados por categoria (via JS) -->
+          <div
+            id="produtosPorCategoria"
+            style="
+              flex: 1 1 0%;
+              margin-top: 2vw;
+              display: flex;
+              flex-direction: column;
+              gap: 2vw;
+              max-width: calc(100vw - 27vw);
+              margin-left: auto;
+              margin-right: 0vw;
+              overflow-x: hidden;
+            "
+          ></div>
+        </div>
+      </div>
+    </main>
+    <script src="js/funcoesCarrossel.js" defer></script>
+    <script src="js/funcoesP2.js" defer></script>
+    <script src="js/produtosHome.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+  </body>
 </html>
-
-<!--1. TCM (Módulo de Controle de Transmissão)
-Módulos eletrônicos que controlam a transmissão automática.
-
-TCM AW5040 – Vectra, Astra, Zafira
-
-TCM GM 6T30 (1ª geração)
-
-TCM 6L50 GM – S10, Trailblazer (com arquivo)
-
-TCM V5A51 – Triton 3.0
-
-TCM Esitronic KS – com arquivo
-
-TCM AL4 – Citroen 2.0
-
-TCM 09G – Jetta, Golf 2.0
-
-TCM Dual Logic – Fiat 500 (com arquivo)
-
-TCM TF72SC – Jeep Compass 2.0
-
-TCM RE4F04A – Grand Livina 1.8
-
-2. Corpo de Válvulas (Valve Body)
-Componente hidráulico que gerencia a troca de marchas na transmissão.
-
-Corpo de válvulas JF011E – Sentra, Fluence
-
-Corpo de válvulas JF015E – Kicks
-
-Corpo de válvulas AL4 – Renault
-
-Corpo de válvulas TF72SC – Renegade, Toro 1.8 (start/stop)
-
-Corpo de válvulas 09G moderno – Jetta 1.4, Audi 1.4, TSI/TFSI
-
-Corpo de válvulas RE4F04A – 1.8 (vários)
-
-Corpo de válvulas 6F35 – Fusion
-
-3. Conversores de Torque
-Peças que transmitem a força do motor para a transmissão automática.
-
-Conversor de Torque 6T31 – Spin, Cobalt
-
-Conversor de Torque JF011E 2.0 – Todos
-
-Conversor de Torque JF015E – Kicks (com e sem sensor)
-
-Conversor de Torque 6L50 – 2.8 200cv
-
-Conversor de Torque GM 6L50 – 200vc
-
-4. Transmissões Completas
-Sistemas completos de transmissão automática ou CVT.
-
-Transmissão JF015E – Kicks (6 meses ou 20.000 km)
-
-Transmissão CVT HR-V 1.8 – 6 meses de garantia
-
-Transmissão automática ZF9HP48 – Fiat Toro diesel 4x4
-
-5. Carcaças
-Estruturas externas da transmissão, vendidas avulsas.
-
-Carcaça Transmissão Automatizada Imotion
-
-Carcaça 6T31 completa
-
-Carcaça 6T31 completa (traseira)
-
-6. Outras Peças de Transmissão
-Componentes avulsos importantes.
-
-Tambor 3/5/Ré 6T30
-
-09G moderno – Jetta 1.4 / Audi 1.4 (TSI/TFSI)
-
-🔧 FILTROS ADICIONAIS (para o cliente filtrar no site):
-Modelo do Carro: Jeep, Fiat, Renault, Nissan, Ford, GM, etc.
-
-Tipo da Peça: TCM, Conversor, Corpo de válvulas, Transmissão, Carcaça
-
-Motor compatível: 1.4 TSI, 2.0, 1.8, 2.3 etc.
-
-Garantia: Sim / Não
-
-Revisado/Testado: Sim / Não
-
-Com Arquivo: Sim / Não
-
-Start/Stop: Sim / Não
-
-Na base de troca?: Sim / Não-->
