@@ -12,20 +12,35 @@
   display: flex; /* layout flexível */
   align-items: center; /* centraliza verticalmente */
   justify-content: center; /* centraliza horizontalmente */
+  height: 0vh;
+  width: 0vw;
 }
-
+.modal-produto-bg.aberto{
+  height: 100vh;
+  width: 100vw;
+}
 /* container principal do modal de produto */
 .modal-produto {
   background: #fff; /* fundo branco */
   border-radius: 1vw; /* cantos arredondados */
   box-shadow: 0 4px 32px #0003; /* sombra suave preta */
   width: 40vw; /* largura relativa à tela */
+  height: 0px;
   max-width: 98vw; /* largura máxima para telas pequenas */
-  padding: 2vw 2vw 1vw 2vw; /* espaçamento interno top, right, bottom, left */
+  padding: 0vw 0vw 0vw 0vw; /* espaçamento interno top, right, bottom, left */
   display: flex; /* layout flexível */
   flex-direction: column; /* organiza elementos em coluna */
   max-height: 90vh; /* altura máxima relativa à tela */
   overflow-y: auto; /* barra de rolagem vertical se necessário */
+  transition: .6s ease-in;
+  position: fixed; 
+  top: 0vh;
+}
+/* quando clica em um produto faz animação no modal */
+.modal-produto.aberto{
+  height: 100vh;
+  transition: .6s ease-in;
+  padding: 2vw 2vw 1vw 2vw; /* espaçamento interno top, right, bottom, left */
 }
 
 /* cabeçalho do modal */
