@@ -1,3 +1,30 @@
+<footer
+  style="
+    background: #222;
+    color: #fff;
+    padding: 2vw 0;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 0.2vw;
+  "
+>
+  <div style="margin-bottom: 1vw">
+    <span style="font-weight: 600; color: #ea580c">JMatic Auto</span>
+    &nbsp;|&nbsp;
+    <a
+      href="mailto:contato@jmaticauto.com"
+      style="color: #fff; text-decoration: underline"
+      >contato@jmaticauto.com</a
+    >
+    &nbsp;|&nbsp;
+    <a
+      href="https://wa.me/5511999999999"
+      style="color: #fff; text-decoration: underline"
+      >WhatsApp</a
+    >
+  </div>
+</footer>
+<!-- Rodapé informativo -->
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -177,23 +204,322 @@
     <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
     <main style="background-color: #f3f4f6">
       <div id="fundo1">
-        <!-- Carrossel de imagens/promos -->
-        <section class="carrossel">
-          <button class="btn-carrossel esq" onclick="irPE()"><</button>
-          <button class="btn-carrossel dir" onclick="irPD()">></button>
-          <div class="imagem imagem1" style="background-color: black">
-            <img src="" alt="Peça 1" />
-          </div>
-          <div class="imagem imagem2" style="background-color: rgb(255, 0, 0)">
-            <img src="" alt="Peça 2" />
-          </div>
-          <div class="imagem imagem3" style="background-color: rgb(0, 8, 255)">
-            <img src="" alt="Peça 3" />
+        <!-- Banner de apresentação profissional -->
+        <section
+          class="banner-apresentacao"
+          style="
+            background: linear-gradient(90deg, #ea580c 0%, #f3f4f6 100%);
+            padding: 3vw 0;
+            border-radius: 1vw;
+            margin-bottom: 2vw;
+            text-align: center;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3vw;
+            flex-wrap: wrap;
+          "
+        >
+          <img
+            src="imagens/logo.svg"
+            alt="Logo J.MATIC"
+            style="
+              height: 8vw;
+              min-width: 100px;
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 1vw;
+            "
+          />
+          <div style="max-width: 600px; text-align: left">
+            <h1
+              style="
+                font-family: 'Oswald', sans-serif;
+                font-size: 2.8vw;
+                margin-bottom: 1vw;
+                color: #ea580c;
+              "
+            >
+              J.MATIC AUTOMÁTICOS
+            </h1>
+            <p style="font-size: 1.2vw; color: #222; margin-bottom: 1vw">
+              Especialistas em peças e soluções para transmissão automática.<br />Produtos
+              de qualidade, atendimento personalizado e entrega rápida para todo
+              o Brasil.
+            </p>
+            <span
+              style="
+                display: block;
+                font-size: 1vw;
+                color: #ea580c;
+                font-weight: 600;
+                margin-bottom: 1vw;
+              "
+              >Seu parceiro em tecnologia automotiva!</span
+            >
+            <a
+              href="contato.html"
+              class="btn-whatsapp"
+              style="
+                font-size: 1.1vw;
+                background: #ea580c;
+                color: #fff;
+                border-radius: 0.5vw;
+                padding: 0.7vw 2vw;
+                text-decoration: none;
+                display: inline-block;
+              "
+              ><i class="fa fa-whatsapp"></i> Fale conosco</a
+            >
           </div>
         </section>
 
-        <!-- Barra lateral de busca e filtros -->
-        <div style="display: flex; gap: 2vw; align-items: flex-start">
+        <!-- Categorias em destaque com ícones -->
+        <section
+          class="categorias-destaque"
+          style="
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-cogs" style="font-size: 2vw; color: #ea580c"></i>
+            Corpo de Válvulas
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i
+              class="fa fa-microchip"
+              style="font-size: 2vw; color: #ea580c"
+            ></i>
+            Módulo de Controle
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-gears" style="font-size: 2vw; color: #ea580c"></i>
+            Conversores de Torque
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-car" style="font-size: 2vw; color: #ea580c"></i>
+            Transmissões Completas
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-cube" style="font-size: 2vw; color: #ea580c"></i>
+            Carcaças
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-wrench" style="font-size: 2vw; color: #ea580c"></i>
+            Outras Peças
+          </a>
+        </section>
+
+        <!-- Chamada para o catálogo -->
+        <section
+          class="chamada-catalogo"
+          style="margin-bottom: 2vw; text-align: center"
+        >
+          <div
+            style="
+              display: inline-block;
+              background: linear-gradient(90deg, #ea580c 0%, #ffb86c 100%);
+              border-radius: 2vw;
+              box-shadow: 0 6px 32px #ea580c33;
+              padding: 1.5vw 3.5vw;
+              margin-bottom: 1vw;
+              position: relative;
+              animation: fadeInBar 1s ease;
+            "
+          >
+            <h2
+              style="
+                font-family: 'Oswald', sans-serif;
+                color: #fff;
+                font-size: 2.3vw;
+                margin: 0;
+                letter-spacing: 1px;
+                text-shadow: 0 2px 8px #ea580c55;
+              "
+            >
+              Confira nossos produtos!
+            </h2>
+          </div>
+          <div
+            style="
+              max-width: 620px;
+              margin: 1vw auto 0 auto;
+              background: #fff7f2;
+              border: 1.5px solid #ea580c44;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #ea580c11;
+              padding: 1.2vw 2vw;
+              display: flex;
+              align-items: flex-start;
+              gap: 1vw;
+            "
+          >
+            <span style="font-size: 1.7vw; color: #ea580c; margin-top: 0.1vw">
+              <i class="fa fa-search"></i>
+            </span>
+            <span
+              style="
+                font-size: 1.08vw;
+                color: #222;
+                font-family: 'Montserrat', 'Oswald', Arial, sans-serif;
+                line-height: 1.6;
+              "
+            >
+              Encontre as melhores peças para transmissão automática do
+              mercado!<br />
+              <span style="color: #ea580c; font-weight: 600"
+                >Use os filtros</span
+              >
+              para buscar por categoria, modelo ou aplicação e descubra produtos
+              de alta qualidade para o seu veículo.<br />
+              <span style="color: #ea580c; font-weight: 500">Dúvidas?</span>
+              Nossa equipe está pronta para ajudar.
+            </span>
+          </div>
+        </section>
+        <style>
+          @keyframes fadeInBar {
+            from {
+              opacity: 0;
+              transform: translateY(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+
+        <!-- Barra lateral de busca e filtros + produtos -->
+        <div
+          style="
+            display: flex;
+            gap: 2vw;
+            align-items: flex-start;
+            margin-top: 2vw;
+          "
+        >
           <aside
             id="busca-filtros"
             style="
@@ -206,7 +532,7 @@
               display: flex;
               flex-direction: column;
               gap: 2vw;
-              margin-top: 5vw;
+              margin-top: 0vw;
             "
           >
             <!-- Campo de busca -->
@@ -258,19 +584,31 @@
               <label for="filtro-modelo" style="font-weight: 600"
                 >Modelo:</label
               >
-              <input id="filtro-modelo" type="text" placeholder="Ex: 6T30, JF015E..." />
+              <input
+                id="filtro-modelo"
+                type="text"
+                placeholder="Ex: 6T30, JF015E..."
+              />
             </div>
 
             <!-- Filtro por tipo -->
             <div>
               <label for="filtro-tipo" style="font-weight: 600">Tipo:</label>
-              <input id="filtro-tipo" type="text" placeholder="Ex: Módulo, Corpo de Válvulas..." />
+              <input
+                id="filtro-tipo"
+                type="text"
+                placeholder="Ex: Módulo, Corpo de Válvulas..."
+              />
             </div>
 
             <!-- Filtro por motor -->
             <div>
               <label for="filtro-motor" style="font-weight: 600">Motor:</label>
-              <input id="filtro-motor" type="text" placeholder="Ex: 1.8, 2.0, TSI..." />
+              <input
+                id="filtro-motor"
+                type="text"
+                placeholder="Ex: 1.8, 2.0, TSI..."
+              />
             </div>
 
             <!-- Filtro por garantia -->
@@ -291,7 +629,7 @@
             id="produtosPorCategoria"
             style="
               flex: 1 1 0%;
-              margin-top: 2vw;
+              margin-top: 0vw;
               display: flex;
               flex-direction: column;
               gap: 2vw;
