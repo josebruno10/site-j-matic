@@ -236,7 +236,8 @@ function renderizarCategorias(categorias, ordemCategorias) {
     });
     // Modal de detalhe do produto
     function abrirModalProduto(produto) {
-      const modal = document.getElementById("modal-produto");
+      const modalBg = document.querySelector(".modal-produto-bg");
+      const modal = document.querySelector(".modal-produto");
       document.getElementById("modal-produto-title").textContent = produto.nome;
       document.getElementById("modal-produto-img").src = produto.imagem;
       document.getElementById("modal-produto-img").alt = produto.nome;
@@ -276,22 +277,30 @@ function renderizarCategorias(categorias, ordemCategorias) {
         }, 1200);
       };
       // Abrir modal
-      modal.style.display = "flex";
+      modalBg.classList.add('aberto')
+      modal.classList.add('aberto')
     }
     // Fechar modal produto (garantir sempre que o DOM já existe)
     function fecharModalProduto() {
-      const modal = document.getElementById("modal-produto");
-      if (modal) modal.style.display = "none";
+      const modalBg = document.querySelector(".modal-produto-bg");
+      const modal = document.querySelector(".modal-produto");
+      if (modalBg) {
+        modal.classList.remove('aberto')
+        setTimeout(() => {
+          modalBg.classList.remove('aberto')
+        }, 600);
+      };
+      
     }
 
     // Sempre garantir que o evento está ativo após o DOM carregar
     setTimeout(() => {
       const btnFechar = document.getElementById("fechar-produto-btn");
-      const modal = document.getElementById("modal-produto");
+      const modalBg = document.querySelector(".modal-produto-bg");
       if (btnFechar) btnFechar.onclick = fecharModalProduto;
-      if (modal) {
-        modal.addEventListener("click", function (e) {
-          if (e.target === modal) fecharModalProduto();
+      if (modalBg) {
+        modalBg.addEventListener("click", function (e) {
+          if (e.target === modalBg) fecharModalProduto();
         });
       }
     }, 500);

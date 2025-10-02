@@ -78,7 +78,13 @@
   margin-right: 0.5vw; /* espaço à direita do ícone */
   font-size: 1.2vw; /* tamanho do ícone */
 }
-
+*{
+  margin: 0px;
+  padding: 0px;
+}
+main{
+  margin-bottom: 0px;
+}
 /* botão de compra via whatsapp */
 .btn-whatsapp {
   display: flex; /* usa flexbox para alinhar conteúdo */

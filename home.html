@@ -69,43 +69,55 @@
   <body>
     <!-- ===================== MODAL DE DETALHE DO PRODUTO ===================== -->
     <!-- Abre quando o usuário clica em um produto -->
-    <div id="modal-produto" class="modal-produto-bg" style="display: none">
-      <div class="modal-produto">
-        <!-- Cabeçalho do modal -->
-        <div class="modal-produto-header">
-          <span class="modal-produto-title" id="modal-produto-title"></span>
-          <button class="modal-produto-close" id="fechar-produto-btn">
-            &times;
-          </button>
-        </div>
-        <!-- Corpo do modal: imagens + informações -->
-        <div class="modal-produto-body">
-          <div class="modal-produto-fotos">
-            <!-- Imagem principal do produto -->
-            <img
-              id="modal-produto-img"
-              src=""
-              alt=""
-              class="modal-produto-img-principal"
-            />
-            <!-- Miniaturas adicionais -->
-            <div id="modal-produto-thumbs" class="modal-produto-thumbs"></div>
+      <div id="modal-produto" class="modal-produto-bg" style="display: flex">
+        <div class="modal-produto">
+          <!-- Cabeçalho do modal -->
+          <div class="modal-produto-header">
+            <span class="modal-produto-title" id="modal-produto-title"></span>
+            <button class="modal-produto-close" id="fechar-produto-btn">
+              &times;
+            </button>
           </div>
-          <div class="modal-produto-info">
-            <!-- Informações dinâmicas do produto -->
-            <div class="modal-produto-preco" id="modal-produto-preco"></div>
-            <div class="modal-produto-desc" id="modal-produto-desc"></div>
-            <div class="modal-produto-ficha" id="modal-produto-ficha"></div>
-            <!-- Botões de ação -->
-            <div class="botoes-produto">
-              <button id="modal-produto-whatsapp" class="btn-whatsapp">
-                <i class="fa fa-whatsapp"></i> Comprar no WhatsApp
-              </button>
-              <button id="modal-produto-carrinho" class="btn-carrinho">
-                <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-              </button>
+          <!-- Corpo do modal: imagens + informações -->
+          <div class="modal-produto-body">
+            <div class="modal-produto-fotos">
+              <!-- Imagem principal do produto -->
+              <img
+                id="modal-produto-img"
+                src=""
+                alt=""
+                class="modal-produto-img-principal"
+              />
+              <!-- Miniaturas adicionais -->
+              <div id="modal-produto-thumbs" class="modal-produto-thumbs"></div>
+            </div>
+            <div class="modal-produto-info">
+              <!-- Informações dinâmicas do produto -->
+              <div class="modal-produto-preco" id="modal-produto-preco"></div>
+              <div class="modal-produto-desc" id="modal-produto-desc"></div>
+              <div class="modal-produto-ficha" id="modal-produto-ficha"></div>
+              <!-- Botões de ação -->
+              <div class="botoes-produto">
+                <button id="modal-produto-whatsapp" class="btn-whatsapp">
+                  <i class="fa fa-whatsapp"></i> Comprar no WhatsApp
+                </button>
+                <button id="modal-produto-carrinho" class="btn-carrinho">
+                  <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+                </button>
+              </div>
             </div>
           </div>
+          <span style="margin-top: 10vh;"><h5>Detalhes do produto</h5></span>
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            provident magni doloribus, modi dolore quam sed nam unde ullam culpa tempore
+            natus maiores suscipit corrupti inventore repellat ex nisi harum? Consequatur,
+            suscipit explicabo quo minima, dolore incidunt, doloremque corrupti eius voluptate
+            labore autem error at nisi nam quaerat odio unde eos sapiente debitis iusto pariatur
+            voluptatem deserunt ducimus! Eum perferendis ab dolor harum accusantium molestias
+            eligendi nisi quos vero sed, culpa ex hic fugit aperiam laboriosam, nihil inventore
+            ipsum, sint sunt sit. Animi veritatis porro odio blanditiis eveniet odit amet?
+            Perspiciatis minus omnis eaque maiores mollitia? Optio error ipsum autem?
+          </span>
         </div>
       </div>
     </div>
