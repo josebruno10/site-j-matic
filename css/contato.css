@@ -8,8 +8,9 @@ html {
   flex-direction: column; /* organiza elementos em coluna */
   align-items: center; /* centraliza horizontalmente */
   justify-content: center; /* centraliza verticalmente */
-  margin-top: 3vw; /* espaço acima do header */
-  margin-bottom: 2vw; /* espaço abaixo do header */
+  box-shadow: 0.1vw 0.1vw 0.3vw #c2410c;
+  border-bottom: 0.2vw solid #c2410c;
+  background-color: #ffffff;
 }
 
 .contato-logo {
@@ -29,7 +30,7 @@ html {
 }
 
 .contato-desc {
-  color: #444; /* cor cinza escura para descrição */
+  color: #555555; /* cor cinza escura para descrição */
   font-size: 1.2vw; /* tamanho da fonte */
   margin-bottom: 2vw; /* espaço abaixo da descrição */
   text-align: center; /* centraliza o texto */
@@ -39,7 +40,7 @@ html {
 
 .contato-main {
   max-width: 900px; /* largura máxima do container principal */
-  margin: 0 auto 3vw auto; /* centraliza horizontalmente e adiciona espaço abaixo */
+  margin: 1vw auto 3vw auto; /* centraliza horizontalmente e adiciona espaço abaixo */
   padding: 2.5vw 2vw 3vw 2vw; /* espaçamento interno: top, right, bottom, left */
   background: #fff; /* fundo branco */
   border-radius: 1vw; /* cantos arredondados */
@@ -47,11 +48,9 @@ html {
 }
 
 .contato-flex {
-  display: flex; /* layout flexível */
-  flex-wrap: wrap; /* permite quebra de linha em telas menores */
+  display: grid; /* layout flexível */
   gap: 2.5vw; /* espaçamento entre itens */
-  align-items: stretch; /* estica itens verticalmente */
-  justify-content: center; /* centraliza horizontalmente */
+  grid-template-columns: 1fr 1fr;
 }
 
 .contato-infos {
