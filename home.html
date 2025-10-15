@@ -1,0 +1,661 @@
+<footer
+  style="
+    background: #222;
+    color: #fff;
+    padding: 2vw 0;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 0.2vw;
+  "
+>
+  <div style="margin-bottom: 1vw">
+    <span style="font-weight: 600; color: #ea580c">JMatic Auto</span>
+    &nbsp;|&nbsp;
+    <a
+      href="mailto:contato@jmaticauto.com"
+      style="color: #fff; text-decoration: underline"
+      >contato@jmaticauto.com</a
+    >
+    &nbsp;|&nbsp;
+    <a
+      href="https://wa.me/5511999999999"
+      style="color: #fff; text-decoration: underline"
+      >WhatsApp</a
+    >
+  </div>
+</footer>
+<!-- Rodapé informativo -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J.MATIC AUTOMÁTICOS</title>
+
+    <!-- Fonte personalizada (Google Fonts: Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ícones do Font Awesome (carrinho, whatsapp etc.) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- CSS específico para os botões de ação dos produtos -->
+    <link rel="stylesheet" href="css/botoes-produto.css" />
+
+    <!-- Biblioteca Bootstrap (CSS + JS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Arquivos de estilos separados por funcionalidade -->
+    <link rel="stylesheet" href="css/reset-base.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="stylesheet" href="css/sidebar-filtros.css" />
+    <link rel="stylesheet" href="css/carrossel.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+    <link rel="stylesheet" href="css/eventosDeMouse.css" />
+  </head>
+
+  <body>
+    <!-- ===================== MODAL DE DETALHE DO PRODUTO ===================== -->
+    <!-- Abre quando o usuário clica em um produto -->
+      <div id="modal-produto" class="modal-produto-bg" style="display: flex">
+        <div class="modal-produto">
+          <!-- Cabeçalho do modal -->
+          <div class="modal-produto-header">
+            <span class="modal-produto-title" id="modal-produto-title"></span>
+            <button class="modal-produto-close" id="fechar-produto-btn">
+              &times;
+            </button>
+          </div>
+          <!-- Corpo do modal: imagens + informações -->
+          <div class="modal-produto-body">
+            <div class="modal-produto-fotos">
+              <!-- Imagem principal do produto -->
+              <img
+                id="modal-produto-img"
+                src=""
+                alt=""
+                class="modal-produto-img-principal"
+              />
+              <!-- Miniaturas adicionais -->
+              <div id="modal-produto-thumbs" class="modal-produto-thumbs"></div>
+            </div>
+            <div class="modal-produto-info">
+              <!-- Informações dinâmicas do produto -->
+              <div class="modal-produto-preco" id="modal-produto-preco"></div>
+              <div class="modal-produto-desc" id="modal-produto-desc"></div>
+              <div class="modal-produto-ficha" id="modal-produto-ficha"></div>
+              <!-- Botões de ação -->
+              <div class="botoes-produto">
+                <button id="modal-produto-whatsapp" class="btn-whatsapp">
+                  <i class="fa fa-whatsapp"></i> Comprar no WhatsApp
+                </button>
+                <button id="modal-produto-carrinho" class="btn-carrinho">
+                  <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+          <span style="margin-top: 10vh;"><h5>Detalhes do produto</h5></span>
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            provident magni doloribus, modi dolore quam sed nam unde ullam culpa tempore
+            natus maiores suscipit corrupti inventore repellat ex nisi harum? Consequatur,
+            suscipit explicabo quo minima, dolore incidunt, doloremque corrupti eius voluptate
+            labore autem error at nisi nam quaerat odio unde eos sapiente debitis iusto pariatur
+            voluptatem deserunt ducimus! Eum perferendis ab dolor harum accusantium molestias
+            eligendi nisi quos vero sed, culpa ex hic fugit aperiam laboriosam, nihil inventore
+            ipsum, sint sunt sit. Animi veritatis porro odio blanditiis eveniet odit amet?
+            Perspiciatis minus omnis eaque maiores mollitia? Optio error ipsum autem?
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== CABEÇALHO / NAVBAR ===================== -->
+    <header
+      class="barraP d-flex align-items-center justify-content-between px-4"
+    >
+      <!-- Logo e nome da empresa -->
+      <div class="d-flex align-items-center" id="logo-container">
+  <a href="index.html">
+          <img src="imagens/logo.svg" alt="Logo da J.Matic" class="logo me-3" />
+        </a>
+        <span class="nome">J.MATIC AUTOMÁTICOS</span>
+      </div>
+
+      <!-- Links de navegação e carrinho -->
+      <nav
+        class="nav-links"
+        style="display: flex; gap: 2vw; align-items: center"
+      >
+  <a href="index.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Sobre</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+
+        <!-- Botão do carrinho com contador de itens -->
+        <button
+          class="btn-icone"
+          title="Carrinho"
+          style="position: relative"
+          id="abrir-carrinho-btn"
+        >
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span
+            id="badge-carrinho"
+            style="
+              position: absolute;
+              top: -0.5vw;
+              right: -0.5vw;
+              background: #ea580c;
+              color: #fff;
+              font-size: 0.9vw;
+              padding: 0.2vw 0.5vw;
+              border-radius: 1vw;
+              min-width: 1vw;
+              text-align: center;
+            "
+          ></span>
+        </button>
+
+        <!-- ===================== MODAL DO CARRINHO ===================== -->
+        <div
+          id="modal-carrinho"
+          class="modal-carrinho-bg"
+          style="display: none"
+        >
+          <div class="modal-carrinho">
+            <!-- Cabeçalho do carrinho -->
+            <div class="modal-carrinho-header">
+              <span class="modal-carrinho-title">Seu Carrinho</span>
+              <button class="modal-carrinho-close" id="fechar-carrinho-btn">
+                &times;
+              </button>
+            </div>
+
+            <!-- Itens do carrinho (renderizados via JS) -->
+            <div id="carrinho-itens"></div>
+
+            <!-- Rodapé: total e botões -->
+            <div class="modal-carrinho-footer">
+              <span id="carrinho-total"></span>
+              <div style="display: flex; gap: 1vw; margin-top: 1vw">
+                <!-- Limpar carrinho -->
+                <button
+                  id="limpar-carrinho"
+                  class="btn-carrinho"
+                  style="flex: 1; background: #e11d48; border: none"
+                >
+                  <i class="fa fa-trash"></i> Limpar Carrinho
+                </button>
+                <!-- Finalizar compra no WhatsApp -->
+                <button
+                  id="finalizar-whatsapp"
+                  class="btn-whatsapp"
+                  style="flex: 2"
+                >
+                  <i class="fa fa-whatsapp"></i> Finalizar compra no WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main style="background-color: #f3f4f6">
+      <div id="fundo1">
+        <!-- Banner de apresentação profissional -->
+        <section
+          class="banner-apresentacao"
+          style="
+            background: linear-gradient(90deg, #ea580c 0%, #f3f4f6 100%);
+            padding: 3vw 0;
+            border-radius: 1vw;
+            margin-bottom: 2vw;
+            text-align: center;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3vw;
+            flex-wrap: wrap;
+          "
+        >
+          <img
+            src="imagens/logo.svg"
+            alt="Logo J.MATIC"
+            style="
+              height: 8vw;
+              min-width: 100px;
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 1vw;
+            "
+          />
+          <div style="max-width: 600px; text-align: left">
+            <h1
+              style="
+                font-family: 'Oswald', sans-serif;
+                font-size: 2.8vw;
+                margin-bottom: 1vw;
+                color: #ea580c;
+              "
+            >
+              J.MATIC AUTOMÁTICOS
+            </h1>
+            <p style="font-size: 1.2vw; color: #222; margin-bottom: 1vw">
+              Especialistas em peças e soluções para transmissão automática.<br />Produtos
+              de qualidade, atendimento personalizado e entrega rápida para todo
+              o Brasil.
+            </p>
+            <span
+              style="
+                display: block;
+                font-size: 1vw;
+                color: #ea580c;
+                font-weight: 600;
+                margin-bottom: 1vw;
+              "
+              >Seu parceiro em tecnologia automotiva!</span
+            >
+            <a
+              href="contato.html"
+              class="btn-whatsapp"
+              style="
+                font-size: 1.1vw;
+                background: #ea580c;
+                color: #fff;
+                border-radius: 0.5vw;
+                padding: 0.7vw 2vw;
+                text-decoration: none;
+                display: inline-block;
+              "
+              ><i class="fa fa-whatsapp"></i> Fale conosco</a
+            >
+          </div>
+        </section>
+
+        <!-- Categorias em destaque com ícones -->
+        <section
+          class="categorias-destaque"
+          style="
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-cogs" style="font-size: 2vw; color: #ea580c"></i>
+            Corpo de Válvulas
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i
+              class="fa fa-microchip"
+              style="font-size: 2vw; color: #ea580c"
+            ></i>
+            Módulo de Controle
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-gears" style="font-size: 2vw; color: #ea580c"></i>
+            Conversores de Torque
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-car" style="font-size: 2vw; color: #ea580c"></i>
+            Transmissões Completas
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-cube" style="font-size: 2vw; color: #ea580c"></i>
+            Carcaças
+          </a>
+          <a
+            href="#"
+            class="categoria-card"
+            style="
+              background: #fff;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #0001;
+              padding: 2vw 2vw;
+              min-width: 180px;
+              text-align: center;
+              color: #ea580c;
+              font-weight: 600;
+              text-decoration: none;
+              transition: box-shadow 0.2s;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.7vw;
+            "
+          >
+            <i class="fa fa-wrench" style="font-size: 2vw; color: #ea580c"></i>
+            Outras Peças
+          </a>
+        </section>
+
+        <!-- Chamada para o catálogo -->
+        <section
+          class="chamada-catalogo"
+          style="margin-bottom: 2vw; text-align: center"
+        >
+          <div
+            style="
+              display: inline-block;
+              background: linear-gradient(90deg, #ea580c 0%, #ffb86c 100%);
+              border-radius: 2vw;
+              box-shadow: 0 6px 32px #ea580c33;
+              padding: 1.5vw 3.5vw;
+              margin-bottom: 1vw;
+              position: relative;
+              animation: fadeInBar 1s ease;
+            "
+          >
+            <h2
+              style="
+                font-family: 'Oswald', sans-serif;
+                color: #fff;
+                font-size: 2.3vw;
+                margin: 0;
+                letter-spacing: 1px;
+                text-shadow: 0 2px 8px #ea580c55;
+              "
+            >
+              Confira nossos produtos!
+            </h2>
+          </div>
+          <div
+            style="
+              max-width: 620px;
+              margin: 1vw auto 0 auto;
+              background: #fff7f2;
+              border: 1.5px solid #ea580c44;
+              border-radius: 1vw;
+              box-shadow: 0 2px 12px #ea580c11;
+              padding: 1.2vw 2vw;
+              display: flex;
+              align-items: flex-start;
+              gap: 1vw;
+            "
+          >
+            <span style="font-size: 1.7vw; color: #ea580c; margin-top: 0.1vw">
+              <i class="fa fa-search"></i>
+            </span>
+            <span
+              style="
+                font-size: 1.08vw;
+                color: #222;
+                font-family: 'Montserrat', 'Oswald', Arial, sans-serif;
+                line-height: 1.6;
+              "
+            >
+              Encontre as melhores peças para transmissão automática do
+              mercado!<br />
+              <span style="color: #ea580c; font-weight: 600"
+                >Use os filtros</span
+              >
+              para buscar por categoria, modelo ou aplicação e descubra produtos
+              de alta qualidade para o seu veículo.<br />
+              <span style="color: #ea580c; font-weight: 500">Dúvidas?</span>
+              Nossa equipe está pronta para ajudar.
+            </span>
+          </div>
+        </section>
+        <style>
+          @keyframes fadeInBar {
+            from {
+              opacity: 0;
+              transform: translateY(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+
+        <!-- Barra lateral de busca e filtros + produtos -->
+        <div
+          style="
+            display: flex;
+            gap: 2vw;
+            align-items: flex-start;
+            margin-top: 2vw;
+          "
+        >
+          <aside
+            id="busca-filtros"
+            style="
+              width: 23vw;
+              min-width: 240px;
+              background: #fff;
+              border-radius: 1vw;
+              padding: 2.5vw 1.5vw 2.5vw 1.5vw;
+              box-shadow: 0 4px 24px #0002;
+              display: flex;
+              flex-direction: column;
+              gap: 2vw;
+              margin-top: 0vw;
+            "
+          >
+            <!-- Campo de busca -->
+            <div>
+              <label for="input-busca" style="font-weight: 600"
+                >Buscar produto:</label
+              >
+              <input
+                id="input-busca"
+                type="text"
+                placeholder="Nome, categoria, aplicação..."
+              />
+            </div>
+
+            <!-- Filtro por categoria -->
+            <div>
+              <label for="filtro-categoria" style="font-weight: 600"
+                >Categoria:</label
+              >
+              <select id="filtro-categoria">
+                <option value="">Todas</option>
+                <option value="Corpo de Válvulas">Corpo de Válvulas</option>
+                <option value="Módulo de Controle de Transmissão">
+                  Módulo de Controle de Transmissão
+                </option>
+                <option value="Conversores de Torque">
+                  Conversores de Torque
+                </option>
+                <option value="Transmissões Completas">
+                  Transmissões Completas
+                </option>
+                <option value="Carcaças">Carcaças</option>
+                <option value="Outras Peças de Transmissão">
+                  Outras Peças de Transmissão
+                </option>
+              </select>
+            </div>
+
+            <!-- Filtro por preço -->
+            <div>
+              <label for="filtro-preco" style="font-weight: 600"
+                >Preço até:</label
+              >
+              <input id="filtro-preco" type="number" placeholder="R$" />
+            </div>
+
+            <!-- Filtro por modelo -->
+            <div>
+              <label for="filtro-modelo" style="font-weight: 600"
+                >Modelo:</label
+              >
+              <input
+                id="filtro-modelo"
+                type="text"
+                placeholder="Ex: 6T30, JF015E..."
+              />
+            </div>
+
+            <!-- Filtro por tipo -->
+            <div>
+              <label for="filtro-tipo" style="font-weight: 600">Tipo:</label>
+              <input
+                id="filtro-tipo"
+                type="text"
+                placeholder="Ex: Módulo, Corpo de Válvulas..."
+              />
+            </div>
+
+            <!-- Filtro por motor -->
+            <div>
+              <label for="filtro-motor" style="font-weight: 600">Motor:</label>
+              <input
+                id="filtro-motor"
+                type="text"
+                placeholder="Ex: 1.8, 2.0, TSI..."
+              />
+            </div>
+
+            <!-- Filtro por garantia -->
+            <div>
+              <label for="filtro-garantia" style="font-weight: 600"
+                >Garantia:</label
+              >
+              <select id="filtro-garantia">
+                <option value="">Todas</option>
+                <option value="3 meses">3 meses</option>
+                <option value="6 meses">6 meses</option>
+              </select>
+            </div>
+          </aside>
+
+          <!-- Área onde os produtos serão renderizados por categoria (via JS) -->
+          <div
+            id="produtosPorCategoria"
+            style="
+              flex: 1 1 0%;
+              margin-top: 0vw;
+              display: flex;
+              flex-direction: column;
+              gap: 2vw;
+              max-width: calc(100vw - 27vw);
+              margin-left: auto;
+              margin-right: 0vw;
+              overflow-x: hidden;
+            "
+          ></div>
+        </div>
+      </div>
+    </main>
+    <script src="js/funcoesCarrossel.js" defer></script>
+    <script src="js/produtosHome.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+  </body>
+</html>
